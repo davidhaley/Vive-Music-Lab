@@ -1,7 +1,7 @@
 Documentation/
 Assets/Plugins/
-Assets/GoogleVR/
-Assets/TheLabRenderer
+Assets/ExternalAssets/GoogleVR/
+Assets/ExternalAssets/TheLabRenderer
 tatus
 
 # Windows image file caches

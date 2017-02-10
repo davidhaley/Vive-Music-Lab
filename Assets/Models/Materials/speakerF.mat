@@ -7,11 +7,12 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: speakerF
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 4800000, guid: 908b379d4818cd64184b95a21123d909, type: 3}
+  m_ShaderKeywords: S_RECEIVE_SHADOWS S_SPECULAR_METALLIC
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    OriginalShader: Standard
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -69,10 +70,25 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - first:
+        name: _SpecGlossMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: g_tOverrideLightmap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
         name: _BumpScale
       second: 1
+    - first:
+        name: _Cull
+      second: 2
     - first:
         name: _Cutoff
       second: 0.5
@@ -82,6 +98,9 @@ Material:
     - first:
         name: _DstBlend
       second: 0
+    - first:
+        name: _FogMultiplier
+      second: 1
     - first:
         name: _GlossMapScale
       second: 1
@@ -101,6 +120,18 @@ Material:
         name: _OcclusionStrength
       second: 1
     - first:
+        name: _OcclusionStrengthDirectDiffuse
+      second: 1
+    - first:
+        name: _OcclusionStrengthDirectSpecular
+      second: 1
+    - first:
+        name: _OcclusionStrengthIndirectDiffuse
+      second: 1
+    - first:
+        name: _OcclusionStrengthIndirectSpecular
+      second: 1
+    - first:
         name: _Parallax
       second: 0.02
     - first:
@@ -110,6 +141,9 @@ Material:
         name: _SpecularHighlights
       second: 1
     - first:
+        name: _SpecularMode
+      second: 2
+    - first:
         name: _SrcBlend
       second: 1
     - first:
@@ -118,6 +152,33 @@ Material:
     - first:
         name: _ZWrite
       second: 1
+    - first:
+        name: g_bReceiveShadows
+      second: 1
+    - first:
+        name: g_bRenderBackfaces
+      second: 0
+    - first:
+        name: g_bUnlit
+      second: 0
+    - first:
+        name: g_bWorldAlignedTexture
+      second: 0
+    - first:
+        name: g_flCubeMapScalar
+      second: 1
+    - first:
+        name: g_flReflectanceBias
+      second: 0
+    - first:
+        name: g_flReflectanceMax
+      second: 1
+    - first:
+        name: g_flReflectanceMin
+      second: 0
+    - first:
+        name: g_flReflectanceScale
+      second: 1
     m_Colors:
     - first:
         name: _Color
@@ -125,3 +186,21 @@ Material:
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _SpecColor
+      second: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - first:
+        name: g_vWorldAlignedNormalTangentU
+      second: {r: -1, g: 0, b: 0, a: 0}
+    - first:
+        name: g_vWorldAlignedNormalTangentV
+      second: {r: 0, g: 0, b: 1, a: 0}
+    - first:
+        name: g_vWorldAlignedTextureNormal
+      second: {r: 0, g: 1, b: 0, a: 0}
+    - first:
+        name: g_vWorldAlignedTexturePosition
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: g_vWorldAlignedTextureSize
+      second: {r: 1, g: 1, b: 1, a: 0}

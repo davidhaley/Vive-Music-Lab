@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class exampleSceneScript : MonoBehaviour {
+public class Fog : MonoBehaviour {
 
 	// Use this for initialization
 	

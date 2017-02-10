@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: fogmaterial
-  m_Shader: {fileID: 4800000, guid: 908b379d4818cd64184b95a21123d909, type: 3}
+  m_Name: Fog
+  m_Shader: {fileID: 4800000, guid: b5c3da14c95db4343b7a9eea0c89bf0e, type: 3}
   m_ShaderKeywords: S_RECEIVE_SHADOWS S_SPECULAR_BLINNPHONG
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -84,7 +84,7 @@ Material:
     m_Floats:
     - first:
         name: _Alpha
-      second: 0.33
+      second: 0.45
     - first:
         name: _AlphaSub
       second: 0.05
@@ -114,7 +114,7 @@ Material:
       second: 0.5
     - first:
         name: _Intensity
-      second: 0.53
+      second: 0.8
     - first:
         name: _Metallic
       second: 0.937
@@ -144,7 +144,7 @@ Material:
       second: 1.2
     - first:
         name: _Scale
-      second: 25.14
+      second: 0.6
     - first:
         name: _SpecularMode
       second: 1
@@ -187,7 +187,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.9338235, g: 0.9338235, b: 0.9338235, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 0}

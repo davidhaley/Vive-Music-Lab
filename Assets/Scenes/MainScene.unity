@@ -6485,7 +6485,7 @@ Prefab:
     - target: {fileID: 114618565622013746, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4863196329726130, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f, type: 2}
       propertyPath: m_LocalPosition.x
@@ -6547,11 +6547,11 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1740330770}
+      objectReference: {fileID: 0}
     - target: {fileID: 114618565622013746, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: toggleLightmaps
+      value: toggleAlbedo
       objectReference: {fileID: 0}
     - target: {fileID: 114618565622013746, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
         type: 2}
@@ -46501,22 +46501,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1739475948}
   m_Mesh: {fileID: 4300782, guid: 9292f6cda134ab14cada85106964493e, type: 3}
---- !u!1 &1740330768 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1322737121103960, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 242223628}
---- !u!114 &1740330770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1740330768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f2c896988ec56642b51d3c071ffcc57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1741272597
 GameObject:
   m_ObjectHideFlags: 0

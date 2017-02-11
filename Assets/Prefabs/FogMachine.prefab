@@ -19,11 +19,26 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4287330354813208}
-  - component: {fileID: 198175855473731114}
-  - component: {fileID: 199538820940302052}
-  - component: {fileID: 114203849493454264}
   m_Layer: 0
   m_Name: FogMachine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &1286614219469226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4303985365804358}
+  - component: {fileID: 198361082191613904}
+  - component: {fileID: 199347323933355686}
+  - component: {fileID: 114697903394355546}
+  m_Layer: 0
+  m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,40 +50,54 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150022164245686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.793925, y: 2.495275, z: 7.080952}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4303985365804358}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4303985365804358
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1286614219469226}
   m_LocalRotation: {x: 0, y: 0.8598523, z: -0.51054287, w: 0}
   m_LocalPosition: {x: 0, y: -1.642, z: -4.479}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 4287330354813208}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 61.4, y: 180, z: 0}
---- !u!114 &114203849493454264
+--- !u!114 &114697903394355546
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1150022164245686}
+  m_GameObject: {fileID: 1286614219469226}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ee9af5f0769444259c39a59205758b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 0.6
+  scale: 0.05
   intensity: 0.8
   alpha: 0.45
   alphasub: 0.05
   pow: 1.2
   color: {r: 1, g: 1, b: 1, a: 1}
   fogMaterial: {fileID: 2100000, guid: 015ded2f9331e4ffdb975fd20910ea0c, type: 2}
---- !u!198 &198175855473731114
+--- !u!198 &198361082191613904
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1150022164245686}
+  m_GameObject: {fileID: 1286614219469226}
   serializedVersion: 5
   lengthInSec: 5
-  speed: 1
+  simulationSpeed: 1.48
   looping: 1
   prewarm: 0
   playOnAwake: 1
@@ -112,10 +141,10 @@ ParticleSystem:
       m_PostInfinity: 2
       m_RotationOrder: 4
     minMaxState: 0
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1118186503
+  randomSeed: -2002635358
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -840,7 +869,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     y:
-      scalar: 0.5235988
+      scalar: 0.08726646
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2691,16 +2720,16 @@ ParticleSystem:
       minColor: {r: 1, g: 1, b: 1, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       minMaxState: 0
---- !u!199 &199538820940302052
+--- !u!199 &199347323933355686
 ParticleSystemRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1150022164245686}
+  m_GameObject: {fileID: 1286614219469226}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
@@ -2726,8 +2755,8 @@ ParticleSystemRenderer:
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 2
-  m_MinParticleSize: 3.91
-  m_MaxParticleSize: 72.69
+  m_MinParticleSize: 1.94
+  m_MaxParticleSize: 12.03
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2

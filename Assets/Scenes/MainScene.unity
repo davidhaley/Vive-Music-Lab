@@ -1028,7 +1028,7 @@ GameObject:
   - component: {fileID: 30447391}
   - component: {fileID: 30447390}
   m_Layer: 5
-  m_Name: InteractionCanvas
+  m_Name: DemoCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1206,7 +1206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &36462987
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1214,8 +1214,8 @@ RectTransform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 36462986}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.100274906, y: 0, z: 0, w: 0.99495983}
+  m_LocalPosition: {x: 0, y: 0, z: -2.527}
   m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
   m_Children:
   - {fileID: 380052290}
@@ -1224,10 +1224,10 @@ RectTransform:
   - {fileID: 1740330769}
   m_Father: {fileID: 1305399316}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -11.51, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.611}
   m_SizeDelta: {x: 700, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &36462988
@@ -26836,7 +26836,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1286614219469226, guid: 2918b8dd885b1c14c8a06d54d474ad32, type: 2}
       propertyPath: m_TagString
-      value: FogMachine
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150022164245686, guid: 2918b8dd885b1c14c8a06d54d474ad32, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114697903394355546, guid: 2918b8dd885b1c14c8a06d54d474ad32, type: 2}
@@ -37589,6 +37593,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1364310249}
   m_Mesh: {fileID: 4301664, guid: 9292f6cda134ab14cada85106964493e, type: 3}
+--- !u!1 &1364873424 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1150022164245686, guid: 2918b8dd885b1c14c8a06d54d474ad32,
+    type: 2}
+  m_PrefabInternal: {fileID: 965961349}
+--- !u!114 &1364873425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1364873424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197682b8115e8ef45ae33307f18a0403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1366930245
 GameObject:
   m_ObjectHideFlags: 0
@@ -42091,6 +42111,19 @@ Prefab:
       propertyPath: m_TagString
       value: MainLights
       objectReference: {fileID: 0}
+    - target: {fileID: 108991717955780654, guid: b70932139c7e61349baf3c8d147506ef,
+        type: 2}
+      propertyPath: m_AreaSize.x
+      value: 6.7229
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678328267081238, guid: b70932139c7e61349baf3c8d147506ef, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678328267081238, guid: b70932139c7e61349baf3c8d147506ef, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5.47
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b70932139c7e61349baf3c8d147506ef, type: 2}
   m_IsPrefabParent: 0
@@ -46056,8 +46089,8 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1672710393}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000047683734}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1228571201}
@@ -48072,7 +48105,6 @@ GameObject:
   - component: {fileID: 1740330771}
   - component: {fileID: 1740330770}
   - component: {fileID: 1740330774}
-  - component: {fileID: 1740330775}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -48166,19 +48198,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1740330770}
-        m_MethodName: fadeOnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1740330774}
-        m_MethodName: ToggleLights
+        m_MethodName: Show
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -48233,20 +48254,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1740330768}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc6068595ae13d641a1fa30e542ab541, type: 3}
+  m_Script: {fileID: 11500000, guid: 29ea93e32207cf047aa1f8d2475a0605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1740330775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1740330768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0c738dd9c7a4f84895f93f0c50281ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  canvas: {fileID: 30447388}
 --- !u!1 &1741272597
 GameObject:
   m_ObjectHideFlags: 0
@@ -49239,7 +49250,7 @@ GameObject:
   - component: {fileID: 1780585114}
   - component: {fileID: 1780585113}
   - component: {fileID: 1780585110}
-  - component: {fileID: 1780585111}
+  - component: {fileID: 1780585112}
   m_Layer: 5
   m_Name: ButtonToggleFog
   m_TagString: Untagged
@@ -49281,7 +49292,7 @@ MonoBehaviour:
   foregroundImage: {fileID: 393556934}
   toggleColor: {r: 0.71323526, g: 0.71323526, b: 0.71323526, a: 1}
   fadeTime: 1
---- !u!114 &1780585111
+--- !u!114 &1780585112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -49289,9 +49300,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1780585108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 197682b8115e8ef45ae33307f18a0403, type: 3}
+  m_Script: {fileID: 11500000, guid: aa44ecd2ba0a5db4d93cabef5bc63770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 89d014e9b8daa9f4a8acad5355a877b3, type: 3}
 --- !u!114 &1780585113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49343,7 +49355,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1780585111}
+      - m_Target: {fileID: 1780585112}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1364873425}
         m_MethodName: Toggle
         m_Mode: 1
         m_Arguments:
@@ -50196,8 +50219,9 @@ GameObject:
   - component: {fileID: 1808745202}
   - component: {fileID: 1808745201}
   - component: {fileID: 1808745199}
-  - component: {fileID: 1808745204}
   - component: {fileID: 1808745200}
+  - component: {fileID: 1808745204}
+  - component: {fileID: 1808745205}
   m_Layer: 5
   m_Name: ButtonToggleLights
   m_TagString: Untagged
@@ -50287,6 +50311,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1808745204}
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1808745200}
         m_MethodName: ToggleLights
         m_Mode: 1
@@ -50298,8 +50333,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1808745204}
-        m_MethodName: Toggle
+      - m_Target: {fileID: 1808745205}
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -50360,6 +50395,18 @@ MonoBehaviour:
   foregroundImage: {fileID: 29196501}
   toggleColor: {r: 0.654902, g: 0, b: 1, a: 1}
   fadeTime: 1
+--- !u!114 &1808745205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1808745197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa44ecd2ba0a5db4d93cabef5bc63770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 599e01a51ffac634fa3d34474bcba8ab, type: 3}
 --- !u!1 &1810380781 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1113286341096326, guid: 5425cae89f26b614aa9e6a6fed18c8b8,

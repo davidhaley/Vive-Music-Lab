@@ -8,6 +8,7 @@ TagManager:
   - LightShow
   - ToggleMaterialDarkBright
   - StageAudioSource
+  - FogMachine
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class LightController : MonoBehaviour {
 
+    [Header("Enable Script")]
+    public bool enableScript = false;
+
     [Header("Strobe (Default Mode)")]
     public float strobeSpeed = 10f;
     [Range(3f,8f)] public float upperIntensityBound;
@@ -29,6 +32,7 @@ public class LightController : MonoBehaviour {
     //State Variables
     private bool toggleLightReady = true;
     private bool switchColorReady = true;
+    private bool coRoutinesStopped;
     private float onOff;
 
     public float xAngle;
@@ -44,22 +48,32 @@ public class LightController : MonoBehaviour {
 
 void Update () {
 
-        RotateLight();
-
-        if (lightSwitch && toggleLightReady)
+        if (!enableScript && !coRoutinesStopped)
         {
-
-            StartCoroutine("ToggleLight");
-
+            StopAllCoroutines();
+            coRoutinesStopped = true;
         }
-        else if (!lightSwitch)
+        else if (enableScript)
         {
-            StartCoroutine("StrobeLight");
-        }
+            RotateLight();
 
-        if (colorRandomizer && switchColorReady)
-        {
-            StartCoroutine(SwitchColor(changeColorInSeconds));
+            if (lightSwitch && toggleLightReady)
+            {
+                StartCoroutine("ToggleLight");
+                coRoutinesStopped = false;
+
+            }
+            else if (!lightSwitch)
+            {
+                StartCoroutine("StrobeLight");
+                coRoutinesStopped = false;
+            }
+
+            if (colorRandomizer && switchColorReady)
+            {
+                StartCoroutine(SwitchColor(changeColorInSeconds));
+                coRoutinesStopped = false;
+            }
         }
     }
 

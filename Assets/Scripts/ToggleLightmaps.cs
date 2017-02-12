@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ToggleLightmaps : MonoBehaviour {
 
-    LightmapData[] lightmap_data;
+    LightmapData[] lightmapData;
     private bool lightmapEnabled = true;
 
     void Start()
     {
         // Save reference to existing scene lightmap data.
-        lightmap_data = LightmapSettings.lightmaps;
+        lightmapData = LightmapSettings.lightmaps;
     }
 
     public void Toggle()
@@ -24,7 +24,7 @@ public class ToggleLightmaps : MonoBehaviour {
         else if (!lightmapEnabled)
         {
             // Reenable lightmap data in scene.
-            LightmapSettings.lightmaps = lightmap_data;
+            LightmapSettings.lightmaps = lightmapData;
             lightmapEnabled = true;
         }
     }

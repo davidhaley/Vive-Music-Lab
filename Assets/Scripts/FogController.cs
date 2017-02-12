@@ -4,26 +4,26 @@ using UnityEngine;
 
 public class FogController : MonoBehaviour {
 
-    private GameObject fogMachine;
+    private ParticleSystem fogParticleSystem;
     private bool fogEnabled;
 
-	// Use this for initialization
 	void Awake() {
-        fogMachine = GameObject.FindGameObjectWithTag("FogMachine");
-        fogMachine.SetActive(false);
-        Debug.Log(fogMachine.activeSelf);
+        fogParticleSystem = gameObject.GetComponentInChildren<ParticleSystem>();
+        fogParticleSystem.gameObject.SetActive(false);
+        Debug.Log(fogParticleSystem.gameObject.activeSelf);
+        fogEnabled = false;
 	}
 	
 	public void Toggle()
     {
         if (!fogEnabled)
         {
-            fogMachine.gameObject.SetActive(true);
+            fogParticleSystem.gameObject.SetActive(true);
             fogEnabled = true;
         }
         else if (fogEnabled)
         {
-            fogMachine.gameObject.SetActive(false);
+            fogParticleSystem.gameObject.SetActive(false);
             fogEnabled = false;
         }
     }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MainLights
   - LightShow
+  - ToggleMaterialDarkBright
   layers:
   - Default
   - TransparentFX

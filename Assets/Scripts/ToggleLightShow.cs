@@ -4,28 +4,31 @@ using UnityEngine;
 
 public class ToggleLightShow : MonoBehaviour {
 
-    public GameObject[] mainLights;
-    public GameObject[] lightShowLights;
+    private GameObject[] lightShowLights;
+    private ToggleLightmaps toggleLightMaps;
+    private GameObject[] gameObjects;
+
+    private Color32 lightsOffColor = new Color32(64, 64, 64, 1);
+    private Color32 lightsOnColor = Color.white;
+
     private bool mainLightsEnabled = true;
 
     private void Awake()
     {
-        mainLights = GameObject.FindGameObjectsWithTag("MainLights");
         lightShowLights = GameObject.FindGameObjectsWithTag("LightShow");
-
-        foreach (GameObject light in lightShowLights)
-        {
-            light.SetActive(false);
-        }
+        toggleLightMaps = GetComponent<ToggleLightmaps>();
+        gameObjects = GameObject.FindGameObjectsWithTag("ToggleMaterialDarkBright");
     }
 
     public void ToggleLights()
     {
         if (mainLightsEnabled)
         {
-            foreach (GameObject light in mainLights)
+            toggleLightMaps.Toggle();
+
+            foreach (GameObject go in gameObjects)
             {
-                light.GetComponent<Light>().enabled = false;
+                go.GetComponent<Renderer>().material.color = lightsOffColor;
             }
 
             foreach (GameObject light in lightShowLights)
@@ -37,17 +40,18 @@ public class ToggleLightShow : MonoBehaviour {
         }
         else if (!mainLightsEnabled)
         {
-            foreach (GameObject light in mainLights)
+            toggleLightMaps.Toggle();
+
+            foreach (GameObject go in gameObjects)
             {
-                light.GetComponent<Light>().enabled = true;
+                go.GetComponent<Renderer>().material.color = lightsOnColor;
             }
+
 
             foreach (GameObject light in lightShowLights)
             {
                 light.SetActive(false);
             }
-
-            mainLightsEnabled = true;
         }
     }
 }

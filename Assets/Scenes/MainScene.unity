@@ -66,7 +66,7 @@ LightmapSettings:
     m_CompAOExponentDirect: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
-    m_LightmapsBakeMode: 1
+    m_LightmapsBakeMode: 0
     m_TextureCompression: 0
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
@@ -12105,7 +12105,7 @@ GameObject:
   - component: {fileID: 429568396}
   m_Layer: 0
   m_Name: MuseumWalls
-  m_TagString: Untagged
+  m_TagString: ToggleMaterialDarkBright
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14085,7 +14085,7 @@ GameObject:
   - component: {fileID: 508745125}
   m_Layer: 0
   m_Name: MuseumWallRoofConnector1
-  m_TagString: Untagged
+  m_TagString: ToggleMaterialDarkBright
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26737,7 +26737,7 @@ GameObject:
   - component: {fileID: 977746707}
   m_Layer: 0
   m_Name: polySurface1
-  m_TagString: Untagged
+  m_TagString: ToggleMaterialDarkBright
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -36537,8 +36537,8 @@ MonoBehaviour:
   canvas: {fileID: 36462990}
   fadeButton: {fileID: 1740330770}
   playOnAwake: 1
-  delayToStart: 3
-  delayBetweenChars: 0.07
+  delayToStart: 0
+  delayBetweenChars: 0.01
   delayAfterPunctuation: 0.5
 --- !u!114 &1346210406
 MonoBehaviour:
@@ -41505,6 +41505,22 @@ Prefab:
     - target: {fileID: 1327575636824334, guid: b70932139c7e61349baf3c8d147506ef, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767429117298122, guid: b70932139c7e61349baf3c8d147506ef, type: 2}
+      propertyPath: m_TagString
+      value: MainLights
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495846699461206, guid: b70932139c7e61349baf3c8d147506ef, type: 2}
+      propertyPath: m_TagString
+      value: MainLights
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132836985040656, guid: b70932139c7e61349baf3c8d147506ef, type: 2}
+      propertyPath: m_TagString
+      value: MainLights
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464189264716978, guid: b70932139c7e61349baf3c8d147506ef, type: 2}
+      propertyPath: m_TagString
+      value: MainLights
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b70932139c7e61349baf3c8d147506ef, type: 2}
@@ -47420,6 +47436,7 @@ GameObject:
   - component: {fileID: 1740330771}
   - component: {fileID: 1740330770}
   - component: {fileID: 1740330774}
+  - component: {fileID: 1740330775}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -47583,8 +47600,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc6068595ae13d641a1fa30e542ab541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainLights: []
-  lightShowLights: []
+--- !u!114 &1740330775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1740330768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c738dd9c7a4f84895f93f0c50281ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1741272597
 GameObject:
   m_ObjectHideFlags: 0
@@ -51095,7 +51121,7 @@ GameObject:
   - component: {fileID: 1890584242}
   m_Layer: 0
   m_Name: MuseumRoof
-  m_TagString: Untagged
+  m_TagString: ToggleMaterialDarkBright
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

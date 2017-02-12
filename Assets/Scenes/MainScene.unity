@@ -2069,7 +2069,7 @@ GameObject:
   - component: {fileID: 60284031}
   m_Layer: 0
   m_Name: Mains
-  m_TagString: Untagged
+  m_TagString: StageAudioSource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3893,7 +3893,7 @@ GameObject:
   - component: {fileID: 116076383}
   m_Layer: 0
   m_Name: Mains (1)
-  m_TagString: Untagged
+  m_TagString: StageAudioSource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8557,7 +8557,7 @@ GameObject:
   - component: {fileID: 312682667}
   m_Layer: 0
   m_Name: BigSpeaker
-  m_TagString: Untagged
+  m_TagString: StageAudioSource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14116,6 +14116,7 @@ GameObject:
   - component: {fileID: 489417919}
   - component: {fileID: 489417922}
   - component: {fileID: 489417921}
+  - component: {fileID: 489417925}
   - component: {fileID: 489417920}
   - component: {fileID: 489417923}
   - component: {fileID: 489417924}
@@ -14235,6 +14236,22 @@ MonoBehaviour:
   m_cullLightsInSceneEditor: 0
   m_cullLightsFromEditorCamera: 0
   m_hideAllValveMaterials: 0
+--- !u!114 &489417925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 489417917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1156c073149742478887bb24456f32d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalGainDb: 0
+  occlusionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  quality: 2
 --- !u!1 &490886520
 GameObject:
   m_ObjectHideFlags: 0
@@ -22871,13 +22888,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee9af5f0769444259c39a59205758b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 0.6
-  intensity: 0.8
-  alpha: 0.45
-  alphasub: 0.05
+  scale: 0.06
+  intensity: 2.64
+  alpha: 0.22
+  alphasub: 0.03
   pow: 1.2
-  color: {r: 1, g: 0.95, b: 0.9, a: 1}
-  fogMaterial: {fileID: 0}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  fogMaterial: {fileID: 2100000, guid: 015ded2f9331e4ffdb975fd20910ea0c, type: 2}
 --- !u!1 &790144345
 GameObject:
   m_ObjectHideFlags: 0
@@ -26765,7 +26782,57 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1286614219469226, guid: 2918b8dd885b1c14c8a06d54d474ad32, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198361082191613904, guid: 2918b8dd885b1c14c8a06d54d474ad32,
+        type: 2}
+      propertyPath: randomSeed
+      value: -539422134
+      objectReference: {fileID: 0}
+    - target: {fileID: 198361082191613904, guid: 2918b8dd885b1c14c8a06d54d474ad32,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.77205884
+      objectReference: {fileID: 0}
+    - target: {fileID: 198361082191613904, guid: 2918b8dd885b1c14c8a06d54d474ad32,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.77205884
+      objectReference: {fileID: 0}
+    - target: {fileID: 198361082191613904, guid: 2918b8dd885b1c14c8a06d54d474ad32,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.77205884
+      objectReference: {fileID: 0}
+    - target: {fileID: 198361082191613904, guid: 2918b8dd885b1c14c8a06d54d474ad32,
+        type: 2}
+      propertyPath: simulationSpeed
+      value: 1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 198361082191613904, guid: 2918b8dd885b1c14c8a06d54d474ad32,
+        type: 2}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198361082191613904, guid: 2918b8dd885b1c14c8a06d54d474ad32,
+        type: 2}
+      propertyPath: scalingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198361082191613904, guid: 2918b8dd885b1c14c8a06d54d474ad32,
+        type: 2}
+      propertyPath: InitialModule.maxNumParticles
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198361082191613904, guid: 2918b8dd885b1c14c8a06d54d474ad32,
+        type: 2}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 198361082191613904, guid: 2918b8dd885b1c14c8a06d54d474ad32,
+        type: 2}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114697903394355546, guid: 2918b8dd885b1c14c8a06d54d474ad32, type: 2}
@@ -34474,6 +34541,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1224230353}
+  - component: {fileID: 1224230354}
   m_Layer: 0
   m_Name: Museum
   m_TagString: Untagged
@@ -34504,6 +34572,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1224230354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224230352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d2722c2401e34d51bf5b473ef7aeefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftWall: 15
+  rightWall: 15
+  floor: 12
+  ceiling: 9
+  backWall: 15
+  frontWall: 15
+  reflectivity: 1
+  reverbGainDb: 0
+  reverbBrightness: 0
+  reverbTime: 1
+  size: {x: 1, y: 1, z: 1}
 --- !u!1 &1225600377
 GameObject:
   m_ObjectHideFlags: 0
@@ -34619,9 +34709,8 @@ GameObject:
   - component: {fileID: 1228571207}
   - component: {fileID: 1228571206}
   - component: {fileID: 1228571205}
-  - component: {fileID: 1228571204}
-  - component: {fileID: 1228571203}
   - component: {fileID: 1228571202}
+  - component: {fileID: 1228571203}
   m_Layer: 5
   m_Name: ButtonToggleMusic
   m_TagString: Untagged
@@ -34671,18 +34760,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1228571200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0c738dd9c7a4f84895f93f0c50281ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1228571204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1228571200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc6068595ae13d641a1fa30e542ab541, type: 3}
+  m_Script: {fileID: 11500000, guid: 99a08ed2350d2f447912b210bd48d2ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1228571205
@@ -34725,6 +34803,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1228571203}
+        m_MethodName: ToggleAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1228571202}
         m_MethodName: Toggle
         m_Mode: 1
@@ -54288,7 +54377,7 @@ GameObject:
   - component: {fileID: 1982253757}
   m_Layer: 0
   m_Name: BigSpeaker (1)
-  m_TagString: Untagged
+  m_TagString: StageAudioSource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

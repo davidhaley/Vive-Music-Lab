@@ -8,8 +8,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Skybox
   m_Shader: {fileID: 4800000, guid: f4fbed94e8c21af41b7c1a3a58fc55bf, type: 3}
-  m_ShaderKeywords: S_RECEIVE_SHADOWS S_SPECULAR_METALLIC
-  m_LightmapFlags: 5
+  m_ShaderKeywords: S_RECEIVE_SHADOWS S_SPECULAR_METALLIC _EMISSION
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_CustomRenderQueue: -1
   stringTagMap:
@@ -92,7 +92,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Exposure: 1
+    - _Exposure: 0.73
     - _FogMultiplier: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5

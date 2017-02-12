@@ -18,6 +18,12 @@ public class ToggleLightShow : MonoBehaviour {
         lightShowLights = GameObject.FindGameObjectsWithTag("LightShow");
         toggleLightMaps = GetComponent<ToggleLightmaps>();
         gameObjects = GameObject.FindGameObjectsWithTag("ToggleMaterialDarkBright");
+
+        foreach (GameObject go in lightShowLights)
+        {
+            go.GetComponent<LightController>().enableScript = false;
+            go.GetComponent<Light>().enabled = false;
+        }
     }
 
     public void ToggleLights()
@@ -31,9 +37,10 @@ public class ToggleLightShow : MonoBehaviour {
                 go.GetComponent<Renderer>().material.color = lightsOffColor;
             }
 
-            foreach (GameObject light in lightShowLights)
+            foreach (GameObject go in lightShowLights)
             {
-                light.SetActive(true);
+                go.GetComponent<LightController>().enableScript = true;
+                go.GetComponent<Light>().enabled = true;
             }
 
             mainLightsEnabled = false;
@@ -48,10 +55,13 @@ public class ToggleLightShow : MonoBehaviour {
             }
 
 
-            foreach (GameObject light in lightShowLights)
+            foreach (GameObject go in lightShowLights)
             {
-                light.SetActive(false);
+                go.GetComponent<LightController>().enableScript = false;
+                go.GetComponent<Light>().enabled = false;
             }
+
+            mainLightsEnabled = true;
         }
     }
 }

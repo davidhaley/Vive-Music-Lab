@@ -27,7 +27,7 @@ public class FadeButton : MonoBehaviour {
     //    return Foo;
     //}
 
-public void fadeOnClick()
+    public void fadeOnClick()
     {
         foregroundImage.CrossFadeColor(Color.black, fadeTime * 1.2f, false, true);
         faded = true;

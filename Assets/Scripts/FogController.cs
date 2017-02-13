@@ -10,7 +10,6 @@ public class FogController : MonoBehaviour {
 	void Awake() {
         fogParticleSystem = gameObject.GetComponentInChildren<ParticleSystem>();
         fogParticleSystem.gameObject.SetActive(false);
-        Debug.Log(fogParticleSystem.gameObject.activeSelf);
         fogEnabled = false;
 	}
 	

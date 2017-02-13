@@ -71,11 +71,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4431312499649036}
   - component: {fileID: 108444244848556386}
-  - component: {fileID: 114919514634009120}
   - component: {fileID: 114989772697010490}
+  - component: {fileID: 114689671874686888}
   m_Layer: 0
   m_Name: Spotlight
-  m_TagString: Untagged
+  m_TagString: LightShow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,11 +206,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4963990752336352}
   - component: {fileID: 108828999080756594}
-  - component: {fileID: 114782290762957614}
   - component: {fileID: 114168991241357246}
+  - component: {fileID: 114759067495105142}
   m_Layer: 0
   m_Name: Spotlight (2)
-  m_TagString: Untagged
+  m_TagString: LightShow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -309,11 +309,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4894756894229580}
   - component: {fileID: 108519309781774838}
-  - component: {fileID: 114263617284790376}
   - component: {fileID: 114995971608942690}
+  - component: {fileID: 114548062067021182}
   m_Layer: 0
   m_Name: Spotlight (1)
-  m_TagString: Untagged
+  m_TagString: LightShow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -378,8 +378,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4098031014343458
 Transform:
   m_ObjectHideFlags: 1
@@ -717,6 +717,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23041035103696386
 MeshRenderer:
@@ -748,6 +749,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23197255788557278
 MeshRenderer:
@@ -779,6 +781,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23220586154848210
 MeshRenderer:
@@ -810,6 +813,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23253465917263068
 MeshRenderer:
@@ -841,6 +845,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23265698889317950
 MeshRenderer:
@@ -872,6 +877,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23343356275448976
 MeshRenderer:
@@ -903,6 +909,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23384115097389740
 MeshRenderer:
@@ -934,6 +941,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23466864330103886
 MeshRenderer:
@@ -965,6 +973,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23514346110372288
 MeshRenderer:
@@ -996,6 +1005,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23616304348041118
 MeshRenderer:
@@ -1027,6 +1037,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23744532672943686
 MeshRenderer:
@@ -1058,6 +1069,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23873993842870672
 MeshRenderer:
@@ -1089,6 +1101,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23903750719875396
 MeshRenderer:
@@ -1120,6 +1133,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23997227352226422
 MeshRenderer:
@@ -1151,6 +1165,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33152958716243074
 MeshFilter:
@@ -1264,7 +1279,7 @@ Light:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1113286341096326}
   m_Enabled: 1
-  serializedVersion: 7
+  serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0.65517235, g: 0, b: 1, a: 1}
   m_Intensity: 4.14
@@ -1289,6 +1304,7 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
+  m_CCT: 6570
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!108 &108519309781774838
@@ -1298,7 +1314,7 @@ Light:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1805868563286728}
   m_Enabled: 1
-  serializedVersion: 7
+  serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 4.14
@@ -1323,6 +1339,7 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
+  m_CCT: 6570
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!108 &108828999080756594
@@ -1332,7 +1349,7 @@ Light:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1423214440215078}
   m_Enabled: 1
-  serializedVersion: 7
+  serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0.65517235, g: 0, b: 1, a: 1}
   m_Intensity: 4.14
@@ -1357,6 +1374,7 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
+  m_CCT: 6570
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!114 &114168991241357246
@@ -1370,6 +1388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4218219f81d431b4ea6afa566b2315f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableScript: 0
   strobeSpeed: 10
   upperIntensityBound: 8
   lowerIntensityBound: 3.46
@@ -1383,7 +1402,7 @@ MonoBehaviour:
   yAngle: 25
   zAngle: 25
   period: 5
---- !u!114 &114263617284790376
+--- !u!114 &114548062067021182
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1394,36 +1413,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0ce3079cdb6a646a75f65cec8e8714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_innerSpotPercent: 100
-  m_shadowResolution: 4096
-  m_shadowNearClipPlane: 8
+  m_innerSpotPercent: 50
+  m_shadowResolution: 1024
+  m_shadowNearClipPlane: 1
   m_shadowCastLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_directionalLightShadowRadius: 100
   m_directionalLightShadowRange: 100
   m_useOcclusionCullingForShadows: 1
---- !u!114 &114782290762957614
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1423214440215078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd0ce3079cdb6a646a75f65cec8e8714, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_innerSpotPercent: 100
-  m_shadowResolution: 4096
-  m_shadowNearClipPlane: 8
-  m_shadowCastLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  m_directionalLightShadowRadius: 100
-  m_directionalLightShadowRange: 100
-  m_useOcclusionCullingForShadows: 1
---- !u!114 &114919514634009120
+--- !u!114 &114689671874686888
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1434,12 +1433,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0ce3079cdb6a646a75f65cec8e8714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_innerSpotPercent: 100
-  m_shadowResolution: 4096
-  m_shadowNearClipPlane: 8
+  m_innerSpotPercent: 50
+  m_shadowResolution: 1024
+  m_shadowNearClipPlane: 1
   m_shadowCastLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
+  m_directionalLightShadowRadius: 100
+  m_directionalLightShadowRange: 100
+  m_useOcclusionCullingForShadows: 1
+--- !u!114 &114759067495105142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1423214440215078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0ce3079cdb6a646a75f65cec8e8714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_innerSpotPercent: 50
+  m_shadowResolution: 1024
+  m_shadowNearClipPlane: 1
+  m_shadowCastLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_directionalLightShadowRadius: 100
   m_directionalLightShadowRange: 100
   m_useOcclusionCullingForShadows: 1
@@ -1454,6 +1473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4218219f81d431b4ea6afa566b2315f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableScript: 0
   strobeSpeed: 10
   upperIntensityBound: 8
   lowerIntensityBound: 3.46
@@ -1478,6 +1498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4218219f81d431b4ea6afa566b2315f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableScript: 0
   strobeSpeed: 10
   upperIntensityBound: 8
   lowerIntensityBound: 3.46

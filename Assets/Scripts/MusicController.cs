@@ -1,30 +1,76 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MusicController : MonoBehaviour {
 
-    private GameObject[] gameObjects;
+    public GameObject booth;
+    public GvrAudioSource[] audioSources;
 
-	// Use this for initialization
-	void Awake () {
-        gameObjects = GameObject.FindGameObjectsWithTag("StageAudioSource");
-    }
-	
-    public void ToggleAudio()
+    private void Awake()
     {
-        foreach(GameObject go in gameObjects)
+        if (audioSources == null)
         {
-            GvrAudioSource audioSource = go.GetComponent<GvrAudioSource>();
+            audioSources = gameObject.GetComponents<GvrAudioSource>();
+        }
+    }
 
-            if (!audioSource.isPlaying)
-            {
-                audioSource.Play();
-            }
-            else if (audioSource.isPlaying)
-            {
-                audioSource.Pause();
-            }
+    public void PlayAudioSource1()
+    {
+        if (!audioSources[0].isPlaying)
+        {
+            audioSources[0].Play();
+        }
+        else if (audioSources[0].isPlaying)
+        {
+            audioSources[0].Stop();
+        }
+    }
+
+    public void PlayAudioSource2()
+    {
+        if (!audioSources[1].isPlaying)
+        {
+            audioSources[1].Play();
+        }
+        else if (audioSources[1].isPlaying)
+        {
+            audioSources[1].Stop();
+        }
+    }
+    public void PlayAudioSource3()
+    {
+        if (!audioSources[2].isPlaying)
+        {
+            audioSources[2].Play();
+        }
+        else if (audioSources[2].isPlaying)
+        {
+            audioSources[2].Stop();
+        }
+    }
+
+    public void PlayAudioSource4()
+    {
+        if (!audioSources[3].isPlaying)
+        {
+            audioSources[3].Play();
+        }
+        else if (audioSources[3].isPlaying)
+        {
+            audioSources[3].Stop();
+        }
+    }
+    public void PlayAudioSource5()
+    {
+        if (!audioSources[4].isPlaying)
+        {
+            audioSources[4].Play();
+        }
+        else if (audioSources[4].isPlaying)
+        {
+            audioSources[4].Stop();
         }
     }
 }

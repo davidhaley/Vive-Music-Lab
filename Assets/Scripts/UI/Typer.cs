@@ -10,6 +10,7 @@ public class Typer : MonoBehaviour
     public GameObject button;
     public Canvas canvas;
     public FadeButton fadeButton;
+    private GvrAudioSource audioSource;
 
     private bool hideCanvas;
 
@@ -28,6 +29,7 @@ public class Typer : MonoBehaviour
     {
         text = GetComponent<Text>();
         canvas = GetComponentInParent<Canvas>();
+        audioSource = GetComponent<GvrAudioSource>();
 
         button.gameObject.SetActive(false);
 
@@ -71,6 +73,8 @@ public class Typer : MonoBehaviour
         foreach (char c in story)
         {
             delayBetweenChars = originDelayBetweenChars;
+
+            audioSource.Play();
 
             if (lastCharPunctuation)  //If previous character was a comma/period, pause typing
             {

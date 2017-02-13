@@ -9,7 +9,7 @@ public class ShowDemoCanvas : MonoBehaviour {
 
     private void Awake()
     {
-        canvas.SetActive(false);
+        canvas.gameObject.SetActive(false);
         visible = false;
     }
 
@@ -17,12 +17,12 @@ public class ShowDemoCanvas : MonoBehaviour {
     {
         if (visible)
         {
-            canvas.SetActive(false);
+            canvas.gameObject.SetActive(false);
             visible = false;
         }
         else if (!visible)
         {
-            canvas.SetActive(true);
+            canvas.gameObject.SetActive(true);
             visible = true;
         }
     }

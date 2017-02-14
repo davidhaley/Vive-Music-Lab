@@ -13592,14 +13592,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 489417917}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -6.076, y: 1.37, z: -4.04}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 2, y: 1.89, z: 7.019}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 675556250}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!20 &489417919
 Camera:
   m_ObjectHideFlags: 0
@@ -37139,50 +37139,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 223623958827605306, guid: a74e193192b11d94091ca03e77f90684,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 489417919}
     - target: {fileID: 223877240012736612, guid: a74e193192b11d94091ca03e77f90684,
         type: 2}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 489417919}
-    - target: {fileID: 114345995553508014, guid: a74e193192b11d94091ca03e77f90684,
+    - target: {fileID: 223623958827605306, guid: a74e193192b11d94091ca03e77f90684,
         type: 2}
-      propertyPath: audioSources.Array.data[0]
+      propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 312682667}
-    - target: {fileID: 114345995553508014, guid: a74e193192b11d94091ca03e77f90684,
-        type: 2}
-      propertyPath: audioSources.Array.data[1]
-      value: 
-      objectReference: {fileID: 1982253757}
-    - target: {fileID: 114345995553508014, guid: a74e193192b11d94091ca03e77f90684,
-        type: 2}
-      propertyPath: audioSources.Array.data[2]
-      value: 
-      objectReference: {fileID: 60284031}
-    - target: {fileID: 114345995553508014, guid: a74e193192b11d94091ca03e77f90684,
-        type: 2}
-      propertyPath: audioSources.Array.data[3]
-      value: 
-      objectReference: {fileID: 116076383}
-    - target: {fileID: 114159211263901912, guid: a74e193192b11d94091ca03e77f90684,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1364873425}
+      objectReference: {fileID: 489417919}
     - target: {fileID: 114823815012054920, guid: a74e193192b11d94091ca03e77f90684,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1553103913}
-    - target: {fileID: 1486816977364598, guid: a74e193192b11d94091ca03e77f90684, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 114159211263901912, guid: a74e193192b11d94091ca03e77f90684,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1364873425}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74e193192b11d94091ca03e77f90684, type: 2}
   m_IsPrefabParent: 0

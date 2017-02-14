@@ -6,71 +6,104 @@ using UnityEngine.UI;
 public class MusicController : MonoBehaviour {
 
     public GameObject booth;
-    public GvrAudioSource[] audioSources;
+    public GvrAudioSource[] gvrAudioSources;
+
+    [Header("Sync With Master Track")]
+    public GvrAudioSource master;
+
+    [Header("Room Effect Canvas")]
+    public Text gvrRoomEffectText;
 
     private void Awake()
     {
-        if (audioSources == null)
+        if (gvrAudioSources == null)
         {
-            audioSources = gameObject.GetComponents<GvrAudioSource>();
+            gvrAudioSources = gameObject.GetComponents<GvrAudioSource>();
         }
     }
 
     public void PlayAudioSource1()
     {
-        if (!audioSources[0].isPlaying)
+        if (!gvrAudioSources[0].isPlaying)
         {
-            audioSources[0].Play();
+            gvrAudioSources[0].timeSamples = master.timeSamples;
+            gvrAudioSources[0].Play();
         }
-        else if (audioSources[0].isPlaying)
+        else if (gvrAudioSources[0].isPlaying)
         {
-            audioSources[0].Stop();
+            gvrAudioSources[0].timeSamples = master.timeSamples;
+            gvrAudioSources[0].Stop();
         }
     }
 
     public void PlayAudioSource2()
     {
-        if (!audioSources[1].isPlaying)
+        if (!gvrAudioSources[1].isPlaying)
         {
-            audioSources[1].Play();
+            gvrAudioSources[1].timeSamples = master.timeSamples;
+            gvrAudioSources[1].Play();
         }
-        else if (audioSources[1].isPlaying)
+        else if (gvrAudioSources[1].isPlaying)
         {
-            audioSources[1].Stop();
+            gvrAudioSources[1].timeSamples = master.timeSamples;
+            gvrAudioSources[1].Stop();
         }
     }
     public void PlayAudioSource3()
     {
-        if (!audioSources[2].isPlaying)
+        if (!gvrAudioSources[2].isPlaying)
         {
-            audioSources[2].Play();
+            gvrAudioSources[2].timeSamples = master.timeSamples;
+            gvrAudioSources[2].Play();
         }
-        else if (audioSources[2].isPlaying)
+        else if (gvrAudioSources[2].isPlaying)
         {
-            audioSources[2].Stop();
+            gvrAudioSources[2].timeSamples = master.timeSamples;
+            gvrAudioSources[2].Stop();
         }
     }
 
     public void PlayAudioSource4()
     {
-        if (!audioSources[3].isPlaying)
+        if (!gvrAudioSources[3].isPlaying)
         {
-            audioSources[3].Play();
+            gvrAudioSources[3].timeSamples = master.timeSamples;
+            gvrAudioSources[3].Play();
         }
-        else if (audioSources[3].isPlaying)
+        else if (gvrAudioSources[3].isPlaying)
         {
-            audioSources[3].Stop();
+            gvrAudioSources[3].timeSamples = master.timeSamples;
+            gvrAudioSources[3].Stop();
         }
     }
     public void PlayAudioSource5()
     {
-        if (!audioSources[4].isPlaying)
+        if (!gvrAudioSources[4].isPlaying)
         {
-            audioSources[4].Play();
+            gvrAudioSources[4].timeSamples = master.timeSamples;
+            gvrAudioSources[4].Play();
         }
-        else if (audioSources[4].isPlaying)
+        else if (gvrAudioSources[4].isPlaying)
         {
-            audioSources[4].Stop();
+            gvrAudioSources[4].timeSamples = master.timeSamples;
+            gvrAudioSources[4].Stop();
+        }
+    }
+
+    public void ToggleGVRRoomEffect()
+    {
+        foreach(GvrAudioSource gvrAudioSource in gvrAudioSources)
+        {
+            if (gvrAudioSource.bypassRoomEffects == false)
+            {
+                gvrAudioSource.bypassRoomEffects = true;
+                gvrRoomEffectText.text = "Enable Room Effect:";
+            }
+            else if (gvrAudioSource.bypassRoomEffects == true)
+            {
+                gvrAudioSource.bypassRoomEffects = false;
+                gvrRoomEffectText.text = "Disable Room Effect:";
+            }
         }
     }
 }

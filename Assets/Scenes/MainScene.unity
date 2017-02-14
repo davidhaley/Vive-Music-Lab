@@ -37060,6 +37060,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1305399316}
   - component: {fileID: 1305399317}
+  - component: {fileID: 1305399318}
   m_Layer: 0
   m_Name: Booth1LiveMusicLightShow
   m_TagString: Untagged
@@ -37100,6 +37101,18 @@ MonoBehaviour:
   - {fileID: 1982253757}
   - {fileID: 60284031}
   - {fileID: 116076383}
+--- !u!114 &1305399318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1305399315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ea93e32207cf047aa1f8d2475a0605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 30447388}
 --- !u!1 &1305492619
 GameObject:
   m_ObjectHideFlags: 0
@@ -49425,7 +49438,6 @@ GameObject:
   - component: {fileID: 1740330772}
   - component: {fileID: 1740330771}
   - component: {fileID: 1740330770}
-  - component: {fileID: 1740330774}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -49519,7 +49531,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1740330774}
+      - m_Target: {fileID: 1305399318}
         m_MethodName: Show
         m_Mode: 1
         m_Arguments:
@@ -49567,18 +49579,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1740330768}
---- !u!114 &1740330774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1740330768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29ea93e32207cf047aa1f8d2475a0605, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 30447388}
 --- !u!1 &1741272597
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShowDemoCanvas : MonoBehaviour {
+public class CanvasController : MonoBehaviour {
 
     public GameObject canvas;
     private bool visible;

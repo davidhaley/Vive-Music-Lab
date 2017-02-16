@@ -14,119 +14,20 @@ public class MusicController : MonoBehaviour {
     [Header("Room Effect Canvas")]
     public Text gvrRoomEffectText;
 
-    private void Awake()
+    public void PlayAudioSource(GvrAudioSource audioSource)
     {
-        if (gvrAudioSources == null)
+        if (master != null)
         {
-            gvrAudioSources = gameObject.GetComponents<GvrAudioSource>();
+            audioSource.timeSamples = master.timeSamples;
         }
-    }
 
-    public void PlayAudioSource1()
-    {
-        if (!gvrAudioSources[0].isPlaying)
+        if (!audioSource.isPlaying)
         {
-            if (master != null)
-            {
-                gvrAudioSources[0].timeSamples = master.timeSamples;
-            }
-
-            gvrAudioSources[0].Play();
+            audioSource.Play();
         }
-        else if (gvrAudioSources[0].isPlaying)
+        else if (audioSource.isPlaying)
         {
-            if (master != null)
-            {
-                gvrAudioSources[0].timeSamples = master.timeSamples;
-            }
-
-            gvrAudioSources[0].Stop();
-        }
-    }
-
-    public void PlayAudioSource2()
-    {
-        if (!gvrAudioSources[1].isPlaying)
-        {
-            if (master != null)
-            {
-                gvrAudioSources[1].timeSamples = master.timeSamples;
-            }
-
-            gvrAudioSources[1].Play();
-        }
-        else if (gvrAudioSources[1].isPlaying)
-        {
-            if (master != null)
-            {
-                gvrAudioSources[1].timeSamples = master.timeSamples;
-            }
-
-            gvrAudioSources[1].Stop();
-        }
-    }
-    public void PlayAudioSource3()
-    {
-        if (!gvrAudioSources[2].isPlaying)
-        {
-            if (master != null)
-            {
-                gvrAudioSources[2].timeSamples = master.timeSamples;
-            }
-
-            gvrAudioSources[2].Play();
-        }
-        else if (gvrAudioSources[2].isPlaying)
-        {
-            if (master != null)
-            {
-                gvrAudioSources[2].timeSamples = master.timeSamples;
-            }
-
-            gvrAudioSources[2].Stop();
-        }
-    }
-
-    public void PlayAudioSource4()
-    {
-        if (!gvrAudioSources[3].isPlaying)
-        {
-            if (master != null)
-            {
-                gvrAudioSources[3].timeSamples = master.timeSamples;
-            }
-
-            gvrAudioSources[3].Play();
-        }
-        else if (gvrAudioSources[3].isPlaying)
-        {
-            if (master != null)
-            {
-                gvrAudioSources[3].timeSamples = master.timeSamples;
-            }
-
-            gvrAudioSources[3].Stop();
-        }
-    }
-    public void PlayAudioSource5()
-    {
-        if (!gvrAudioSources[4].isPlaying)
-        {
-            if (master != null)
-            {
-                gvrAudioSources[4].timeSamples = master.timeSamples;
-            }
-
-            gvrAudioSources[4].Play();
-        }
-        else if (gvrAudioSources[4].isPlaying)
-        {
-            if (master != null)
-            {
-                gvrAudioSources[4].timeSamples = master.timeSamples;
-            }
-
-            gvrAudioSources[4].Stop();
+            audioSource.Stop();
         }
     }
 

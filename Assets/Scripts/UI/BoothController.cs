@@ -4,23 +4,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CanvasController : MonoBehaviour {
+public class BoothController : MonoBehaviour {
 
     public GameObject booth;
-    private CanvasGroup canvasGroup;
-
+    [Space(1)]
+    [Header("VISIBILITY")]
+    [Space(5)]
     public float fadeSpeed = 1f;
-
+    private CanvasGroup canvasGroup;
     private bool visible = false;
 
     private void Awake()
     {
+        //Hide booth on awake
         canvasGroup = booth.GetComponentInChildren<CanvasGroup>();
         canvasGroup.alpha = 0f;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+
+        //gameObject.SetActive(true);
+        FadeBooth();
     }
 
-    public void FadeCanvas()
+    public void FadeBooth()
     {
         StartCoroutine(Fade());
     }

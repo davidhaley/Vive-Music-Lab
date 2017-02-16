@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 223341527232079406}
   - component: {fileID: 114536420553477262}
   - component: {fileID: 114766902334437056}
+  - component: {fileID: 225788780664029594}
   - component: {fileID: 114930225639082214}
   - component: {fileID: 114142418998942556}
   - component: {fileID: 114654273506065902}
@@ -269,6 +270,7 @@ GameObject:
   - component: {fileID: 114707068812298250}
   - component: {fileID: 114127410792040140}
   - component: {fileID: 114746307324336500}
+  - component: {fileID: 114511223578884332}
   m_Layer: 5
   m_Name: Booth2LivePerformance
   m_TagString: Untagged
@@ -477,11 +479,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114746307324336500}
-        m_MethodName: PlayAudioSource1
-        m_Mode: 1
+        m_MethodName: PlayAudioSource
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 114142418998942556}
+          m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -529,11 +531,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114746307324336500}
-        m_MethodName: PlayAudioSource2
-        m_Mode: 1
+        m_MethodName: PlayAudioSource
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 114654273506065902}
+          m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -590,7 +592,7 @@ MonoBehaviour:
   savedUp: {x: -0.0000000040066963, y: 0.98734117, z: -0.15861061}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.020507812, y: 0.07324219}
+  savedTextUV0: {x: 0, y: 0.00390625}
   savedFill: 0
 --- !u!114 &114127410792040140
 MonoBehaviour:
@@ -721,7 +723,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.08203125, y: 0}
+  savedTextUV0: {x: 0.2890625, y: 0.17578125}
   savedFill: 0
 --- !u!114 &114221845497436502
 MonoBehaviour:
@@ -808,7 +810,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.043945312, y: 0}
+  savedTextUV0: {x: 0.328125, y: 0}
   savedFill: 0
 --- !u!114 &114285214030259752
 MonoBehaviour:
@@ -928,7 +930,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.11816406, y: 0.022949219}
+  savedTextUV0: {x: 0, y: 0.1875}
   savedFill: 0
 --- !u!114 &114418443476689636
 MonoBehaviour:
@@ -973,7 +975,7 @@ MonoBehaviour:
   savedUp: {x: 0.000000047572755, y: 0.9169208, z: 0.39906922}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.0078125, y: 0}
+  savedTextUV0: {x: 0.35742188, y: 0.1796875}
   savedFill: 0
 --- !u!114 &114424993884248866
 MonoBehaviour:
@@ -1042,11 +1044,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114746307324336500}
-        m_MethodName: PlayAudioSource3
-        m_Mode: 1
+        m_MethodName: PlayAudioSource
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 114160388053315742}
+          m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1099,6 +1101,19 @@ MonoBehaviour:
   savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
+--- !u!114 &114511223578884332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1745605193749514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ea93e32207cf047aa1f8d2475a0605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  booth: {fileID: 1745605193749514}
+  fadeSpeed: 1
 --- !u!114 &114519133879714860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1280,7 +1295,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.08691406, y: 0.045898438}
+  savedTextUV0: {x: 0.17578125, y: 0}
   savedFill: 0
 --- !u!114 &114654273506065902
 MonoBehaviour:
@@ -1381,11 +1396,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114746307324336500}
-        m_MethodName: PlayAudioSource5
-        m_Mode: 1
+        m_MethodName: PlayAudioSource
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 114707068812298250}
+          m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1615,7 +1630,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.08691406, y: 0.045898438}
+  savedTextUV0: {x: 0.17578125, y: 0}
   savedFill: 0
 --- !u!114 &114874578498125812
 MonoBehaviour:
@@ -1750,11 +1765,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114746307324336500}
-        m_MethodName: PlayAudioSource4
-        m_Mode: 1
+        m_MethodName: PlayAudioSource
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 114832946125252890}
+          m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2305,3 +2320,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &225788780664029594
+CanvasGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1745605193749514}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

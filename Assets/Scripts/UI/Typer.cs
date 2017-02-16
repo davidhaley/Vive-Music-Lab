@@ -17,10 +17,12 @@ public class Typer : MonoBehaviour
     public bool playOnAwake = true;
     public float delayToStart;
     public float delayBetweenChars = 0.125f;
-    public float delayAfterPunctuation = 0.5f;
+    public float delayAfterComma = 0.5f;
+    public float delayAfterPeriod = 0.5f;
 
     private string story;
     private float originDelayBetweenChars;
+    private float delay;
     private bool lastCharPunctuation = false;
     private char charComma;
     private char charPeriod;
@@ -78,13 +80,22 @@ public class Typer : MonoBehaviour
 
             if (lastCharPunctuation)  //If previous character was a comma/period, pause typing
             {
-                yield return new WaitForSeconds(delayBetweenChars = delayAfterPunctuation);
+                yield return new WaitForSeconds(delayBetweenChars = delay);
                 lastCharPunctuation = false;
             }
-         
+
             if (c == charComma || c == charPeriod)
             {
                 lastCharPunctuation = true;
+
+                if (c == charComma)
+                {
+                    delay = delayAfterComma;
+                }
+                else if (c == charPeriod)
+                {
+                    delay = delayAfterPeriod;
+                }
             }
 
             text.text += c;
@@ -92,7 +103,7 @@ public class Typer : MonoBehaviour
         }
 
         //When finished, show the button
-        yield return new WaitForSeconds(delayAfterPunctuation);
+        yield return new WaitForSeconds(delayBetweenChars);
         button.gameObject.SetActive(true);
     }
 }

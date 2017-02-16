@@ -6637,7 +6637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_innerSpotPercent: 50
-  m_shadowResolution: 1024
+  m_shadowResolution: 8192
   m_shadowNearClipPlane: 1
   m_shadowCastLayerMask:
     serializedVersion: 2
@@ -12826,7 +12826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_innerSpotPercent: 50
-  m_shadowResolution: 1024
+  m_shadowResolution: 8192
   m_shadowNearClipPlane: 1
   m_shadowCastLayerMask:
     serializedVersion: 2
@@ -13592,14 +13592,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 489417917}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 2, y: 1.89, z: 7.019}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -5.274, y: 1.4, z: -4.047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 675556250}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!20 &489417919
 Camera:
   m_ObjectHideFlags: 0
@@ -37159,6 +37159,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1364873425}
+    - target: {fileID: 1486816977364598, guid: a74e193192b11d94091ca03e77f90684, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74e193192b11d94091ca03e77f90684, type: 2}
   m_IsPrefabParent: 0
@@ -48865,7 +48869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_innerSpotPercent: 50
-  m_shadowResolution: 1024
+  m_shadowResolution: 8192
   m_shadowNearClipPlane: 1
   m_shadowCastLayerMask:
     serializedVersion: 2

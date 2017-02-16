@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using System;
 
-public class RaycastMovement : MonoBehaviour, IPointerEnterHandler
+public class RaycastMovement : MonoBehaviour
 {
 
 	public GameObject raycastHolder;
@@ -22,12 +22,16 @@ public class RaycastMovement : MonoBehaviour, IPointerEnterHandler
 
         if (EventSystem.current.IsPointerOverGameObject())
         {
-            Debug.Log("over event system object");
+            if (raycastHolder.activeSelf == true || raycastIndicator.activeSelf == true)
+            {
+                raycastHolder.SetActive(false);
+                raycastIndicator.SetActive(false);
+            }
+
             return;
         }
         else
         {
-            Debug.Log("NOT over event system object");
             Vector3 forwardDir = raycastHolder.transform.TransformDirection(Vector3.forward) * 100;
             Debug.DrawRay(raycastHolder.transform.position, forwardDir, Color.blue);
 
@@ -63,9 +67,4 @@ public class RaycastMovement : MonoBehaviour, IPointerEnterHandler
 	public void Teleport(Vector3 location) {
 		Camera.main.transform.position = new Vector3 (location.x, location.y + height, location.z);
 	}
-
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        Debug.Log("entered");
-    }
 }

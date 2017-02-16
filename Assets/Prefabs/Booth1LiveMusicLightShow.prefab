@@ -80,7 +80,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1344325493934100
 GameObject:
   m_ObjectHideFlags: 1
@@ -394,11 +394,11 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114345995553508014}
-        m_MethodName: PlayAudioSource1
-        m_Mode: 1
+        m_MethodName: PlayAudioSource
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 114066930497806788}
+          m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -531,7 +531,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114258672096949428}
-        m_MethodName: fadeOnClick
+        m_MethodName: Fade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -541,16 +541,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114373027658581274}
-        m_MethodName: Show
-        m_Mode: 1
+      - m_Target: {fileID: 1275975906280652}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -928,7 +928,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ea93e32207cf047aa1f8d2475a0605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1275975906280652}
+  booth: {fileID: 1486816977364598}
+  fadeSpeed: 1
 --- !u!114 &114385872108646374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1230,8 +1231,9 @@ MonoBehaviour:
   fadeButton: {fileID: 114258672096949428}
   playOnAwake: 1
   delayToStart: 2
-  delayBetweenChars: 0.02
-  delayAfterPunctuation: 0.5
+  delayBetweenChars: 0.03
+  delayAfterComma: 0.3
+  delayAfterPeriod: 0.8
 --- !u!114 &114961447115052146
 MonoBehaviour:
   m_ObjectHideFlags: 1

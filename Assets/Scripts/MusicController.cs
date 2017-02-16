@@ -8,10 +8,10 @@ public class MusicController : MonoBehaviour {
     public GameObject booth;
     public GvrAudioSource[] gvrAudioSources;
 
-    [Header("Sync With Master Track")]
+    [Header("Sync With Master Track (Optional)")]
     public GvrAudioSource master;
 
-    [Header("Room Effect Canvas")]
+    [Header("Room Effect Canvas (Optional)")]
     public Text gvrRoomEffectText;
 
     public void PlayAudioSource(GvrAudioSource audioSource)

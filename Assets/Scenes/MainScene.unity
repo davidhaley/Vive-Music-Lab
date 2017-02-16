@@ -37161,7 +37161,12 @@ Prefab:
       objectReference: {fileID: 1364873425}
     - target: {fileID: 1486816977364598, guid: a74e193192b11d94091ca03e77f90684, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114094326983213728, guid: a74e193192b11d94091ca03e77f90684,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Fade
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74e193192b11d94091ca03e77f90684, type: 2}
@@ -37312,6 +37317,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1403844123}
   m_Mesh: {fileID: 4300342, guid: 9292f6cda134ab14cada85106964493e, type: 3}
+--- !u!1 &1404017958 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1745605193749514, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+    type: 2}
+  m_PrefabInternal: {fileID: 1812747819}
+--- !u!225 &1404017970
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1404017958}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1404017971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1404017958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ea93e32207cf047aa1f8d2475a0605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  booth: {fileID: 1404017958}
+  fadeSpeed: 1
 --- !u!1 &1405065341
 GameObject:
   m_ObjectHideFlags: 0
@@ -48984,6 +49018,81 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 489417919}
+    - target: {fileID: 114423755346951190, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.33007812
+      objectReference: {fileID: 0}
+    - target: {fileID: 114423755346951190, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.5644531
+      objectReference: {fileID: 0}
+    - target: {fileID: 114626741344506780, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.83984375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114626741344506780, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114389416448664820, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.83984375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114389416448664820, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.17578125
+      objectReference: {fileID: 0}
+    - target: {fileID: 114846081690118542, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.83984375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114846081690118542, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114189940865305778, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.328125
+      objectReference: {fileID: 0}
+    - target: {fileID: 114189940865305778, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114126609834640986, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114126609834640986, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.00390625
+      objectReference: {fileID: 0}
+    - target: {fileID: 114260711385100332, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.17578125
+      objectReference: {fileID: 0}
+    - target: {fileID: 114243862970231358, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114043598276794074, guid: 8f0ee704d83ce2848b42f4bb6b600659,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f0ee704d83ce2848b42f4bb6b600659, type: 2}
   m_IsPrefabParent: 0

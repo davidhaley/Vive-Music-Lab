@@ -19,15 +19,7 @@ public class FadeButton : MonoBehaviour {
         }
     }
 
-    //public delegate void MyCallback(object sender, string MyArg);
-
-    //public string DoSomeWork(string Foo, MyCallback mcb)
-    //{
-    //    mcb(this, Foo);
-    //    return Foo;
-    //}
-
-    public void fadeOnClick()
+    public void Fade()
     {
         foregroundImage.CrossFadeColor(Color.black, fadeTime * 1.2f, false, true);
         faded = true;

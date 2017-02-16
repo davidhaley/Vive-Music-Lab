@@ -1,29 +1,54 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CanvasController : MonoBehaviour {
 
-    public GameObject canvas;
-    private bool visible;
+    public GameObject booth;
+    private CanvasGroup canvasGroup;
+
+    public float fadeSpeed = 1f;
+
+    private bool visible = false;
 
     private void Awake()
     {
-        canvas.gameObject.SetActive(false);
-        visible = false;
+        canvasGroup = booth.GetComponentInChildren<CanvasGroup>();
+        canvasGroup.alpha = 0f;
+        gameObject.SetActive(false);
     }
 
-    public void Show()
+    public void FadeCanvas()
     {
-        if (visible)
+        StartCoroutine(Fade());
+    }
+
+    IEnumerator Fade()
+    {
+        if (!visible)
         {
-            canvas.gameObject.SetActive(false);
-            visible = false;
-        }
-        else if (!visible)
-        {
-            canvas.gameObject.SetActive(true);
+            gameObject.SetActive(true);
+
+            while (canvasGroup.alpha < 1)
+            {
+                canvasGroup.alpha += Time.deltaTime / fadeSpeed;
+                yield return null;
+            }
+
             visible = true;
+        }
+        else if (visible)
+        {
+            while (canvasGroup.alpha > 0)
+            {
+                canvasGroup.alpha -= Time.deltaTime / fadeSpeed;
+                yield return null;
+            }
+
+            visible = false;
+            gameObject.SetActive(false);
         }
     }
 }

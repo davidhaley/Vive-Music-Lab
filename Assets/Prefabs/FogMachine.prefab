@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4287330354813208}
-  - component: {fileID: 114862628516964904}
+  - component: {fileID: 114392232453828250}
   m_Layer: 0
   m_Name: FogMachine
   m_TagString: Untagged
@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 198361082191613904}
   - component: {fileID: 199347323933355686}
   - component: {fileID: 114161814311619324}
+  - component: {fileID: 114043752670183042}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -72,6 +73,24 @@ Transform:
   m_Father: {fileID: 4287330354813208}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 61.4, y: 180, z: 0}
+--- !u!114 &114043752670183042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1286614219469226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ee9af5f0769444259c39a59205758b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scale: 0.06
+  intensity: 0.19
+  alpha: 0.22
+  alphasub: 0.03
+  pow: 1.2
+  color: {r: 1, g: 1, b: 1, a: 1}
+  fogMaterial: {fileID: 2100000, guid: 015ded2f9331e4ffdb975fd20910ea0c, type: 2}
 --- !u!114 &114161814311619324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,7 +109,7 @@ MonoBehaviour:
   pow: 1.2
   color: {r: 1, g: 1, b: 1, a: 1}
   fogMaterial: {fileID: 2100000, guid: 015ded2f9331e4ffdb975fd20910ea0c, type: 2}
---- !u!114 &114862628516964904
+--- !u!114 &114392232453828250
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -156,7 +175,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 664575089
+  randomSeed: -539422134
   InitialModule:
     serializedVersion: 3
     enabled: 1

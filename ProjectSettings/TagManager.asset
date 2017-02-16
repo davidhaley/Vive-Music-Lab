@@ -9,6 +9,7 @@ TagManager:
   - ToggleMaterialDarkBright
   - StageAudioSource
   - FogMachine
+  - MovementCapable
   layers:
   - Default
   - TransparentFX

@@ -20,7 +20,7 @@ public class LightController : MonoBehaviour {
 
     [Header("Color Randomizer (Optional Mode)")]
     public bool colorRandomizer;
-    public float changeColorInSeconds;
+    //public float changeColorInSeconds;
 
     [Header("Rotation")]
     public bool rotate;
@@ -71,11 +71,13 @@ void Update () {
 
             if (colorRandomizer && switchColorReady)
             {
-                StartCoroutine(SwitchColor(changeColorInSeconds));
+                StartCoroutine(SwitchColor(ChangeColorInSeconds));
                 coRoutinesStopped = false;
             }
         }
     }
+
+    public float ChangeColorInSeconds { get; set; }
 
     private void RotateLight()
     {

@@ -19,9 +19,7 @@ public class BoothController : MonoBehaviour {
         //Hide booth on awake
         canvasGroup = booth.GetComponentInChildren<CanvasGroup>();
         canvasGroup.alpha = 0f;
-        //gameObject.SetActive(false);
 
-        //gameObject.SetActive(true);
         FadeBooth();
     }
 

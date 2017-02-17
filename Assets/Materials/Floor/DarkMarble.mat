@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: DarkMarble
-  m_Shader: {fileID: 4800000, guid: 908b379d4818cd64184b95a21123d909, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: S_RECEIVE_SHADOWS S_SPECULAR_METALLIC _METALLICGLOSSMAP _NORMALMAP
     _SPECGLOSSMAP
   m_LightmapFlags: 5
@@ -37,11 +37,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 40, y: 40}
+        m_Scale: {x: 35, y: 25}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: efe9b7efbbf110141bd385f31724bdb9, type: 3}
-        m_Scale: {x: 40, y: 40}
+        m_Scale: {x: 35, y: 25}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 2800000, guid: ef94634642982354aa85f425c97e3172, type: 3}

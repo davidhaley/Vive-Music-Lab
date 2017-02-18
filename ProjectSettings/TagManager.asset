@@ -10,6 +10,11 @@ TagManager:
   - StageAudioSource
   - FogMachine
   - MovementCapable
+  - Kick
+  - Snare
+  - Hat
+  - Bass
+  - Arp
   layers:
   - Default
   - TransparentFX

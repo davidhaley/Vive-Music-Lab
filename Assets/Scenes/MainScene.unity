@@ -175,8 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27dd0f27730a7e0459022fc52889033c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foregroundImage: {fileID: 995699711}
-  toggleColor: {r: 0.71323526, g: 0.71323526, b: 0.71323526, a: 1}
   fadeTime: 1
 --- !u!114 &13895687
 MonoBehaviour:
@@ -506,8 +504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27dd0f27730a7e0459022fc52889033c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foregroundImage: {fileID: 53592428}
-  toggleColor: {r: 0.7411765, g: 1, b: 0.2509804, a: 1}
   fadeTime: 0.1
 --- !u!114 &53592426
 MonoBehaviour:
@@ -718,7 +714,7 @@ GameObject:
   - component: {fileID: 117842829}
   m_Layer: 5
   m_Name: Arp
-  m_TagString: Untagged
+  m_TagString: Arp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -806,7 +802,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
@@ -1332,7 +1328,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.11159169, g: 0.2930199, b: 0.35294116, a: 1}
     m_HighlightedColor: {r: 0.4121432, g: 0.71185505, b: 0.8897059, a: 1}
@@ -1354,11 +1350,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640026}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1993,7 +1989,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.022058845, g: 0.15020275, b: 0.422, a: 1}
     m_HighlightedColor: {r: 0.33326122, g: 0.44093475, b: 0.6764706, a: 1}
@@ -2015,11 +2011,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640025}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2254,7 +2250,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.53676474, g: 0.22102076, b: 0.22102076, a: 1}
     m_HighlightedColor: {r: 1, g: 0.49264705, b: 0.49264705, a: 1}
@@ -2276,7 +2272,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
@@ -2450,15 +2446,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 489417917}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 3.484, y: 2.505, z: 8.554}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 10.615, y: 1.336, z: -3.778}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 675556250}
   - {fileID: 326878793}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!20 &489417919
 Camera:
   m_ObjectHideFlags: 0
@@ -2620,8 +2616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27dd0f27730a7e0459022fc52889033c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foregroundImage: {fileID: 491077675}
-  toggleColor: {r: 0.7411765, g: 1, b: 0.2509804, a: 1}
   fadeTime: 0.1
 --- !u!114 &491077674
 MonoBehaviour:
@@ -2692,7 +2686,7 @@ GameObject:
   - component: {fileID: 507071528}
   m_Layer: 5
   m_Name: Bass
-  m_TagString: Untagged
+  m_TagString: Bass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2780,11 +2774,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640025}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2910,7 +2904,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.11159169, g: 0.2930199, b: 0.35294116, a: 1}
     m_HighlightedColor: {r: 0.4121432, g: 0.71185505, b: 0.8897059, a: 1}
@@ -2932,11 +2926,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640026}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3211,7 +3205,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.11159169, g: 0.2930199, b: 0.35294116, a: 1}
     m_HighlightedColor: {r: 0.4121432, g: 0.71185505, b: 0.8897059, a: 1}
@@ -3233,11 +3227,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640026}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3331,8 +3325,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27dd0f27730a7e0459022fc52889033c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foregroundImage: {fileID: 572031143}
-  toggleColor: {r: 0.7411765, g: 1, b: 0.2509804, a: 1}
   fadeTime: 0.1
 --- !u!114 &572031142
 MonoBehaviour:
@@ -3435,11 +3427,6 @@ GameObject:
   - component: {fileID: 624640031}
   - component: {fileID: 624640030}
   - component: {fileID: 624640029}
-  - component: {fileID: 624640027}
-  - component: {fileID: 624640026}
-  - component: {fileID: 624640025}
-  - component: {fileID: 624640023}
-  - component: {fileID: 624640022}
   - component: {fileID: 624640028}
   - component: {fileID: 624640021}
   m_Layer: 5
@@ -3486,159 +3473,8 @@ MonoBehaviour:
   kick: {fileID: 1385572619}
   snare: {fileID: 1508235968}
   hat: {fileID: 1929600184}
---- !u!114 &624640022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114546497987693506, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 624640019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99a08ed2350d2f447912b210bd48d2ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  booth: {fileID: 624640019}
-  gvrAudioSources:
-  - {fileID: 624640027}
-  - {fileID: 624640026}
-  - {fileID: 624640025}
-  - {fileID: 0}
-  - {fileID: 0}
-  master: {fileID: 0}
-  gvrRoomEffectText: {fileID: 0}
---- !u!114 &624640023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114907349034625914, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 624640019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bypassRoomEffects: 1
-  directivityAlpha: 0
-  directivitySharpness: 1
-  listenerDirectivityAlpha: 0
-  listenerDirectivitySharpness: 1
-  gainDb: 0
-  occlusionEnabled: 0
-  playOnAwake: 1
-  sourceClip: {fileID: 8300000, guid: 9133906a87a890c49bf2e0bdc92b468f, type: 3}
-  sourceLoop: 1
-  sourceMute: 1
-  sourcePitch: 1
-  sourcePriority: 128
-  sourceDopplerLevel: 1
-  sourceSpread: 0
-  sourceVolume: 1
-  sourceRolloffMode: 0
-  sourceMaxDistance: 500
-  sourceMinDistance: 1
-  hrtfEnabled: 1
-  audioSource: {fileID: 0}
---- !u!114 &624640025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114512402051218134, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 624640019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bypassRoomEffects: 1
-  directivityAlpha: 0
-  directivitySharpness: 1
-  listenerDirectivityAlpha: 0
-  listenerDirectivitySharpness: 1
-  gainDb: 0
-  occlusionEnabled: 0
-  playOnAwake: 0
-  sourceClip: {fileID: 8300000, guid: da5393a202420b341ad030bc2154cd8d, type: 3}
-  sourceLoop: 0
-  sourceMute: 0
-  sourcePitch: 1
-  sourcePriority: 128
-  sourceDopplerLevel: 1
-  sourceSpread: 0
-  sourceVolume: 1
-  sourceRolloffMode: 0
-  sourceMaxDistance: 500
-  sourceMinDistance: 1
-  hrtfEnabled: 1
-  audioSource: {fileID: 0}
---- !u!114 &624640026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114835795748329334, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 624640019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bypassRoomEffects: 1
-  directivityAlpha: 0
-  directivitySharpness: 1
-  listenerDirectivityAlpha: 0
-  listenerDirectivitySharpness: 1
-  gainDb: 0
-  occlusionEnabled: 0
-  playOnAwake: 0
-  sourceClip: {fileID: 8300000, guid: 4fb06dc67bd5f0f43962294af21d2313, type: 3}
-  sourceLoop: 0
-  sourceMute: 0
-  sourcePitch: 1
-  sourcePriority: 128
-  sourceDopplerLevel: 1
-  sourceSpread: 0
-  sourceVolume: 1
-  sourceRolloffMode: 0
-  sourceMaxDistance: 500
-  sourceMinDistance: 1
-  hrtfEnabled: 1
-  audioSource: {fileID: 0}
---- !u!114 &624640027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114416228637132888, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 624640019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bypassRoomEffects: 1
-  directivityAlpha: 0
-  directivitySharpness: 1
-  listenerDirectivityAlpha: 0
-  listenerDirectivitySharpness: 1
-  gainDb: 0
-  occlusionEnabled: 0
-  playOnAwake: 0
-  sourceClip: {fileID: 8300000, guid: 29ab04fb7d248b449a7a3d15d67a913a, type: 3}
-  sourceLoop: 0
-  sourceMute: 0
-  sourcePitch: 1
-  sourcePriority: 128
-  sourceDopplerLevel: 1
-  sourceSpread: 0
-  sourceVolume: 1
-  sourceRolloffMode: 0
-  sourceMaxDistance: 500
-  sourceMinDistance: 1
-  hrtfEnabled: 1
-  audioSource: {fileID: 0}
+  bass: {fileID: 507071526}
+  arp: {fileID: 117842827}
 --- !u!114 &624640028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3845,8 +3681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27dd0f27730a7e0459022fc52889033c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foregroundImage: {fileID: 658774397}
-  toggleColor: {r: 0.7411765, g: 1, b: 0.2509804, a: 1}
   fadeTime: 0.1
 --- !u!114 &658774396
 MonoBehaviour:
@@ -4114,8 +3948,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27dd0f27730a7e0459022fc52889033c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foregroundImage: {fileID: 1319202405}
-  toggleColor: {r: 1, g: 0, b: 0, a: 1}
   fadeTime: 1
 --- !u!114 &693035580
 MonoBehaviour:
@@ -4292,7 +4124,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.11159169, g: 0.2930199, b: 0.35294116, a: 1}
     m_HighlightedColor: {r: 0.4121432, g: 0.71185505, b: 0.8897059, a: 1}
@@ -4314,11 +4146,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640026}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -4438,7 +4270,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.19117647, g: 0.17008115, b: 0, a: 1}
     m_HighlightedColor: {r: 0.5735294, g: 0.5435792, b: 0.328936, a: 1}
@@ -4460,11 +4292,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640025}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -4704,7 +4536,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: ToggleGVRRoomEffect
         m_Mode: 1
         m_Arguments:
@@ -5024,7 +4856,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.19117647, g: 0.17008115, b: 0, a: 1}
     m_HighlightedColor: {r: 0.5735294, g: 0.5435792, b: 0.328936, a: 1}
@@ -5046,11 +4878,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640025}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5749,7 +5581,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.53676474, g: 0.22102076, b: 0.22102076, a: 1}
     m_HighlightedColor: {r: 1, g: 0.49264705, b: 0.49264705, a: 1}
@@ -5771,7 +5603,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
@@ -5928,8 +5760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27dd0f27730a7e0459022fc52889033c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foregroundImage: {fileID: 1631605314}
-  toggleColor: {r: 0.654902, g: 0, b: 1, a: 1}
   fadeTime: 1
 --- !u!114 &988815728
 MonoBehaviour:
@@ -6398,7 +6228,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.10380621, g: 0.4705882, b: 0.44023383, a: 1}
     m_HighlightedColor: {r: 0.38426197, g: 0.5588235, b: 0.37802768, a: 1}
@@ -6420,11 +6250,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640027}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -6544,7 +6374,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.19117647, g: 0.17008115, b: 0, a: 1}
     m_HighlightedColor: {r: 0.5735294, g: 0.5435792, b: 0.328936, a: 1}
@@ -6566,11 +6396,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640025}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -6849,7 +6679,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.19117647, g: 0.17008115, b: 0, a: 1}
     m_HighlightedColor: {r: 0.5735294, g: 0.5435792, b: 0.328936, a: 1}
@@ -6871,11 +6701,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640025}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -6969,8 +6799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27dd0f27730a7e0459022fc52889033c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foregroundImage: {fileID: 1290722073}
-  toggleColor: {r: 0.7411765, g: 1, b: 0.2509804, a: 1}
   fadeTime: 0.1
 --- !u!114 &1290722072
 MonoBehaviour:
@@ -7102,7 +6930,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.10380621, g: 0.4705882, b: 0.44023383, a: 1}
     m_HighlightedColor: {r: 0.38426197, g: 0.5588235, b: 0.37802768, a: 1}
@@ -7124,11 +6952,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640027}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -7248,7 +7076,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.53676474, g: 0.22102076, b: 0.22102076, a: 1}
     m_HighlightedColor: {r: 1, g: 0.49264705, b: 0.49264705, a: 1}
@@ -7270,7 +7098,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
@@ -7642,7 +7470,7 @@ GameObject:
   - component: {fileID: 1385572621}
   m_Layer: 5
   m_Name: Kick
-  m_TagString: Untagged
+  m_TagString: Kick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7731,11 +7559,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640027}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -8337,7 +8165,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.10380621, g: 0.4705882, b: 0.44023383, a: 1}
     m_HighlightedColor: {r: 0.38426197, g: 0.5588235, b: 0.37802768, a: 1}
@@ -8359,11 +8187,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640027}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -8522,7 +8350,7 @@ GameObject:
   - component: {fileID: 1508235970}
   m_Layer: 5
   m_Name: Snare
-  m_TagString: Untagged
+  m_TagString: Snare
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8610,11 +8438,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640026}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -9524,7 +9352,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.53676474, g: 0.22102076, b: 0.22102076, a: 1}
     m_HighlightedColor: {r: 1, g: 0.49264705, b: 0.49264705, a: 1}
@@ -9546,7 +9374,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
@@ -9670,7 +9498,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.10380621, g: 0.4705882, b: 0.44023383, a: 1}
     m_HighlightedColor: {r: 0.38426197, g: 0.5588235, b: 0.37802768, a: 1}
@@ -9692,11 +9520,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640027}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -10709,7 +10537,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.022058845, g: 0.15020275, b: 0.422, a: 1}
     m_HighlightedColor: {r: 0.33326122, g: 0.44093475, b: 0.6764706, a: 1}
@@ -10731,11 +10559,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640025}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -10855,7 +10683,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.022058845, g: 0.15020275, b: 0.422, a: 1}
     m_HighlightedColor: {r: 0.33326122, g: 0.44093475, b: 0.6764706, a: 1}
@@ -10877,11 +10705,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640025}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -11123,7 +10951,7 @@ GameObject:
   - component: {fileID: 1929600186}
   m_Layer: 5
   m_Name: Hat
-  m_TagString: Untagged
+  m_TagString: Hat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11211,7 +11039,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
@@ -11587,7 +11415,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.022058845, g: 0.15020275, b: 0.422, a: 1}
     m_HighlightedColor: {r: 0.33326122, g: 0.44093475, b: 0.6764706, a: 1}
@@ -11609,11 +11437,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624640022}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAudioSource
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 624640025}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -11724,8 +11552,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27dd0f27730a7e0459022fc52889033c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foregroundImage: {fileID: 1530536496}
-  toggleColor: {r: 0.654902, g: 0, b: 1, a: 1}
   fadeTime: 1
 --- !u!114 &2072948062
 MonoBehaviour:

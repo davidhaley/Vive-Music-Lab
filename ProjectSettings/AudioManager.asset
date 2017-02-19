@@ -13,4 +13,4 @@ AudioManager:
   m_RealVoiceCount: 32
   m_SpatializerPlugin: GVR Audio Spatializer
   m_DisableAudio: 0
-  m_VirtualizeEffects: 0
+  m_VirtualizeEffects: 1

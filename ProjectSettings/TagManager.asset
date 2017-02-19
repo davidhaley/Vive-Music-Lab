@@ -15,6 +15,7 @@ TagManager:
   - Hat
   - Bass
   - Arp
+  - SequencerCanvas
   layers:
   - Default
   - TransparentFX

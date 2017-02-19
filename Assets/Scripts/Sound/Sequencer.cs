@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(SequencerButton))]
 public class Sequencer : MonoBehaviour
 {
     public GameObject kick;
@@ -25,8 +26,6 @@ public class Sequencer : MonoBehaviour
     private GvrAudioSource bassAudio;
     private GvrAudioSource pianoPadAudio;
 
-    //private GvrAudioSource masterSyncAudio;
-
     public float bpm = 120f;
     public int numBeatsPerSegment = 1;
     private double nextEventTime;
@@ -38,13 +37,16 @@ public class Sequencer : MonoBehaviour
     {
         GetAllButtons();
         AddEventListeners();
-        //LoadMasterSyncAudio();
-
         LoadAudioSource(kick);
         LoadAudioSource(snare);
         LoadAudioSource(hat);
         LoadAudioSource(bass);
         LoadAudioSource(pianoPad);
+    }
+
+    private void OnDisable()
+    {
+        running = false;
     }
 
     private void Start()
@@ -273,21 +275,11 @@ public class Sequencer : MonoBehaviour
         }
     }
 
-    //void LoadMasterSyncAudio()
-    //{
-    //    masterSyncAudio = GameObject.FindGameObjectWithTag("SequencerCanvas").AddComponent<GvrAudioSource>();
-    //    masterSyncAudio.clip = Resources.Load<AudioClip>("Sounds/Booth2LivePerformance/Drums");
-    //    masterSyncAudio.mute = true;
-    //    masterSyncAudio.loop = true;
-    //    masterSyncAudio.playOnAwake = true;
-    //}
-
     void LoadAudioSource(GameObject go)
     {
         GvrAudioSource gvrAudioSource = go.AddComponent<GvrAudioSource>();
         gvrAudioSource.loop = false;
         gvrAudioSource.playOnAwake = false;
-        //gvrAudioSource.timeSamples = masterSyncAudio.timeSamples;
     }
 
     void LoadAudioClips()
@@ -402,20 +394,12 @@ public class Sequencer : MonoBehaviour
     private void RemoveFromQueue(Button button)
     {
         button.GetComponent<SequencerButton>().Ready = true;
-        Debug.Log("removed from queue: " + button);
     }
 
     private void QueueForPlay(Button button)
     {
-        Debug.Log(Array.IndexOf(kicks, button));
         button.GetComponent<SequencerButton>().Ready = false;
         running = true;
-        Debug.Log("queued for play: " + button);
-    }
-
-    public void Running()
-    {
-        
     }
 }
 

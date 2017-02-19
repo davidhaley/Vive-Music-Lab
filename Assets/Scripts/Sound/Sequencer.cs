@@ -11,19 +11,19 @@ public class Sequencer : MonoBehaviour
     public GameObject snare;
     public GameObject hat;
     public GameObject bass;
-    public GameObject arp;
+    public GameObject pianoPad;
 
     private Button[] kicks;
     private Button[] snares;
     private Button[] hats;
     private Button[] basses;
-    private Button[] arps;
+    private Button[] pianoPads;
 
     private GvrAudioSource kickAudio;
     private GvrAudioSource snareAudio;
     private GvrAudioSource hatAudio;
     private GvrAudioSource bassAudio;
-    private GvrAudioSource arpAudio;
+    private GvrAudioSource pianoPadAudio;
 
     //private GvrAudioSource masterSyncAudio;
 
@@ -33,26 +33,24 @@ public class Sequencer : MonoBehaviour
     private bool running = false;
     private int columnCounter = 0;
     private int beatColumn;
-    private bool col1NotPlayed = true;
-    private bool col2NotPlayed;
-    private bool col3NotPlayed;
-    private bool col4NotPlayed;
 
     private void Awake()
     {
         GetAllButtons();
         AddEventListeners();
         //LoadMasterSyncAudio();
+
         LoadAudioSource(kick);
         LoadAudioSource(snare);
         LoadAudioSource(hat);
+        LoadAudioSource(bass);
+        LoadAudioSource(pianoPad);
     }
 
     private void Start()
     {
         LoadAudioClips();
         nextEventTime = AudioSettings.dspTime;
-        beatColumn = columnCounter + 1;
     }
 
     private void Update()
@@ -114,6 +112,18 @@ public class Sequencer : MonoBehaviour
                 hatAudio.Play();
                 yield return null;
             }
+
+            if (Queued(basses, column))
+            {
+                bassAudio.Play();
+                yield return null;
+            }
+
+            if (Queued(pianoPads, column))
+            {
+                pianoPadAudio.Play();
+                yield return null;
+            }
         }
         else if (column == 1)
         {
@@ -132,6 +142,18 @@ public class Sequencer : MonoBehaviour
             if (Queued(hats, column))
             {
                 hatAudio.Play();
+                yield return null;
+            }
+
+            if (Queued(basses, column))
+            {
+                bassAudio.Play();
+                yield return null;
+            }
+
+            if (Queued(pianoPads, column))
+            {
+                pianoPadAudio.Play();
                 yield return null;
             }
         }
@@ -154,6 +176,18 @@ public class Sequencer : MonoBehaviour
                 hatAudio.Play();
                 yield return null;
             }
+
+            if (Queued(basses, column))
+            {
+                bassAudio.Play();
+                yield return null;
+            }
+
+            if (Queued(pianoPads, column))
+            {
+                pianoPadAudio.Play();
+                yield return null;
+            }
         }
         else if (column == 3)
         {
@@ -172,6 +206,18 @@ public class Sequencer : MonoBehaviour
             if (Queued(hats, column))
             {
                 hatAudio.Play();
+                yield return null;
+            }
+
+            if (Queued(basses, column))
+            {
+                bassAudio.Play();
+                yield return null;
+            }
+
+            if (Queued(pianoPads, column))
+            {
+                pianoPadAudio.Play();
                 yield return null;
             }
         }
@@ -219,11 +265,11 @@ public class Sequencer : MonoBehaviour
             bass.onClick.AddListener(() => { OnClickBass(bass); });
         }
 
-        foreach (Button arp in arps)
+        foreach (Button pianoPad in pianoPads)
         {
-            arp.gameObject.AddComponent<SequencerButton>();
-            arp.gameObject.AddComponent<ButtonImageColor>();
-            arp.onClick.AddListener(() => { OnClickArp(arp); });
+            pianoPad.gameObject.AddComponent<SequencerButton>();
+            pianoPad.gameObject.AddComponent<ButtonImageColor>();
+            pianoPad.onClick.AddListener(() => { OnClickPianoPad(pianoPad); });
         }
     }
 
@@ -254,6 +300,12 @@ public class Sequencer : MonoBehaviour
 
         hatAudio = hat.GetComponent<GvrAudioSource>();
         hatAudio.clip = Resources.Load<AudioClip>("Sounds/Booth3Sequencer/Hat");
+
+        bassAudio = bass.GetComponent<GvrAudioSource>();
+        bassAudio.clip = Resources.Load<AudioClip>("Sounds/Booth3Sequencer/Bass");
+
+        pianoPadAudio = pianoPad.GetComponent<GvrAudioSource>();
+        pianoPadAudio.clip = Resources.Load<AudioClip>("Sounds/Booth3Sequencer/PianoPad");
     }
 
     void OnClickKick(Button kick)
@@ -312,17 +364,17 @@ public class Sequencer : MonoBehaviour
         }
     }
 
-    void OnClickArp(Button arp)
+    void OnClickPianoPad(Button pianoPad)
     {
-        if (IsReady(arp))
+        if (IsReady(pianoPad))
         {
-            QueueForPlay(arp);
-            ChangeColor(arp);
+            QueueForPlay(pianoPad);
+            ChangeColor(pianoPad);
         }
-        else if (!IsReady(arp))
+        else if (!IsReady(pianoPad))
         {
-            RemoveFromQueue(arp);
-            ChangeColor(arp);
+            RemoveFromQueue(pianoPad);
+            ChangeColor(pianoPad);
         }
     }
 
@@ -339,7 +391,7 @@ public class Sequencer : MonoBehaviour
         snares = snare.GetComponentsInChildren<Button>();
         hats = hat.GetComponentsInChildren<Button>();
         basses = bass.GetComponentsInChildren<Button>();
-        arps = arp.GetComponentsInChildren<Button>();
+        pianoPads = pianoPad.GetComponentsInChildren<Button>();
     }
 
     bool IsReady(Button button)

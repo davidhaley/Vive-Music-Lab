@@ -36,7 +36,7 @@ public class InstantiateParametricCubes : MonoBehaviour {
         {
             if (parametricCubes != null)
             {
-                parametricCubes[i].transform.localScale = new Vector3(scale, ((audioVisualizer.samples[i] * sensitivity) + startSize), scale);
+                parametricCubes[i].transform.localScale = new Vector3(scale, ((audioVisualizer.samplesLeft[i] * sensitivity) + startSize), scale);
             }
         }
     }

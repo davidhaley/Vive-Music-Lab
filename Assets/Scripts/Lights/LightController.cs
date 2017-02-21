@@ -1,28 +1,57 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class LightController : MonoBehaviour {
 
-    [Header("Enable Script")]
+    //This becomes enabled when the canvas button is selected
+    [HideInInspector]
     public bool enableScript = false;
 
-    [Header("Strobe (Default Mode)")]
+    [Header("MODES")]
+    [Space(5)]
+
+    [Header("Strobe")]
+    [Space(3)]
+    public bool strobe;
     public float strobeSpeed = 10f;
     [Range(3f,8f)] public float upperIntensityBound;
     [Range(0f, 8f)] public float lowerIntensityBound;
+    [Space(5)]
 
-    [Header("Light Switch (Optional Mode)")]
+    [Header("Light Switch")]
+    [Space(3)]
     public bool lightSwitch;
     [Range(0f, 1f)]
     public float onOffSpeed;
+    [Space(5)]
 
-    [Header("Color Randomizer (Optional Mode)")]
+    [Header("Light Audio Visualizer")]
+    [Space(3)]
+    public AudioVisualizer audioVisualizer;
+    public bool lightAudioVisualizer;
+    [Range(0, 7)]
+    public int band;
+    [Range(0f, 8f)]
+    public float minIntensity = 0f;
+    [Range(0f, 8f)]
+    public float maxIntensity = 8f;
+    [Space(5)]
+
+
+    [Header("OPTIONS")]
+    [Space(5)]
+
+    [Header("Color Randomizer")]
+    [Space(3)]
     public bool colorRandomizer;
-    //public float changeColorInSeconds;
+    public float changeColorInSeconds;
+    [Space(5)]
 
     [Header("Rotation")]
+    [Space(3)]
     public bool rotate;
     public float rotationSpeed;
 
@@ -44,6 +73,13 @@ public class LightController : MonoBehaviour {
     private void Awake()
     {
         lightObj = this.gameObject.GetComponent<Light>();
+
+        if (lightAudioVisualizer)
+        {
+            lightSwitch = false;
+            colorRandomizer = false;
+            strobe = false;
+        }
     }
 
 void Update () {
@@ -57,13 +93,13 @@ void Update () {
         {
             RotateLight();
 
-            if (lightSwitch && toggleLightReady)
+            if (lightSwitch && toggleLightReady && !strobe)
             {
                 StartCoroutine("ToggleLight");
                 coRoutinesStopped = false;
 
             }
-            else if (!lightSwitch)
+            else if (!lightSwitch && !lightAudioVisualizer && strobe)
             {
                 StartCoroutine("StrobeLight");
                 coRoutinesStopped = false;
@@ -73,6 +109,12 @@ void Update () {
             {
                 StartCoroutine(SwitchColor(ChangeColorInSeconds));
                 coRoutinesStopped = false;
+            }
+
+            if (lightAudioVisualizer)
+            {
+                Debug.Log("light audio visualizer");
+                lightObj.intensity = (audioVisualizer.audioBandBuffer[band] * (maxIntensity - minIntensity) + minIntensity);
             }
         }
     }

@@ -33,11 +33,13 @@ public class FadeController : MonoBehaviour {
         if (!uiVisibleOnStart)
         {
             canvasGroup.alpha = 0f;
+            canvasGroup.blocksRaycasts = false;
             visible = false;
         }
         else if (uiVisibleOnStart)
         {
             canvasGroup.alpha = 1f;
+            canvasGroup.blocksRaycasts = true;
             visible = true;
         }
     }
@@ -54,6 +56,7 @@ public class FadeController : MonoBehaviour {
             while (canvasGroup.alpha < 1)
             {
                 canvasGroup.alpha += Time.deltaTime / fadeSpeed;
+                canvasGroup.blocksRaycasts = true;
                 yield return null;
             }
 
@@ -64,6 +67,7 @@ public class FadeController : MonoBehaviour {
             while (canvasGroup.alpha > 0)
             {
                 canvasGroup.alpha -= Time.deltaTime / fadeSpeed;
+                canvasGroup.blocksRaycasts = false;
                 yield return null;
             }
 

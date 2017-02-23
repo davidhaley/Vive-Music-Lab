@@ -11,10 +11,12 @@ public class ParamCube : MonoBehaviour {
     public bool useBuffer;
 
     private Material material;
+    private Color baseColor;
 
     private void Start()
     {
         material = GetComponent<MeshRenderer>().material;
+        baseColor = material.GetColor("_EmissionColor");
     }
 
     void Update () {
@@ -32,7 +34,12 @@ public class ParamCube : MonoBehaviour {
     private void Modulate(float[] audio)
     {
         transform.localScale = new Vector3(transform.localScale.x, (audio[band] * scaleMagnitude) + startScale, transform.localScale.z);
-        Color color = new Color(audio[band], audio[band], audio[band]);
-        material.SetColor("_EmissionColor", color);
+        //Color color = new Color(audio[band], audio[band], audio[band]);
+        //material.SetColor("_EmissionColor", color);
+        material.EnableKeyword("_EMISSION");
+
+        Color finalColor = baseColor * Mathf.LinearToGammaSpace(audio[band]);
+
+        material.SetColor("_EmissionColor", finalColor);
     }
 }

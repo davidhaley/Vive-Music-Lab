@@ -13,23 +13,27 @@ public class FadeController : MonoBehaviour {
     public float fadeSpeed = 1f;
     private CanvasGroup canvasGroup;
     private bool visible;
+    private GameObject refObj;
 
     private void Awake()
     {
         canvasGroup = GetComponentInChildren<CanvasGroup>();
+        refObj = gameObject;
 
-        VisibleOnStart();
+        SetState();
     }
 
-    private void VisibleOnStart()
+    private void SetState()
     {
         if (!visibleOnStart)
         {
+            canvasGroup.alpha = 0f;
             gameObject.SetActive(false);
             visible = false;
         }
         else if (visibleOnStart)
         {
+            canvasGroup.alpha = 1f;
             gameObject.SetActive(true);
             visible = true;
         }
@@ -37,6 +41,11 @@ public class FadeController : MonoBehaviour {
 
     public void ToggleFade()
     {
+        if (refObj.activeSelf == false)
+        {
+            refObj.SetActive(true);
+        }
+
         StartCoroutine(StartFade());
     }
 

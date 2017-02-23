@@ -4117,7 +4117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ea93e32207cf047aa1f8d2475a0605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  booth: {fileID: 1669264510864620}
+  visibleOnStart: 0
   fadeSpeed: 2
 --- !u!222 &222062443576332612
 CanvasRenderer:

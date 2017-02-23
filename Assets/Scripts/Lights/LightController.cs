@@ -38,6 +38,7 @@ public class LightController : MonoBehaviour {
     public float minIntensity = 0f;
     [Range(0f, 8f)]
     public float maxIntensity = 8f;
+    public float scaleMagnitude = 1f;
     [Space(5)]
 
 
@@ -113,8 +114,7 @@ void Update () {
 
             if (lightAudioVisualizer)
             {
-                Debug.Log("light audio visualizer");
-                lightObj.intensity = (audioVisualizer.audioBandBuffer[band] * (maxIntensity - minIntensity) + minIntensity);
+                lightObj.intensity = ((audioVisualizer.audioBandBuffer[band] * scaleMagnitude) * (maxIntensity - minIntensity) + minIntensity);
             }
         }
     }

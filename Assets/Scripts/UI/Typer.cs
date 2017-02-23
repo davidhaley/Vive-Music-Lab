@@ -51,11 +51,16 @@ public class Typer : MonoBehaviour
             canvas.gameObject.SetActive(false);
         }
 
-        if (booth.activeSelf == true && !typing)
+        if (booth.GetComponent<CanvasGroup>().alpha != 0f && !typing)
         {
             ChangeText(text.text, delayToStart);
             typing = true;
         }
+    }
+
+    public bool TyperReady()
+    {
+        return booth.GetComponent<CanvasGroup>().alpha != 0f;
     }
 
     //Update text and start typewriter effect

@@ -14,20 +14,40 @@ public class MusicController : MonoBehaviour {
     [Header("Room Effect Canvas (Optional)")]
     public Text gvrRoomEffectText;
 
-    public void PlayAudioSource(GvrAudioSource audioSource)
+    public void PlayAudioSources()
+    {
+        foreach(GvrAudioSource gvrAudioSource in gvrAudioSources)
+        {
+            if (master != null)
+            {
+                gvrAudioSource.timeSamples = master.timeSamples;
+            }
+
+            if (!gvrAudioSource.isPlaying)
+            {
+                gvrAudioSource.Play();
+            }
+            else if (gvrAudioSource.isPlaying)
+            {
+                gvrAudioSource.Stop();
+            }
+        }
+    }
+
+    public void PlayAudioSource(int index)
     {
         if (master != null)
         {
-            audioSource.timeSamples = master.timeSamples;
+            gvrAudioSources[index].timeSamples = master.timeSamples;
         }
 
-        if (!audioSource.isPlaying)
+        if (!gvrAudioSources[index].isPlaying)
         {
-            audioSource.Play();
+            gvrAudioSources[index].Play();
         }
-        else if (audioSource.isPlaying)
+        else if (gvrAudioSources[index].isPlaying)
         {
-            audioSource.Stop();
+            gvrAudioSources[index].Stop();
         }
     }
 

@@ -835,7 +835,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.5, y: 0.17578125}
+  savedTextUV0: {x: 0, y: 0.5}
   savedFill: 0
 --- !u!114 &114201933219879768
 MonoBehaviour:
@@ -853,7 +853,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.5, y: 0}
+  savedTextUV0: {x: 0.17578125, y: 0}
   savedFill: 0
 --- !u!114 &114221845497436502
 MonoBehaviour:
@@ -940,7 +940,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0, y: 0.0078125}
+  savedTextUV0: {x: 0.828125, y: 0}
   savedFill: 0
 --- !u!114 &114285214030259752
 MonoBehaviour:
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.32421875, y: 0}
+  savedTextUV0: {x: 0, y: 0.1875}
   savedFill: 0
 --- !u!114 &114372192497516402
 MonoBehaviour:
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   savedUp: {x: 0.000000047572755, y: 0.9169208, z: 0.39906922}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.35742188, y: 0.1796875}
+  savedTextUV0: {x: 0.44335938, y: 0}
   savedFill: 0
 --- !u!114 &114424993884248866
 MonoBehaviour:
@@ -1481,7 +1481,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.5, y: 0}
+  savedTextUV0: {x: 0.17578125, y: 0}
   savedFill: 0
 --- !u!114 &114560923002604990
 MonoBehaviour:
@@ -1687,7 +1687,7 @@ MonoBehaviour:
   savedUp: {x: -0.0000000040066963, y: 0.98734117, z: -0.15861061}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0, y: 0.00390625}
+  savedTextUV0: {x: 0.6328125, y: 0.041992188}
   savedFill: 0
 --- !u!114 &114668208260454196
 MonoBehaviour:

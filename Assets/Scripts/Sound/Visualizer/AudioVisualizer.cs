@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(GvrAudioSource))]
 public class AudioVisualizer : MonoBehaviour {
 
     public GvrAudioSource gvrAudioSource;
@@ -33,7 +32,6 @@ public class AudioVisualizer : MonoBehaviour {
 
     private void Start()
     {
-        gvrAudioSource = GetComponent<GvrAudioSource>();
         AudioProfile(audioProfile);
     }
 

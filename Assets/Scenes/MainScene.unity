@@ -61,7 +61,7 @@ LightmapSettings:
     m_TextureWidth: 2048
     m_TextureHeight: 1024
     m_AO: 1
-    m_AOMaxDistance: 1
+    m_AOMaxDistance: 15
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
     m_Padding: 2
@@ -1036,12 +1036,12 @@ Prefab:
     - target: {fileID: 114606351366323144, guid: e6dd2326f328a684ba76099e8a0993bb,
         type: 2}
       propertyPath: maxIntensity
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 114193442138581744, guid: e6dd2326f328a684ba76099e8a0993bb,
         type: 2}
       propertyPath: maxIntensity
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 114606351366323144, guid: e6dd2326f328a684ba76099e8a0993bb,
         type: 2}

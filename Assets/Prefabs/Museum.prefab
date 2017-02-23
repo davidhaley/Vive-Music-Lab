@@ -16373,7 +16373,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1012025107994638}
   m_LocalRotation: {x: 0.23116653, y: -1.1158761e-33, z: -4.6964056e-33, w: 0.9729142}
-  m_LocalPosition: {x: 0.013393793, y: 0.92793715, z: -0.8864851}
+  m_LocalPosition: {x: 0.01, y: 0.91, z: -0.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4596995789317032}
@@ -52233,7 +52233,7 @@ BoxCollider:
   m_GameObject: {fileID: 1546459580761248}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 0.80002004, z: 1}
   m_Center: {x: 0.10501778, y: 0.40709284, z: -0.021339372}
@@ -52508,8 +52508,8 @@ MonoBehaviour:
   sourceSpread: 0
   sourceVolume: 0.8
   sourceRolloffMode: 0
-  sourceMaxDistance: 500
-  sourceMinDistance: 1
+  sourceMaxDistance: 750
+  sourceMinDistance: 3
   hrtfEnabled: 1
   audioSource: {fileID: 0}
 --- !u!114 &114718101128059534
@@ -52540,8 +52540,8 @@ MonoBehaviour:
   sourceSpread: 0
   sourceVolume: 1
   sourceRolloffMode: 0
-  sourceMaxDistance: 500
-  sourceMinDistance: 1
+  sourceMaxDistance: 750
+  sourceMinDistance: 3
   hrtfEnabled: 1
   audioSource: {fileID: 0}
 --- !u!114 &114908574674575736
@@ -52572,8 +52572,8 @@ MonoBehaviour:
   sourceSpread: 0
   sourceVolume: 0.8
   sourceRolloffMode: 0
-  sourceMaxDistance: 500
-  sourceMinDistance: 1
+  sourceMaxDistance: 750
+  sourceMinDistance: 3
   hrtfEnabled: 1
   audioSource: {fileID: 0}
 --- !u!114 &114997990846698656
@@ -52604,7 +52604,7 @@ MonoBehaviour:
   sourceSpread: 0
   sourceVolume: 1
   sourceRolloffMode: 0
-  sourceMaxDistance: 500
-  sourceMinDistance: 1
+  sourceMaxDistance: 750
+  sourceMinDistance: 3
   hrtfEnabled: 1
   audioSource: {fileID: 0}

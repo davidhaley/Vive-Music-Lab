@@ -10,11 +10,11 @@ public class Typer : MonoBehaviour
     public GameObject button;
     public Canvas canvas;
     public FadeButton fadeButton;
+    public GameObject booth;
     private GvrAudioSource audioSource;
 
     private bool hideCanvas;
 
-    public bool playOnAwake = true;
     public float delayToStart;
     public float delayBetweenChars = 0.125f;
     public float delayAfterComma = 0.5f;
@@ -26,6 +26,7 @@ public class Typer : MonoBehaviour
     private bool lastCharPunctuation = false;
     private char charComma;
     private char charPeriod;
+    private bool typing = false;
 
     void Awake()
     {
@@ -39,11 +40,6 @@ public class Typer : MonoBehaviour
 
         charComma = Convert.ToChar(44);
         charPeriod = Convert.ToChar(46);
-
-        if (playOnAwake)
-        {
-            ChangeText(text.text, delayToStart);
-        }
      }
 
     private void Update()
@@ -53,6 +49,12 @@ public class Typer : MonoBehaviour
         if (hideCanvas)
         {
             canvas.gameObject.SetActive(false);
+        }
+
+        if (booth.activeSelf == true && !typing)
+        {
+            ChangeText(text.text, delayToStart);
+            typing = true;
         }
     }
 

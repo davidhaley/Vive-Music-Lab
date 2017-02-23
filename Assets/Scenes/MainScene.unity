@@ -164,7 +164,7 @@ MonoBehaviour:
   savedUp: {x: -0.0000000040066963, y: 0.98734117, z: -0.15861061}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0, y: 0.001953125}
+  savedTextUV0: {x: 0.5957031, y: 0.08203125}
   savedFill: 0
 --- !u!114 &46373599
 MonoBehaviour:
@@ -199,7 +199,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Collaboration
+  m_Text: Remote Collaboration
 --- !u!222 &46373600
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 626547859}
   - component: {fileID: 626547858}
   m_Layer: 5
-  m_Name: Booth5Collaboration
+  m_Name: Booth5RemoteCollaboration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -36912,14 +36912,14 @@ MonoBehaviour:
   gainDb: 0
   occlusionEnabled: 0
   playOnAwake: 0
-  sourceClip: {fileID: 8300000, guid: f44e4af519c2bd344b23c54d88958e46, type: 3}
+  sourceClip: {fileID: 8300000, guid: fea897a5ff9f1564195a6435d70579ba, type: 3}
   sourceLoop: 0
   sourceMute: 0
   sourcePitch: 1
   sourcePriority: 128
   sourceDopplerLevel: 1
   sourceSpread: 0
-  sourceVolume: 0.8
+  sourceVolume: 0.744
   sourceRolloffMode: 0
   sourceMaxDistance: 750
   sourceMinDistance: 3
@@ -37735,6 +37735,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114498148648607660, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: gvrAudioSources.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4863196329726130, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.71
@@ -37832,7 +37837,178 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 489417919}
-    m_RemovedComponents: []
+    - target: {fileID: 114546205368256170, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: sourceClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fea897a5ff9f1564195a6435d70579ba, type: 3}
+    - target: {fileID: 114546205368256170, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: sourceVolume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114546205368256170, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: hrtfEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114546205368256170, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: sourceMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114498148648607660, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: master
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114001038520021914, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.3515625
+      objectReference: {fileID: 0}
+    - target: {fileID: 114001038520021914, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.17578125
+      objectReference: {fileID: 0}
+    - target: {fileID: 114094655722802078, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.5859375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114094655722802078, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.40429688
+      objectReference: {fileID: 0}
+    - target: {fileID: 114865718050924536, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.14453125
+      objectReference: {fileID: 0}
+    - target: {fileID: 114865718050924536, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.67578125
+      objectReference: {fileID: 0}
+    - target: {fileID: 114888372313655334, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.80859375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114888372313655334, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114240831241281720, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.29296875
+      objectReference: {fileID: 0}
+    - target: {fileID: 114240831241281720, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.09277344
+      objectReference: {fileID: 0}
+    - target: {fileID: 114788502077472652, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.14453125
+      objectReference: {fileID: 0}
+    - target: {fileID: 114788502077472652, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114313901249070518, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.31640625
+      objectReference: {fileID: 0}
+    - target: {fileID: 114313901249070518, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114755898066042904, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.80859375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114755898066042904, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.17578125
+      objectReference: {fileID: 0}
+    - target: {fileID: 114834775166119412, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.17578125
+      objectReference: {fileID: 0}
+    - target: {fileID: 114834775166119412, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114165269880304922, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.00390625
+      objectReference: {fileID: 0}
+    - target: {fileID: 114165269880304922, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.5888672
+      objectReference: {fileID: 0}
+    - target: {fileID: 114844648225249782, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.31640625
+      objectReference: {fileID: 0}
+    - target: {fileID: 114844648225249782, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114443998999751992, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056425325830170, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.80859375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056425325830170, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.17578125
+      objectReference: {fileID: 0}
+    - target: {fileID: 114436288465449124, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114436288465449124, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.1875
+      objectReference: {fileID: 0}
+    - target: {fileID: 114838393905541990, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.x
+      value: 0.31640625
+      objectReference: {fileID: 0}
+    - target: {fileID: 114838393905541990, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
+        type: 2}
+      propertyPath: savedTextUV0.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114546205368256170, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1510580755
@@ -40054,7 +40230,7 @@ MonoBehaviour:
   frontWall: 15
   reflectivity: 1
   reverbGainDb: 0
-  reverbBrightness: 0
+  reverbBrightness: -0.1
   reverbTime: 1
   size: {x: 1, y: 1, z: 1}
 --- !u!1 &1571454252
@@ -43142,14 +43318,14 @@ MonoBehaviour:
   gainDb: 0
   occlusionEnabled: 0
   playOnAwake: 0
-  sourceClip: {fileID: 8300000, guid: f44e4af519c2bd344b23c54d88958e46, type: 3}
+  sourceClip: {fileID: 8300000, guid: fea897a5ff9f1564195a6435d70579ba, type: 3}
   sourceLoop: 0
   sourceMute: 0
   sourcePitch: 1
   sourcePriority: 128
   sourceDopplerLevel: 1
   sourceSpread: 0
-  sourceVolume: 1
+  sourceVolume: 0.744
   sourceRolloffMode: 0
   sourceMaxDistance: 750
   sourceMinDistance: 3
@@ -45389,14 +45565,14 @@ MonoBehaviour:
   gainDb: 0
   occlusionEnabled: 0
   playOnAwake: 0
-  sourceClip: {fileID: 8300000, guid: f44e4af519c2bd344b23c54d88958e46, type: 3}
+  sourceClip: {fileID: 8300000, guid: fea897a5ff9f1564195a6435d70579ba, type: 3}
   sourceLoop: 0
   sourceMute: 0
   sourcePitch: 1
   sourcePriority: 128
   sourceDopplerLevel: 1
   sourceSpread: 0
-  sourceVolume: 0.8
+  sourceVolume: 0.744
   sourceRolloffMode: 0
   sourceMaxDistance: 750
   sourceMinDistance: 3
@@ -50717,14 +50893,14 @@ MonoBehaviour:
   gainDb: 0
   occlusionEnabled: 0
   playOnAwake: 0
-  sourceClip: {fileID: 8300000, guid: f44e4af519c2bd344b23c54d88958e46, type: 3}
+  sourceClip: {fileID: 8300000, guid: fea897a5ff9f1564195a6435d70579ba, type: 3}
   sourceLoop: 0
   sourceMute: 0
   sourcePitch: 1
   sourcePriority: 128
   sourceDopplerLevel: 1
   sourceSpread: 0
-  sourceVolume: 1
+  sourceVolume: 0.744
   sourceRolloffMode: 0
   sourceMaxDistance: 750
   sourceMinDistance: 3

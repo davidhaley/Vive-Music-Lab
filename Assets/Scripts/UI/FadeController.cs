@@ -71,6 +71,7 @@ public class FadeController : MonoBehaviour {
                 yield return null;
             }
 
+            gameObject.SetActive(false);
             visible = false;
         }
     }

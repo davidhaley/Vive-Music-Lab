@@ -6,73 +6,42 @@ using System;
 
 public class Typer : MonoBehaviour
 {
-    public Text text;
     public GameObject button;
-    public Canvas canvas;
-    public FadeButton fadeButton;
-    private GvrAudioSource audioSource;
 
-    private bool hideCanvas;
-
-    public bool playOnAwake = true;
     public float delayToStart;
     public float delayBetweenChars = 0.125f;
     public float delayAfterComma = 0.5f;
     public float delayAfterPeriod = 0.5f;
 
-    private string story;
+    private Text text;
+    private GvrAudioSource audioSource;
+    private string originText;
     private float originDelayBetweenChars;
-    private float delay;
+    private float punctuationDelay;
     private bool lastCharPunctuation = false;
     private char charComma;
     private char charPeriod;
 
     void Awake()
     {
-        text = GetComponent<Text>();
-        canvas = GetComponentInParent<Canvas>();
-        audioSource = GetComponent<GvrAudioSource>();
+        InitializeTyper();
+        LoadAudio();
 
         button.gameObject.SetActive(false);
-
-        originDelayBetweenChars = delayBetweenChars;
-
-        charComma = Convert.ToChar(44);
-        charPeriod = Convert.ToChar(46);
-
-        if (playOnAwake)
-        {
-            ChangeText(text.text, delayToStart);
-        }
      }
 
-    private void Update()
-    {
-        hideCanvas = fadeButton.faded;
-
-        if (hideCanvas)
-        {
-            canvas.gameObject.SetActive(false);
-        }
-    }
-
     //Update text and start typewriter effect
-    public void ChangeText(string textContent, float delayBetweenChars = 0f)
+    public void StartTyper()
     {
-        StopCoroutine(PlayText()); //stop Coroutime if exist
-        story = textContent;
-        text.text = ""; //clean text
-        Invoke("Start_PlayText", delayBetweenChars); //Invoke effect
-    }
-
-    void Start_PlayText()
-    {
+        StopCoroutine(PlayText()); //stop Coroutime if one exists
         StartCoroutine(PlayText());
     }
 
     IEnumerator PlayText()
     {
-        foreach (char c in story)
+        yield return new WaitForSeconds(delayToStart);
+
+        foreach (char c in originText)
         {
             delayBetweenChars = originDelayBetweenChars;
 
@@ -80,7 +49,7 @@ public class Typer : MonoBehaviour
 
             if (lastCharPunctuation)  //If previous character was a comma/period, pause typing
             {
-                yield return new WaitForSeconds(delayBetweenChars = delay);
+                yield return new WaitForSeconds(delayBetweenChars = punctuationDelay);
                 lastCharPunctuation = false;
             }
 
@@ -90,11 +59,11 @@ public class Typer : MonoBehaviour
 
                 if (c == charComma)
                 {
-                    delay = delayAfterComma;
+                    punctuationDelay = delayAfterComma;
                 }
                 else if (c == charPeriod)
                 {
-                    delay = delayAfterPeriod;
+                    punctuationDelay = delayAfterPeriod;
                 }
             }
 
@@ -105,5 +74,26 @@ public class Typer : MonoBehaviour
         //When finished, show the button
         yield return new WaitForSeconds(delayBetweenChars);
         button.gameObject.SetActive(true);
+    }
+
+    private void LoadAudio()
+    {
+        audioSource = gameObject.AddComponent<GvrAudioSource>();
+        audioSource.clip = Resources.Load<AudioClip>("Sounds/UI/MouthClick");
+        audioSource.playOnAwake = false;
+        audioSource.loop = false;
+        audioSource.bypassRoomEffects = true;
+    }
+
+    private void InitializeTyper()
+    {
+        text = GetComponent<Text>();
+
+        originText = text.text;
+        text.text = ""; //clean text
+
+        originDelayBetweenChars = delayBetweenChars;
+        charComma = Convert.ToChar(44);
+        charPeriod = Convert.ToChar(46);
     }
 }

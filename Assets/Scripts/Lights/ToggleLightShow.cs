@@ -7,6 +7,7 @@ public class ToggleLightShow : MonoBehaviour {
     private GameObject[] lightShowLights;
     private ToggleLightmaps toggleLightMaps;
     private GameObject[] gameObjects;
+    private Renderer[] renderers;
 
     private Color32 lightsOffColor = new Color32(64, 64, 64, 1);
     private Color32 lightsOnColor = Color.white;
@@ -34,7 +35,11 @@ public class ToggleLightShow : MonoBehaviour {
 
             foreach (GameObject go in gameObjects)
             {
-                go.GetComponent<Renderer>().material.color = lightsOffColor;
+                renderers = go.GetComponentsInChildren<Renderer>();
+                foreach(Renderer rend in renderers)
+                {
+                    rend.material.color = lightsOffColor;
+                }
             }
 
             foreach (GameObject go in lightShowLights)
@@ -51,9 +56,12 @@ public class ToggleLightShow : MonoBehaviour {
 
             foreach (GameObject go in gameObjects)
             {
-                go.GetComponent<Renderer>().material.color = lightsOnColor;
+                renderers = go.GetComponentsInChildren<Renderer>();
+                foreach (Renderer rend in renderers)
+                {
+                    rend.material.color = lightsOnColor;
+                }
             }
-
 
             foreach (GameObject go in lightShowLights)
             {

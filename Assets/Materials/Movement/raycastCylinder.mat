@@ -11,9 +11,10 @@ Material:
   m_ShaderKeywords: S_RECEIVE_SHADOWS S_SPECULAR_METALLIC _ALPHAPREMULTIPLY_ON _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap:
     OriginalShader: Standard
+    RenderType: Transparent
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3

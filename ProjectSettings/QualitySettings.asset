@@ -143,9 +143,9 @@ QualitySettings:
     shadowResolution: 2
     shadowProjection: 1
     shadowCascades: 2
-    shadowDistance: 150
+    shadowDistance: 50
     shadowNearPlaneOffset: 3
-    shadowCascade2Split: 0.00000035576522
+    shadowCascade2Split: 0.5000001
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
     blendWeights: 4
     textureQuality: 0
@@ -157,7 +157,7 @@ QualitySettings:
     billboardsFaceCameraPosition: 1
     vSyncCount: 1
     lodBias: 2
-    maximumLODLevel: 0
+    maximumLODLevel: 1
     particleRaycastBudget: 4096
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 4

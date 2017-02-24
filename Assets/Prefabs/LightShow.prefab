@@ -612,7 +612,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4098031014343458
 Transform:
@@ -2296,7 +2296,7 @@ MonoBehaviour:
   lowerIntensityBound: 3.46
   lightSwitch: 1
   onOffSpeed: 1
-  audioVisualizer: {fileID: 0}
+  audioVisualizer: {fileID: 114982800689978106}
   lightAudioVisualizer: 0
   band: 3
   minIntensity: 1
@@ -3491,7 +3491,7 @@ MonoBehaviour:
   lowerIntensityBound: 3.46
   lightSwitch: 1
   onOffSpeed: 1
-  audioVisualizer: {fileID: 0}
+  audioVisualizer: {fileID: 114982800689978106}
   lightAudioVisualizer: 0
   band: 0
   minIntensity: 1
@@ -3523,7 +3523,7 @@ MonoBehaviour:
   lowerIntensityBound: 3.46
   lightSwitch: 0
   onOffSpeed: 0.75
-  audioVisualizer: {fileID: 0}
+  audioVisualizer: {fileID: 114982800689978106}
   lightAudioVisualizer: 0
   band: 2
   minIntensity: 1

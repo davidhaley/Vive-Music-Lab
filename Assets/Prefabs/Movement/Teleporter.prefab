@@ -33,8 +33,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1645346505373566}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.4647799, y: -4.2318993, z: 7.852542}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -53,5 +53,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raycastHolder: {fileID: 0}
   raycastIndicator: {fileID: 0}
-  height: 1.4
+  height: 1.6
   maxMoveDistance: 15

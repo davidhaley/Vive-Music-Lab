@@ -912,12 +912,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 27779155}
   m_Mesh: {fileID: 4301094, guid: 9292f6cda134ab14cada85106964493e, type: 3}
---- !u!114 &31452496 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114566670721217648, guid: b0d7d4316cf180249960807ba4e7ff92,
-    type: 2}
-  m_PrefabInternal: {fileID: 1422952830}
-  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
 --- !u!1 &35086863
 GameObject:
   m_ObjectHideFlags: 0
@@ -14297,12 +14291,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 393107219}
   m_Mesh: {fileID: 4300716, guid: 9292f6cda134ab14cada85106964493e, type: 3}
---- !u!114 &396545907 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114908574674575736, guid: b0d7d4316cf180249960807ba4e7ff92,
-    type: 2}
-  m_PrefabInternal: {fileID: 1422952830}
-  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
 --- !u!1 &400392410
 GameObject:
   m_ObjectHideFlags: 0
@@ -22331,12 +22319,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 654599691}
   m_Mesh: {fileID: 4301076, guid: 9292f6cda134ab14cada85106964493e, type: 3}
---- !u!114 &655905145 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114997990846698656, guid: b0d7d4316cf180249960807ba4e7ff92,
-    type: 2}
-  m_PrefabInternal: {fileID: 1422952830}
-  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
 --- !u!1 &662827408
 GameObject:
   m_ObjectHideFlags: 0
@@ -22959,17 +22941,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 695031848}
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1578191294}
         m_MethodName: PlayAudioSources
         m_Mode: 1
@@ -29008,22 +28979,22 @@ Prefab:
         type: 2}
       propertyPath: audioVisualizer
       value: 
-      objectReference: {fileID: 217121205}
+      objectReference: {fileID: 1618375336}
     - target: {fileID: 114168991241357246, guid: 5425cae89f26b614aa9e6a6fed18c8b8,
         type: 2}
       propertyPath: audioVisualizer
       value: 
-      objectReference: {fileID: 217121205}
+      objectReference: {fileID: 1618375336}
     - target: {fileID: 114989772697010490, guid: 5425cae89f26b614aa9e6a6fed18c8b8,
         type: 2}
       propertyPath: audioVisualizer
       value: 
-      objectReference: {fileID: 217121205}
+      objectReference: {fileID: 1618375336}
     - target: {fileID: 114982800689978106, guid: 5425cae89f26b614aa9e6a6fed18c8b8,
         type: 2}
       propertyPath: gvrAudioSource
       value: 
-      objectReference: {fileID: 31452496}
+      objectReference: {fileID: 1790060823}
     - target: {fileID: 1987863329771998, guid: 5425cae89f26b614aa9e6a6fed18c8b8, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -51960,6 +51931,7 @@ GameObject:
   - component: {fileID: 1578191294}
   - component: {fileID: 1578191296}
   - component: {fileID: 1578191295}
+  - component: {fileID: 1578191297}
   m_Layer: 0
   m_Name: Booth1LiveMusicLightShow
   m_TagString: Untagged
@@ -51997,11 +51969,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   booth: {fileID: 1578191292}
   gvrAudioSources:
-  - {fileID: 2057276378}
-  - {fileID: 655905145}
-  - {fileID: 31452496}
-  - {fileID: 396545907}
-  master: {fileID: 31452496}
+  - {fileID: 1947832550}
+  - {fileID: 1689992639}
+  - {fileID: 1790060823}
+  - {fileID: 1462585461}
+  master: {fileID: 1578191297}
   gvrRoomEffectText: {fileID: 0}
 --- !u!114 &1578191295
 MonoBehaviour:
@@ -52027,6 +51999,38 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1578191297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1578191292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bypassRoomEffects: 1
+  directivityAlpha: 0
+  directivitySharpness: 1
+  listenerDirectivityAlpha: 0
+  listenerDirectivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  sourceClip: {fileID: 8300000, guid: f44e4af519c2bd344b23c54d88958e46, type: 3}
+  sourceLoop: 0
+  sourceMute: 1
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceDopplerLevel: 1
+  sourceSpread: 0
+  sourceVolume: 1
+  sourceRolloffMode: 0
+  sourceMaxDistance: 500
+  sourceMinDistance: 1
+  hrtfEnabled: 1
+  audioSource: {fileID: 0}
 --- !u!1 &1580504013
 GameObject:
   m_ObjectHideFlags: 0
@@ -53038,6 +53042,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1611653135}
   m_Mesh: {fileID: 4300614, guid: 9292f6cda134ab14cada85106964493e, type: 3}
+--- !u!114 &1618375336 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114982800689978106, guid: 5425cae89f26b614aa9e6a6fed18c8b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 902486819}
+  m_Script: {fileID: 11500000, guid: 379662da2f6b2d243822fa2ac5e2f485, type: 3}
 --- !u!1 &1618819026
 GameObject:
   m_ObjectHideFlags: 0
@@ -55098,6 +55108,32 @@ Transform:
   m_Father: {fileID: 1464140665}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1678712542 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100008, guid: f4bf54a67b99d70499de8bbc3bed0516, type: 3}
+  m_PrefabInternal: {fileID: 1850729443}
+--- !u!114 &1678712543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1678712542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d2722c2401e34d51bf5b473ef7aeefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftWall: 15
+  rightWall: 15
+  floor: 12
+  ceiling: 9
+  backWall: 15
+  frontWall: 15
+  reflectivity: 1
+  reverbGainDb: 0
+  reverbBrightness: 0
+  reverbTime: 1
+  size: {x: 1, y: 1, z: 1}
 --- !u!1 &1680578503
 GameObject:
   m_ObjectHideFlags: 0
@@ -68568,12 +68604,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2057010988}
---- !u!114 &2057276378 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114718101128059534, guid: b0d7d4316cf180249960807ba4e7ff92,
-    type: 2}
-  m_PrefabInternal: {fileID: 1422952830}
-  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
 --- !u!1 &2059539470
 GameObject:
   m_ObjectHideFlags: 0

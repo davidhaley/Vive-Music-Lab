@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class ButtonImageColor : MonoBehaviour
 {
-    //public Color toggleColor;
     public float fadeTime = 0.1f;
-    //private MaskableGraphic foregroundImage;
+    public Button buttonToColor;
 
     private bool toggled = false;
 

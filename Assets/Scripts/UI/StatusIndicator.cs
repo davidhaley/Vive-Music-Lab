@@ -7,9 +7,11 @@ public class StatusIndicator : MonoBehaviour {
 
     public Color activeColor;
     public float fadeTime = 0.1f;
+    public bool colorOnce;
 
     private MaskableGraphic foregroundImage;
     private bool toggled = false;
+    private bool colored = false;
 
     private void Awake()
     {
@@ -25,6 +27,11 @@ public class StatusIndicator : MonoBehaviour {
         }
         else if (toggled)
         {
+            if (colorOnce)
+            {
+                return;
+            }
+
             foregroundImage.CrossFadeColor(Color.white, fadeTime * 1.2f, false, true);
             toggled = false;
         }

@@ -25,20 +25,10 @@ public class MusicController : MonoBehaviour {
 
             if (!gvrAudioSource.isPlaying)
             {
-                if (master != null)
-                {
-                    master.Play();
-                }
-
                 gvrAudioSource.Play();
             }
             else if (gvrAudioSource.isPlaying)
             {
-                if (master != null)
-                {
-                    master.Stop();
-                }
-
                 gvrAudioSource.Stop();
             }
         }
@@ -53,20 +43,10 @@ public class MusicController : MonoBehaviour {
 
         if (!gvrAudioSources[index].isPlaying)
         {
-            if (master != null)
-            {
-                master.Play();
-            }
-
             gvrAudioSources[index].Play();
         }
         else if (gvrAudioSources[index].isPlaying)
         {
-            if (master != null)
-            {
-                master.Stop();
-            }
-
             gvrAudioSources[index].Stop();
         }
     }

@@ -7,7 +7,7 @@ public class MusicController : MonoBehaviour {
 
     public GvrAudioSource[] gvrAudioSources;
 
-    [Header("Sync With Master Track (Optional)")]
+    [Header("Sync With  (Always Playing) Master Track (Optional)")]
     public GvrAudioSource master;
 
     [Header("Room Effect Canvas (Optional)")]
@@ -24,7 +24,7 @@ public class MusicController : MonoBehaviour {
 
             if (!gvrAudioSource.isPlaying)
             {
-                if (master != null)
+                if (master != null && master.isPlaying == false)
                 {
                     master.Play();
                 }
@@ -33,11 +33,6 @@ public class MusicController : MonoBehaviour {
             }
             else if (gvrAudioSource.isPlaying)
             {
-                if (master != null)
-                {
-                    master.Stop();
-                }
-
                 gvrAudioSource.Stop();
             }
         }
@@ -52,12 +47,15 @@ public class MusicController : MonoBehaviour {
 
         if (!gvrAudioSources[index].isPlaying)
         {
-            master.Play();
+            if (master != null && master.isPlaying == false)
+            {
+                master.Play();
+            }
+
             gvrAudioSources[index].Play();
         }
         else if (gvrAudioSources[index].isPlaying)
         {
-            master.Stop();
             gvrAudioSources[index].Stop();
         }
     }

@@ -10,9 +10,12 @@ public class FadeController : MonoBehaviour {
     [Header("VISIBILITY")]
     [Space(5)]
     public bool uiVisibleOnStart;
+    public bool fadeOnce;
     public float fadeSpeed = 1f;
+
     private CanvasGroup canvasGroup;
     private bool visible;
+    private bool fadedOnce = false;
     private GameObject refObj;
 
     private void Awake()
@@ -46,6 +49,11 @@ public class FadeController : MonoBehaviour {
 
     public void ToggleFade()
     {
+        if (fadeOnce && fadedOnce)
+        {
+            return;
+        }
+
         StartCoroutine(StartFade());
     }
 
@@ -60,6 +68,7 @@ public class FadeController : MonoBehaviour {
                 yield return null;
             }
 
+            fadedOnce = true;
             visible = true;
         }
         else if (visible)
@@ -71,6 +80,7 @@ public class FadeController : MonoBehaviour {
                 yield return null;
             }
 
+            fadedOnce = true;
             gameObject.SetActive(false);
             visible = false;
         }

@@ -787,7 +787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1370959847837424}
   delayToStart: 1
-  delayBetweenChars: 0.01
+  delayBetweenChars: 0.015
   delayAfterComma: 0.25
   delayAfterPeriod: 0.5
 --- !u!114 &114250554581352586

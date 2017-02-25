@@ -376,7 +376,7 @@ MonoBehaviour:
   savedUp: {x: -0.0000000040066963, y: 0.98734117, z: -0.15861061}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0, y: 0.5917969}
+  savedTextUV0: {x: 0, y: 0.001953125}
   savedFill: 0
 --- !u!114 &62438871
 MonoBehaviour:
@@ -1136,8 +1136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bypassRoomEffects: 0
-  directivityAlpha: 0.827
-  directivitySharpness: 1
+  directivityAlpha: 0
+  directivitySharpness: 1.1
   listenerDirectivityAlpha: 0
   listenerDirectivitySharpness: 1
   gainDb: 0
@@ -1149,10 +1149,10 @@ MonoBehaviour:
   sourcePitch: 1
   sourcePriority: 128
   sourceDopplerLevel: 1
-  sourceSpread: 45
+  sourceSpread: 31
   sourceVolume: 1
   sourceRolloffMode: 0
-  sourceMaxDistance: 30
+  sourceMaxDistance: 25
   sourceMinDistance: 5
   hrtfEnabled: 1
   audioSource: {fileID: 0}
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.48828125, y: 0.28125}
+  savedTextUV0: {x: 0.40820312, y: 0.24707031}
   savedFill: 0
 --- !u!114 &192151549
 MonoBehaviour:
@@ -2183,7 +2183,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 781.21, y: 350}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.31835938, y: 0.3330078}
+  savedTextUV0: {x: 0, y: 0.20507812}
   savedFill: 0
 --- !u!114 &319915823
 MonoBehaviour:
@@ -2275,11 +2275,6 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1553103913}
-    - target: {fileID: 114865315748425576, guid: 7e1c1ffcd6e685a4c984d7002369867c,
-        type: 2}
-      propertyPath: m_Text
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e1c1ffcd6e685a4c984d7002369867c, type: 2}
   m_IsPrefabParent: 0
@@ -2645,7 +2640,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0, y: 0.22558594}
+  savedTextUV0: {x: 0.8613281, y: 0.044921875}
   savedFill: 0
 --- !u!114 &382838784
 MonoBehaviour:
@@ -3231,7 +3226,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 781.21, y: 300}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.03125, y: 0.27148438}
+  savedTextUV0: {x: 0.7285156, y: 0.171875}
   savedFill: 0
 --- !u!114 &456106823
 MonoBehaviour:
@@ -3620,7 +3615,7 @@ MonoBehaviour:
   savedUp: {x: -0.0000000040066963, y: 0.98734117, z: -0.15861061}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.671875, y: 0.38378906}
+  savedTextUV0: {x: 0.5292969, y: 0}
   savedFill: 0
 --- !u!114 &478589543
 MonoBehaviour:
@@ -5040,7 +5035,7 @@ Prefab:
         type: 2}
       propertyPath: gvrAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 185568034}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6dd2326f328a684ba76099e8a0993bb, type: 2}
   m_IsPrefabParent: 0
@@ -5134,7 +5129,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.15820312, y: 0.13378906}
+  savedTextUV0: {x: 0.6328125, y: 0.234375}
   savedFill: 0
 --- !u!114 &524326882
 MonoBehaviour:
@@ -6032,7 +6027,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.072265625, y: 0.140625}
+  savedTextUV0: {x: 0.5527344, y: 0.2783203}
   savedFill: 0
 --- !u!114 &585615774
 MonoBehaviour:
@@ -6332,7 +6327,7 @@ MonoBehaviour:
   fadeTime: 0.1
   colorOnce: 1
   rawImage: {fileID: 0}
-  image: {fileID: 0}
+  image: {fileID: 613805706}
 --- !u!114 &613805706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6440,7 +6435,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.072265625, y: 0.140625}
+  savedTextUV0: {x: 0.5527344, y: 0.2783203}
   savedFill: 0
 --- !u!114 &617497590
 MonoBehaviour:
@@ -6726,7 +6721,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.072265625, y: 0.140625}
+  savedTextUV0: {x: 0.5527344, y: 0.2783203}
   savedFill: 0
 --- !u!114 &665140780
 MonoBehaviour:
@@ -7060,7 +7055,7 @@ MonoBehaviour:
   savedUp: {x: 0.000000047572755, y: 0.9169208, z: 0.39906922}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.6660156, y: 0.27246094}
+  savedTextUV0: {x: 0.6425781, y: 0.091796875}
   savedFill: 0
 --- !u!222 &670327914
 CanvasRenderer:
@@ -7196,7 +7191,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0, y: 0.091796875}
+  savedTextUV0: {x: 0.7050781, y: 0.23339844}
   savedFill: 0
 --- !u!114 &686858551
 MonoBehaviour:
@@ -7432,7 +7427,7 @@ MonoBehaviour:
   savedUp: {x: -0.0000000040066963, y: 0.98734117, z: -0.15861061}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.8183594, y: 0.21484375}
+  savedTextUV0: {x: 0.6855469, y: 0.14550781}
   savedFill: 0
 --- !u!114 &762108682
 MonoBehaviour:
@@ -9916,7 +9911,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0, y: 0.091796875}
+  savedTextUV0: {x: 0.7050781, y: 0.23339844}
   savedFill: 0
 --- !u!114 &1011446204
 MonoBehaviour:
@@ -10024,7 +10019,7 @@ MonoBehaviour:
   fadeTime: 0.1
   colorOnce: 1
   rawImage: {fileID: 0}
-  image: {fileID: 0}
+  image: {fileID: 1037501240}
 --- !u!114 &1037501240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11626,7 +11621,7 @@ MonoBehaviour:
   fadeTime: 0.1
   colorOnce: 1
   rawImage: {fileID: 0}
-  image: {fileID: 0}
+  image: {fileID: 1258945846}
 --- !u!114 &1258945846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13888,7 +13883,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 874, y: 158}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.31835938, y: 0.3330078}
+  savedTextUV0: {x: 0, y: 0.20507812}
   savedFill: 0
 --- !u!114 &1559041435
 MonoBehaviour:
@@ -13958,8 +13953,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bypassRoomEffects: 0
-  directivityAlpha: 0.784
-  directivitySharpness: 1
+  directivityAlpha: 0
+  directivitySharpness: 1.1
   listenerDirectivityAlpha: 0
   listenerDirectivitySharpness: 1
   gainDb: 0
@@ -13971,10 +13966,10 @@ MonoBehaviour:
   sourcePitch: 1
   sourcePriority: 128
   sourceDopplerLevel: 1
-  sourceSpread: 45
+  sourceSpread: 31
   sourceVolume: 1
   sourceRolloffMode: 0
-  sourceMaxDistance: 30
+  sourceMaxDistance: 25
   sourceMinDistance: 5
   hrtfEnabled: 1
   audioSource: {fileID: 0}
@@ -14838,7 +14833,7 @@ MonoBehaviour:
   savedUp: {x: -0.0000000040066963, y: 0.98734117, z: -0.15861061}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.14453125, y: 0}
+  savedTextUV0: {x: 0, y: 0.7138672}
   savedFill: 0
 --- !u!114 &1685944617
 MonoBehaviour:
@@ -15114,7 +15109,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.1015625, y: 0}
+  savedTextUV0: {x: 0.14257812, y: 0.3564453}
   savedFill: 0
 --- !u!114 &1705325113
 MonoBehaviour:
@@ -15643,7 +15638,7 @@ MonoBehaviour:
   fadeTime: 0.1
   colorOnce: 1
   rawImage: {fileID: 0}
-  image: {fileID: 0}
+  image: {fileID: 1806816897}
 --- !u!114 &1806816897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16526,7 +16521,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0, y: 0.047851562}
+  savedTextUV0: {x: 0.8515625, y: 0.17871094}
   savedFill: 0
 --- !u!114 &1894271137
 MonoBehaviour:

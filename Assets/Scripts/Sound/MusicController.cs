@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MusicController : MonoBehaviour {
 
-    public GameObject booth;
+    public GameObject boothCanvas;
     public GvrAudioSource[] gvrAudioSources;
 
     [Header("Sync With Master Track (Optional)")]

@@ -28,8 +28,10 @@ public class Sequencer : MonoBehaviour
 
     public float bpm = 120f;
     public int numBeatsPerSegment = 1;
+    [HideInInspector]
+    public bool running = false;
+
     private double nextEventTime;
-    private bool running = false;
     private int columnCounter = 0;
     private int beatColumn;
 

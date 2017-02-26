@@ -6,12 +6,29 @@ using UnityEngine.UI;
 public class MusicController : MonoBehaviour {
 
     public GvrAudioSource[] gvrAudioSources;
+    public bool stopAudioOnColliderExit;
 
-    [Header("Sync With  (Always Playing) Master Track (Optional)")]
+    [Header("Sync With Master Track (Optional)")]
     public GvrAudioSource master;
+    public bool playMasterOnAwake;
+    public bool playMasterOnColliderEnter;
+    public bool stopMasterOnColliderExit;
 
     [Header("Room Effect Canvas (Optional)")]
     public Text gvrRoomEffectText;
+
+    private void Awake()
+    {
+        if (playMasterOnAwake && master != null)
+        {
+            master.playOnAwake = true;
+        }
+        else if (!playMasterOnAwake && master != null)
+        {
+            master.playOnAwake = false;
+        }
+    }
+
 
     private void OnDisable()
     {
@@ -29,6 +46,22 @@ public class MusicController : MonoBehaviour {
         }
     }
 
+    public void PlayMaster()
+    {
+        if (master != null && master.isPlaying == false)
+        {
+            master.Play();
+        }
+    }
+
+    public void StopMaster()
+    {
+        if (master != null && master.isPlaying == true)
+        {
+            master.Stop();
+        }
+    }
+
     public void PlayAudioSources()
     {
         foreach(GvrAudioSource gvrAudioSource in gvrAudioSources)
@@ -40,11 +73,6 @@ public class MusicController : MonoBehaviour {
 
             if (!gvrAudioSource.isPlaying)
             {
-                if (master != null && master.isPlaying == false)
-                {
-                    master.Play();
-                }
-
                 gvrAudioSource.Play();
             }
             else if (gvrAudioSource.isPlaying)
@@ -63,11 +91,6 @@ public class MusicController : MonoBehaviour {
 
         if (!gvrAudioSources[index].isPlaying)
         {
-            if (master != null && master.isPlaying == false)
-            {
-                master.Play();
-            }
-
             gvrAudioSources[index].Play();
         }
         else if (gvrAudioSources[index].isPlaying)

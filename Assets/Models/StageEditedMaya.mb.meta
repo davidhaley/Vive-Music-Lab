@@ -795,6 +795,13 @@ ModelImporter:
     101574: Truss_system
     101576: truss_wire
     101578: 'Mains '
+    101580: Collider
+    101582: 'Collider '
+    101584: Collider  1
+    101586: Collider  2
+    101588: Cylinder_5_7_MeshPart0
+    101590: Cylinder_5_7_MeshPart1
+    101592: TrussSystem
     400000: above_cam
     400002: Ampeg_8_10
     400004: Ampeg_8_10_1
@@ -1585,6 +1592,13 @@ ModelImporter:
     401574: Truss_system
     401576: truss_wire
     401578: 'Mains '
+    401580: Collider
+    401582: 'Collider '
+    401584: Collider  1
+    401586: Collider  2
+    401588: Cylinder_5_7_MeshPart0
+    401590: Cylinder_5_7_MeshPart1
+    401592: TrussSystem
     2300000: Bolt
     2300002: Bolt_2
     2300004: Bolt_3
@@ -2303,6 +2317,8 @@ ModelImporter:
     2301430: Sweep_3
     2301432: truss_wire
     2301434: 'Mains '
+    2301436: Cylinder_5_7_MeshPart0
+    2301438: Cylinder_5_7_MeshPart1
     3300000: Bolt
     3300002: Bolt_2
     3300004: Bolt_3
@@ -3021,6 +3037,8 @@ ModelImporter:
     3301430: Sweep_3
     3301432: truss_wire
     3301434: 'Mains '
+    3301436: Cylinder_5_7_MeshPart0
+    3301438: Cylinder_5_7_MeshPart1
     4300000: truss_wire
     4300002: Sweep_1
     4300004: Sweep_2
@@ -3739,6 +3757,8 @@ ModelImporter:
     4301430: Cube_3_17
     4301432: Cube_1_24
     4301434: 'Mains '
+    4301436: Cylinder_5_7_MeshPart0
+    4301438: Cylinder_5_7_MeshPart1
     9500000: //RootNode
   materials:
     importMaterials: 1

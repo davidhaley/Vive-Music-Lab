@@ -1,46 +1,15 @@
 fileFormatVersion: 2
-guid: 2305a121adf75c64b8c55fabb78921dd
-timeCreated: 1488131823
+guid: 225a136aab862724e8ac64d9a5bb2551
+timeCreated: 1488135914
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Bolt_5
-    100002: Handle_5
-    100004: Handle_5 1
-    100006: Housing_5
-    100008: Nut_5
-    100010: Sphere_5
-    100012: sTAGE
-    100014: Stage_Light_2
-    100016: Stage_Lights
-    100018: //RootNode
-    100020: transform1
-    100022: transform2
-    100024: transform3
-    100026: transform4
-    100028: transform5
-    400000: Bolt_5
-    400002: Handle_5
-    400004: Handle_5 1
-    400006: Housing_5
-    400008: Nut_5
-    400010: Sphere_5
-    400012: sTAGE
-    400014: Stage_Light_2
-    400016: Stage_Lights
-    400018: //RootNode
-    400020: transform1
-    400022: transform2
-    400024: transform3
-    400026: transform4
-    400028: transform5
-    2300000: Handle_5
-    2300002: //RootNode
-    3300000: Handle_5
-    3300002: //RootNode
-    4300000: Handle_5
-    9500000: //RootNode
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: 'Mains '
   materials:
     importMaterials: 1
     materialName: 0
@@ -105,7 +74,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

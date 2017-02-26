@@ -794,6 +794,7 @@ ModelImporter:
     101572: top_truss_3
     101574: Truss_system
     101576: truss_wire
+    101578: 'Mains '
     400000: above_cam
     400002: Ampeg_8_10
     400004: Ampeg_8_10_1
@@ -1583,6 +1584,7 @@ ModelImporter:
     401572: top_truss_3
     401574: Truss_system
     401576: truss_wire
+    401578: 'Mains '
     2300000: Bolt
     2300002: Bolt_2
     2300004: Bolt_3
@@ -2300,6 +2302,7 @@ ModelImporter:
     2301428: Sweep_2
     2301430: Sweep_3
     2301432: truss_wire
+    2301434: 'Mains '
     3300000: Bolt
     3300002: Bolt_2
     3300004: Bolt_3
@@ -3017,6 +3020,7 @@ ModelImporter:
     3301428: Sweep_2
     3301430: Sweep_3
     3301432: truss_wire
+    3301434: 'Mains '
     4300000: truss_wire
     4300002: Sweep_1
     4300004: Sweep_2
@@ -3734,6 +3738,7 @@ ModelImporter:
     4301428: Cube_4_13
     4301430: Cube_3_17
     4301432: Cube_1_24
+    4301434: 'Mains '
     9500000: //RootNode
   materials:
     importMaterials: 1

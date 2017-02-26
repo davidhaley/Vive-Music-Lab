@@ -1,0 +1,177 @@
+fileFormatVersion: 2
+guid: d3ced29b13fdaf949b8bdeefd3fd7f35
+timeCreated: 1488142360
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: AngleRoof1
+    100002: AngleRoof2
+    100004: AngleRoof3
+    100006: AngleRoof4
+    100008: //RootNode
+    100010: MuseumAngleRoof
+    100012: MuseumFloor
+    100014: MuseumRoof
+    100016: MuseumSkylight
+    100018: MuseumWallRoofConnector
+    100020: MuseumWalls
+    100022: Roof1
+    100024: Roof2
+    100026: Roof3
+    100028: Roof4
+    100030: Wall1
+    100032: Wall2
+    100034: Wall3
+    100036: Wall4
+    100038: WallConnector2
+    100040: WallConnector3
+    100042: WallConnector4
+    100044: WallConnector5
+    400000: AngleRoof1
+    400002: AngleRoof2
+    400004: AngleRoof3
+    400006: AngleRoof4
+    400008: //RootNode
+    400010: MuseumAngleRoof
+    400012: MuseumFloor
+    400014: MuseumRoof
+    400016: MuseumSkylight
+    400018: MuseumWallRoofConnector
+    400020: MuseumWalls
+    400022: Roof1
+    400024: Roof2
+    400026: Roof3
+    400028: Roof4
+    400030: Wall1
+    400032: Wall2
+    400034: Wall3
+    400036: Wall4
+    400038: WallConnector2
+    400040: WallConnector3
+    400042: WallConnector4
+    400044: WallConnector5
+    2300000: AngleRoof1
+    2300002: AngleRoof2
+    2300004: AngleRoof3
+    2300006: AngleRoof4
+    2300008: MuseumFloor
+    2300010: MuseumSkylight
+    2300012: Roof1
+    2300014: Roof2
+    2300016: Roof3
+    2300018: Roof4
+    2300020: Wall1
+    2300022: Wall2
+    2300024: Wall3
+    2300026: Wall4
+    2300028: WallConnector2
+    2300030: WallConnector3
+    2300032: WallConnector4
+    2300034: WallConnector5
+    3300000: AngleRoof1
+    3300002: AngleRoof2
+    3300004: AngleRoof3
+    3300006: AngleRoof4
+    3300008: MuseumFloor
+    3300010: MuseumSkylight
+    3300012: Roof1
+    3300014: Roof2
+    3300016: Roof3
+    3300018: Roof4
+    3300020: Wall1
+    3300022: Wall2
+    3300024: Wall3
+    3300026: Wall4
+    3300028: WallConnector2
+    3300030: WallConnector3
+    3300032: WallConnector4
+    3300034: WallConnector5
+    4300000: AngleRoof1
+    4300002: AngleRoof2
+    4300004: AngleRoof3
+    4300006: AngleRoof4
+    4300008: MuseumFloor
+    4300010: Roof1
+    4300012: Roof2
+    4300014: Roof3
+    4300016: Roof4
+    4300018: MuseumSkylight
+    4300020: WallConnector2
+    4300022: WallConnector3
+    4300024: WallConnector4
+    4300026: WallConnector5
+    4300028: Wall1
+    4300030: Wall2
+    4300032: Wall3
+    4300034: Wall4
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

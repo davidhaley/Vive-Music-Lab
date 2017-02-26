@@ -22,6 +22,8 @@ public class Typer : MonoBehaviour
     private char charComma;
     private char charPeriod;
 
+    private bool finished = false;
+
     void Awake()
     {
         InitializeTyper();
@@ -33,8 +35,11 @@ public class Typer : MonoBehaviour
     //Update text and start typewriter effect
     public void StartTyper()
     {
-        StopCoroutine(PlayText()); //stop Coroutime if one exists
-        StartCoroutine(PlayText());
+        if (!finished)
+        {
+            StopCoroutine(PlayText()); //stop Coroutime if one exists
+            StartCoroutine(PlayText());
+        }
     }
 
     IEnumerator PlayText()
@@ -74,6 +79,7 @@ public class Typer : MonoBehaviour
         //When finished, show the button
         yield return new WaitForSeconds(delayBetweenChars);
         button.gameObject.SetActive(true);
+        finished = true;
     }
 
     private void LoadAudio()

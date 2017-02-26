@@ -8,13 +8,14 @@ public class RaycastMovement : MonoBehaviour
 
 	public GameObject raycastHolder;
 	public GameObject raycastIndicator;
+    public GameObject cube;
 
 	public float height = 2;
 	public float maxMoveDistance = 10;
 	
 	private bool moving = false;
 
-	RaycastHit hit;
+    RaycastHit hit;
 	float theDistance;
 
 
@@ -47,11 +48,11 @@ public class RaycastMovement : MonoBehaviour
 
                     raycastIndicator.transform.position = hit.point;
 
-                    if (hit.distance <= maxMoveDistance && GvrViewer.Instance.Triggered)
-                    {
-                        Teleport(hit.point);
-                    }
+                if (hit.distance <= maxMoveDistance)
+                {
+                    //Teleport(hit.point);
                 }
+            }
             }
             else
             {
@@ -65,6 +66,14 @@ public class RaycastMovement : MonoBehaviour
     }
 
 	public void Teleport(Vector3 location) {
-		Camera.main.transform.position = new Vector3 (location.x, location.y + height, location.z);
-	}
+        Camera.main.transform.parent.position = new Vector3(location.x, location.y + height, location.z);
+    }
+
+    public void OnClick()
+    {
+        if (hit.distance <= maxMoveDistance)
+        {
+            Teleport(hit.point);
+        }
+    }
 }

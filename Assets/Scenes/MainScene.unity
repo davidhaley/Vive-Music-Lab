@@ -52,12 +52,12 @@ LightmapSettings:
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 1
     m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 7
-    m_Resolution: 1
-    m_BakeResolution: 10
-    m_TextureWidth: 2048
+    m_Resolution: 20
+    m_BakeResolution: 20
+    m_TextureWidth: 1024
     m_TextureHeight: 1024
     m_AO: 1
     m_AOMaxDistance: 4
@@ -71,7 +71,7 @@ LightmapSettings:
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
-    m_StationaryBakeMode: 1
+    m_StationaryBakeMode: 0
     m_BakeBackend: 0
     m_PVRSampling: 1
     m_PVRSampleCount: 500
@@ -85,7 +85,7 @@ LightmapSettings:
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
-  m_LightingDataAsset: {fileID: 112001474, guid: 0da95d13c439b204b9afff876f9f1090,
+  m_LightingDataAsset: {fileID: 112000002, guid: 0da95d13c439b204b9afff876f9f1090,
     type: 2}
   m_ShadowMaskMode: 0
 --- !u!196 &4
@@ -2004,27 +2004,27 @@ Prefab:
     - target: {fileID: 108476973506164828, guid: e6dd2326f328a684ba76099e8a0993bb,
         type: 2}
       propertyPath: m_Lightmapping
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108337894912997108, guid: e6dd2326f328a684ba76099e8a0993bb,
         type: 2}
       propertyPath: m_Lightmapping
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108642758536297440, guid: e6dd2326f328a684ba76099e8a0993bb,
         type: 2}
       propertyPath: m_Lightmapping
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108444090742142918, guid: e6dd2326f328a684ba76099e8a0993bb,
         type: 2}
       propertyPath: m_Lightmapping
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108171981542019468, guid: e6dd2326f328a684ba76099e8a0993bb,
         type: 2}
       propertyPath: m_Lightmapping
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108642758536297440, guid: e6dd2326f328a684ba76099e8a0993bb,
         type: 2}
@@ -2245,7 +2245,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 741.21, y: 325.7}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.08203125, y: 0.7011719}
+  savedTextUV0: {x: 0.072265625, y: 0.32714844}
   savedFill: 0
 --- !u!114 &560036885
 MonoBehaviour:
@@ -5876,7 +5876,7 @@ MonoBehaviour:
   savedUp: {x: -0.0000000040066963, y: 0.98734117, z: -0.15861061}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.47851562, y: 0.15332031}
+  savedTextUV0: {x: 0.31445312, y: 0.29101562}
   savedFill: 0
 --- !u!114 &1245086995
 MonoBehaviour:
@@ -6760,6 +6760,10 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 489417919}
+    - target: {fileID: 1702502586001362, guid: 79d0cd50094ebb24e86dabcdd2e806ab, type: 2}
+      propertyPath: m_Name
+      value: Collider
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79d0cd50094ebb24e86dabcdd2e806ab, type: 2}
   m_IsPrefabParent: 0

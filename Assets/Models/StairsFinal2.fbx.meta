@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 225a136aab862724e8ac64d9a5bb2551
-timeCreated: 1488135914
+guid: 47e59a31b44418043b102bf511c08a35
+timeCreated: 1488138524
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: 'Mains '
+    4300000: Cube_13_2
   materials:
     importMaterials: 1
     materialName: 0
@@ -41,7 +41,7 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0

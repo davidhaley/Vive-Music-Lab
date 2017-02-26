@@ -802,6 +802,36 @@ ModelImporter:
     101588: Cylinder_5_7_MeshPart0
     101590: Cylinder_5_7_MeshPart1
     101592: TrussSystem
+    101594: Cube_13_2 1
+    101596: Cube_13_2 2
+    101598: 'Cube_18 '
+    101600: 'Cube_23 '
+    101602: transform1
+    101604: transform10
+    101606: transform11
+    101608: transform12
+    101610: transform13
+    101612: transform14
+    101614: transform15
+    101616: transform16
+    101618: transform17
+    101620: transform18
+    101622: transform19
+    101624: transform2
+    101626: transform20
+    101628: transform21
+    101630: transform22
+    101632: transform23
+    101634: transform24
+    101636: transform25
+    101638: transform26
+    101640: transform3
+    101642: transform4
+    101644: transform5
+    101646: transform6
+    101648: transform7
+    101650: transform8
+    101652: transform9
     400000: above_cam
     400002: Ampeg_8_10
     400004: Ampeg_8_10_1
@@ -1599,6 +1629,36 @@ ModelImporter:
     401588: Cylinder_5_7_MeshPart0
     401590: Cylinder_5_7_MeshPart1
     401592: TrussSystem
+    401594: Cube_13_2 1
+    401596: Cube_13_2 2
+    401598: 'Cube_18 '
+    401600: 'Cube_23 '
+    401602: transform1
+    401604: transform10
+    401606: transform11
+    401608: transform12
+    401610: transform13
+    401612: transform14
+    401614: transform15
+    401616: transform16
+    401618: transform17
+    401620: transform18
+    401622: transform19
+    401624: transform2
+    401626: transform20
+    401628: transform21
+    401630: transform22
+    401632: transform23
+    401634: transform24
+    401636: transform25
+    401638: transform26
+    401640: transform3
+    401642: transform4
+    401644: transform5
+    401646: transform6
+    401648: transform7
+    401650: transform8
+    401652: transform9
     2300000: Bolt
     2300002: Bolt_2
     2300004: Bolt_3
@@ -3759,6 +3819,7 @@ ModelImporter:
     4301434: 'Mains '
     4301436: Cylinder_5_7_MeshPart0
     4301438: Cylinder_5_7_MeshPart1
+    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1

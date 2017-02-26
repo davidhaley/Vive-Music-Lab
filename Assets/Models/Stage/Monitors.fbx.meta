@@ -1,22 +1,15 @@
 fileFormatVersion: 2
-guid: e180bcbff2626d748aedf8f9bc3f833d
-timeCreated: 1488137493
+guid: 203e380fd18d1bd44933877550a39869
+timeCreated: 1488140469
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: TrussSystem_MeshPart0
-    100002: TrussSystem_MeshPart1
-    100004: //RootNode
-    400000: TrussSystem_MeshPart0
-    400002: TrussSystem_MeshPart1
-    400004: //RootNode
-    2300000: TrussSystem_MeshPart0
-    2300002: TrussSystem_MeshPart1
-    3300000: TrussSystem_MeshPart0
-    3300002: TrussSystem_MeshPart1
-    4300000: TrussSystem_MeshPart0
-    4300002: TrussSystem_MeshPart1
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Monitors
   materials:
     importMaterials: 1
     materialName: 0
@@ -48,7 +41,7 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0

@@ -20,24 +20,24 @@ public class RaycastMovement : MonoBehaviour
 
     void Update () {
 
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            if (raycastHolder.activeSelf == true || raycastIndicator.activeSelf == true)
-            {
-                raycastHolder.SetActive(false);
-                raycastIndicator.SetActive(false);
-            }
+        //if (EventSystem.current.IsPointerOverGameObject())
+        //{
+        //    if (raycastHolder.activeSelf == true || raycastIndicator.activeSelf == true)
+        //    {
+        //        raycastHolder.SetActive(false);
+        //        raycastIndicator.SetActive(false);
+        //    }
 
-            return;
-        }
-        else
-        {
+        //    return;
+        //}
+        //else
+        //{
             Vector3 forwardDir = raycastHolder.transform.TransformDirection(Vector3.forward) * 100;
             Debug.DrawRay(raycastHolder.transform.position, forwardDir, Color.blue);
 
             if (Physics.Raycast(raycastHolder.transform.position, (forwardDir), out hit))
             {
-                if (hit.collider.gameObject.tag == "MovementCapable")
+                if (hit.collider.gameObject.layer == 8)
                 {
                     if (raycastHolder.activeSelf == false || raycastIndicator.activeSelf == false)
                     {
@@ -61,7 +61,7 @@ public class RaycastMovement : MonoBehaviour
                     raycastIndicator.SetActive(false);
                 }
             }
-        }
+        //}
     }
 
 	public void Teleport(Vector3 location) {

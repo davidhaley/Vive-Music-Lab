@@ -13,6 +13,22 @@ public class MusicController : MonoBehaviour {
     [Header("Room Effect Canvas (Optional)")]
     public Text gvrRoomEffectText;
 
+    private void OnDisable()
+    {
+        if (master != null && master.isPlaying)
+        {
+            master.Stop();
+        }
+
+        foreach (GvrAudioSource gvrAudioSource in gvrAudioSources)
+        {
+            if (gvrAudioSource.isPlaying)
+            {
+                gvrAudioSource.Stop();
+            }
+        }
+    }
+
     public void PlayAudioSources()
     {
         foreach(GvrAudioSource gvrAudioSource in gvrAudioSources)

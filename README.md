@@ -4,7 +4,7 @@
 
 #### Screenshot
 
-https://cloud.githubusercontent.com/assets/11729897/23351623/72e2e72c-fc7f-11e6-9c20-a8d8b1435c58.png
+![alt text](https://cloud.githubusercontent.com/assets/11729897/23351623/72e2e72c-fc7f-11e6-9c20-a8d8b1435c58.png)
 
 
 #### Project Dependencies

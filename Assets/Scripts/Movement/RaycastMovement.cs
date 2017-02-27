@@ -81,6 +81,11 @@ public class RaycastMovement : MonoBehaviour
 
 	public void OnClick()
 	{
+        if (hit.collider.gameObject.layer == 9)
+        {
+            return;
+        }
+
 		if (hit.distance <= maxMoveDistance)
 		{
 			Teleport(hit.point);

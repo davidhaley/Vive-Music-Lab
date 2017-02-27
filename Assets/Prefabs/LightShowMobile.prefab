@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114280487487489158}
   - component: {fileID: 114018393820192364}
   m_Layer: 0
-  m_Name: LightShowStatic
+  m_Name: LightShowMobile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

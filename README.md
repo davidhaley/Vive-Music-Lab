@@ -23,6 +23,8 @@ This was my final project for the mobile track in Udacity's VR Developer Nano-De
 
 The project was challenging because Google Cardboard and mobile VR requires finite optimization. I spent a lot of time adding more functionality than what I have in this final build, but the platform would not support it at a reasonable framerate.
 
+Some of the features I completed but would not work, are a fog machine, a dynamic strobe light controller, and spatial audio.
+
 I had a lot of fun building the booths, especially the sequencer and audio visualizer. The sequencer was challenging, and took quite a while to get right. The audio visualizer is something I have been wanting to create. Now that I have it working, I can use it in upcoming projects.
 
 I fully intend to expand on this project in the high-immersion section of Udacity's VR Developer Nano-Degree. I have many ideas I want to see implemented, using the HTC Vive.

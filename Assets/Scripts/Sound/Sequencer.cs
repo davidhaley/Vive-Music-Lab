@@ -99,31 +99,31 @@ public class Sequencer : MonoBehaviour
     {
         if (column == 0)
         {
-            if (Queued(kicks, column))
+            if (Queued(kicks, column) && !kickAudio.isPlaying)
             {
                 kickAudio.Play();
                 yield return null;
             }
 
-            if (Queued(snares, column))
+            if (Queued(snares, column) && !snareAudio.isPlaying)
             {
                 snareAudio.Play();
                 yield return null;
             }
 
-            if (Queued(hats, column))
+            if (Queued(hats, column) && !hatAudio.isPlaying)
             {
                 hatAudio.Play();
                 yield return null;
             }
 
-            if (Queued(basses, column))
+            if (Queued(basses, column) && !bassAudio.isPlaying)
             {
                 bassAudio.Play();
                 yield return null;
             }
 
-            if (Queued(pianoPads, column))
+            if (Queued(pianoPads, column) && !pianoPadAudio.isPlaying)
             {
                 pianoPadAudio.Play();
                 yield return null;
@@ -131,31 +131,31 @@ public class Sequencer : MonoBehaviour
         }
         else if (column == 1)
         {
-            if (Queued(kicks, column))
+            if (Queued(kicks, column) && !kickAudio.isPlaying)
             {
                 kickAudio.Play();
                 yield return null;
             }
 
-            if (Queued(snares, column))
+            if (Queued(snares, column) && !snareAudio.isPlaying)
             {
                 snareAudio.Play();
                 yield return null;
             }
 
-            if (Queued(hats, column))
+            if (Queued(hats, column) && !hatAudio.isPlaying)
             {
                 hatAudio.Play();
                 yield return null;
             }
 
-            if (Queued(basses, column))
+            if (Queued(basses, column) && !bassAudio.isPlaying)
             {
                 bassAudio.Play();
                 yield return null;
             }
 
-            if (Queued(pianoPads, column))
+            if (Queued(pianoPads, column) && !pianoPadAudio.isPlaying)
             {
                 pianoPadAudio.Play();
                 yield return null;
@@ -163,31 +163,31 @@ public class Sequencer : MonoBehaviour
         }
         else if (column == 2)
         {
-            if (Queued(kicks, column))
+            if (Queued(kicks, column) && !kickAudio.isPlaying)
             {
                 kickAudio.Play();
                 yield return null;
             }
 
-            if (Queued(snares, column))
+            if (Queued(snares, column) && !snareAudio.isPlaying)
             {
                 snareAudio.Play();
                 yield return null;
             }
 
-            if (Queued(hats, column))
+            if (Queued(hats, column) && !hatAudio.isPlaying)
             {
                 hatAudio.Play();
                 yield return null;
             }
 
-            if (Queued(basses, column))
+            if (Queued(basses, column) && !bassAudio.isPlaying)
             {
                 bassAudio.Play();
                 yield return null;
             }
 
-            if (Queued(pianoPads, column))
+            if (Queued(pianoPads, column) && !pianoPadAudio.isPlaying)
             {
                 pianoPadAudio.Play();
                 yield return null;
@@ -195,31 +195,31 @@ public class Sequencer : MonoBehaviour
         }
         else if (column == 3)
         {
-            if (Queued(kicks, column))
+            if (Queued(kicks, column) && !kickAudio.isPlaying)
             {
                 kickAudio.Play();
                 yield return null;
             }
 
-            if (Queued(snares, column))
+            if (Queued(snares, column) && !snareAudio.isPlaying)
             {
                 snareAudio.Play();
                 yield return null;
             }
 
-            if (Queued(hats, column))
+            if (Queued(hats, column) && !hatAudio.isPlaying)
             {
                 hatAudio.Play();
                 yield return null;
             }
 
-            if (Queued(basses, column))
+            if (Queued(basses, column) && !bassAudio.isPlaying)
             {
                 bassAudio.Play();
                 yield return null;
             }
 
-            if (Queued(pianoPads, column))
+            if (Queued(pianoPads, column) && !pianoPadAudio.isPlaying)
             {
                 pianoPadAudio.Play();
                 yield return null;
@@ -393,7 +393,7 @@ public class Sequencer : MonoBehaviour
         return button.GetComponent<SequencerButton>().Ready;
     }
 
-    private void RemoveFromQueue(Button button)
+    public void RemoveFromQueue(Button button)
     {
         button.GetComponent<SequencerButton>().Ready = true;
     }

@@ -16,8 +16,7 @@ TagManager:
   - Bass
   - Arp
   - SequencerCanvas
-  - Occluder Static
-  - Occludee Static
+  - AudioVisualizer
   layers:
   - Default
   - TransparentFX

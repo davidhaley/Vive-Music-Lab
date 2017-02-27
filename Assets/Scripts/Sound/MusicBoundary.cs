@@ -48,31 +48,34 @@ public class MusicBoundary : MonoBehaviour {
                         if (gvrAudioSource.isPlaying)
                         {
                             gvrAudioSource.Stop();
+
+                            // Change from play button to stop button if playing
+                            if (gameObject.tag == "AudioVisualizer")
+                            {
+                                gameObject.GetComponent<SwitchButtons>().Switch();
+                            }
                         }
                     }
                 }
-            }
-
-            //Stop all sequencer audio
-            if (sequencer != null)
-            {
-                sequencer.running = false;
-                sequencer.StopAllCoroutines();
             }
 
             if (statusIndicators != null)
             {
                 foreach (StatusIndicator statusIndicator in statusIndicators)
                 {
-                    if (statusIndicator.ToggledStatus() == true)
-                    {
-                        statusIndicator.ToggleColor();
-                    }
+                    statusIndicator.ToggleColor();
                 }
             }
 
             if (gameObject.tag == "SequencerCanvas")
             {
+                //Stop all sequencer audio
+                if (sequencer != null)
+                {
+                    sequencer.running = false;
+                    sequencer.StopAllCoroutines();
+                }
+
                 buttonImageColors = FindObjectsOfType<ButtonImageColor>();
 
                 if (buttonImageColors != null)
@@ -86,6 +89,7 @@ public class MusicBoundary : MonoBehaviour {
                             foreach (Button button in buttons)
                             {
                                 buttonImageColor.Toggle(button, Color.white);
+                                sequencer.RemoveFromQueue(button);
                             }
                         }
                     }

@@ -44,6 +44,7 @@ public class Typer : MonoBehaviour
 
     IEnumerator PlayText()
     {
+        finished = true;
         yield return new WaitForSeconds(delayToStart);
 
         foreach (char c in originText)
@@ -79,7 +80,6 @@ public class Typer : MonoBehaviour
         //When finished, show the button
         yield return new WaitForSeconds(delayBetweenChars);
         button.gameObject.SetActive(true);
-        finished = true;
     }
 
     private void LoadAudio()

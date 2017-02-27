@@ -53,5 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raycastHolder: {fileID: 0}
   raycastIndicator: {fileID: 0}
+  cube: {fileID: 0}
   height: 1.6
   maxMoveDistance: 15

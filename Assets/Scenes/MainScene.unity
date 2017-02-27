@@ -1381,7 +1381,6 @@ GameObject:
   - component: {fileID: 135816689}
   - component: {fileID: 135816688}
   - component: {fileID: 135816687}
-  - component: {fileID: 135816686}
   - component: {fileID: 135816685}
   m_Layer: 5
   m_Name: Button
@@ -1409,22 +1408,6 @@ MonoBehaviour:
   savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
---- !u!114 &135816686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114717504126752676, guid: e5f699e6cdb05ee48a6a4d25b9d64e4f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 135816684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a41537d7fb69fad44bf8f1fabb7d579d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backgroundImage: {fileID: 135816688}
-  foregroundImage: {fileID: 896318176}
-  fadeTime: 1
-  faded: 0
 --- !u!114 &135816687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2257,6 +2240,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicController: {fileID: 1428390149}
   sequencer: {fileID: 0}
+  statusIndicators:
+  - {fileID: 436100932}
 --- !u!65 &181479449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4072,6 +4057,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224767451183254478, guid: 9ba931941ba25ad4f816fd6faca072af,
     type: 2}
   m_PrefabInternal: {fileID: 1800168802}
+--- !u!114 &436100932 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114567066936339166, guid: 9ba931941ba25ad4f816fd6faca072af,
+    type: 2}
+  m_PrefabInternal: {fileID: 1800168802}
+  m_Script: {fileID: 11500000, guid: b96613555df1e364eb54a3d7870c9121, type: 3}
 --- !u!1 &439621245
 GameObject:
   m_ObjectHideFlags: 0
@@ -8403,6 +8394,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicController: {fileID: 2136988337}
   sequencer: {fileID: 0}
+  statusIndicators:
+  - {fileID: 1441181883}
+  - {fileID: 67426041}
+  - {fileID: 1513039306}
+  - {fileID: 1974548220}
+  - {fileID: 439889180}
 --- !u!65 &676489238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12965,6 +12962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicController: {fileID: 766713713}
   sequencer: {fileID: 0}
+  statusIndicators: []
 --- !u!65 &922023171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19544,7 +19542,7 @@ GameObject:
   - component: {fileID: 1664489183}
   m_Layer: 2
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: SequencerCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19582,6 +19580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicController: {fileID: 0}
   sequencer: {fileID: 831435159}
+  statusIndicators: []
 --- !u!65 &1664489184
 BoxCollider:
   m_ObjectHideFlags: 0

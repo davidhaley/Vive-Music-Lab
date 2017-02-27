@@ -50,4 +50,9 @@ public class StatusIndicator : MonoBehaviour {
         }
 
     }
+
+    public bool ToggledStatus()
+    {
+        return toggled;
+    }
 }

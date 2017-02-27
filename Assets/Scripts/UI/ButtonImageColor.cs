@@ -25,4 +25,9 @@ public class ButtonImageColor : MonoBehaviour
             button.GetComponent<ButtonImageColor>().toggled = false;
         }
     }
+
+    public bool ToggleStatus()
+    {
+        return toggled;
+    }
 }

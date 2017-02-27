@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MusicBoundary : MonoBehaviour {
 
     public MusicController musicController;
     public Sequencer sequencer;
+    public StatusIndicator[] statusIndicators;
+
+    private ButtonImageColor[] buttonImageColors;
     private GvrAudioSource[] gvrAudioSources;
 
 
@@ -54,6 +58,38 @@ public class MusicBoundary : MonoBehaviour {
             {
                 sequencer.running = false;
                 sequencer.StopAllCoroutines();
+            }
+
+            if (statusIndicators != null)
+            {
+                foreach (StatusIndicator statusIndicator in statusIndicators)
+                {
+                    if (statusIndicator.ToggledStatus() == true)
+                    {
+                        statusIndicator.ToggleColor();
+                    }
+                }
+            }
+
+            if (gameObject.tag == "SequencerCanvas")
+            {
+                buttonImageColors = FindObjectsOfType<ButtonImageColor>();
+
+                if (buttonImageColors != null)
+                {
+                    foreach (ButtonImageColor buttonImageColor in buttonImageColors)
+                    {
+                        if (buttonImageColor.ToggleStatus() == true)
+                        {
+                            Button[] buttons = buttonImageColor.GetComponentsInChildren<Button>();
+
+                            foreach (Button button in buttons)
+                            {
+                                buttonImageColor.Toggle(button, Color.white);
+                            }
+                        }
+                    }
+                }
             }
         }
     }

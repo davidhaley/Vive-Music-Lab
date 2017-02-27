@@ -11,11 +11,25 @@ public class SwitchText : MonoBehaviour {
     public Text text2;
     public Text text3;
 
+    public bool fadeCanvasOnFinalText;
+    public bool welcomeCanvas;
+    public GameObject canvas;
+
     private void Awake()
     {
         text1.gameObject.SetActive(true);
         text2.gameObject.SetActive(false);
         text2.gameObject.SetActive(false);
+
+        if (welcomeCanvas)
+        {
+            GameObject[] teleportObjs = GameObject.FindGameObjectsWithTag("Teleport");
+
+            foreach (GameObject teleportObj in teleportObjs)
+            {
+                teleportObj.layer = 9;
+            }
+        }
     }
 
     public void Switch()
@@ -35,9 +49,31 @@ public class SwitchText : MonoBehaviour {
             text3.gameObject.SetActive(false);
             fadeButton.Fade();
 
-            foreach(StatusIndicator statusIndicator in statusIndicators)
+            if (statusIndicators != null)
             {
-                statusIndicator.ToggleColor();
+                foreach (StatusIndicator statusIndicator in statusIndicators)
+                {
+                    if (statusIndicator != null)
+                    {
+                        statusIndicator.ToggleColor();
+                    }
+                }
+            }
+
+            if (fadeCanvasOnFinalText && canvas != null)
+            {
+                Debug.Log("starting fade");
+                canvas.GetComponent<FadeController>().ToggleFade();
+            }
+
+            if (welcomeCanvas)
+            {
+                GameObject[] teleportObjs = GameObject.FindGameObjectsWithTag("Teleport");
+
+                foreach(GameObject teleportObj in teleportObjs)
+                {
+                    teleportObj.layer = 8;
+                }
             }
         }
     }

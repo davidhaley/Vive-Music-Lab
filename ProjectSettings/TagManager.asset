@@ -19,6 +19,7 @@ TagManager:
   - AudioVisualizer
   - LivePerformance
   - LivePerformanceCollider
+  - Teleport
   layers:
   - Default
   - TransparentFX

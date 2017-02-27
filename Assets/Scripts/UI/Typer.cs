@@ -8,6 +8,7 @@ public class Typer : MonoBehaviour
 {
     public GameObject button;
 
+    public bool playOnAwake;
     public float delayToStart;
     public float delayBetweenChars = 0.125f;
     public float delayAfterComma = 0.5f;
@@ -30,6 +31,11 @@ public class Typer : MonoBehaviour
         LoadAudio();
 
         button.gameObject.SetActive(false);
+
+        if (playOnAwake)
+        {
+            StartTyper();
+        }
      }
 
     //Update text and start typewriter effect

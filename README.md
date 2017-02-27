@@ -28,7 +28,7 @@ Unity v5.6.0b7
 
 This was my final project for the mobile track in Udacity's VR Developer Nano-Degree. We had full autonomy to choose a specific company, industry, or technology, and show the user ways it could be affected by virtual reality. I chose the music industry, because I am musician, DJ and producer myself, and because I wanted to do this anyway.
 
-The project was challenging because Google Cardboard and mobile VR requires finite optimization. I spent a lot of time adding more functionality than what I have in this final build, but the platform would not support it at a reasonable framerate.
+The project was challenging because Google Cardboard and mobile VR require finite optimization. I spent a lot of time adding more functionality than what I have in this final build, but the platform would not support it at a reasonable framerate.
 
 Some of the features I completed but would not work, are a fog machine, a dynamic strobe light controller, and spatial audio.
 

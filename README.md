@@ -1,11 +1,18 @@
 # Udacity-VR-Nano-Degree-Project-5-Museum
 "A night at the museum" is a mobile VR application that tries to convey how virtual reality might affect the music industry.
 
+
+#### Screenshot
+
+https://cloud.githubusercontent.com/assets/11729897/23351623/72e2e72c-fc7f-11e6-9c20-a8d8b1435c58.png
+
+
 #### Project Dependencies
 
 Google VR SDK for Unity v1.20 - https://developers.google.com/vr/unity/download
 
 Unity v5.6.0b7
+
 
 #### Instructions
 

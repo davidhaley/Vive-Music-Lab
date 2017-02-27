@@ -1179,7 +1179,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 874, y: 158}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.0859375, y: 0.203125}
+  savedTextUV0: {x: 0.30078125, y: 0}
   savedFill: 0
 --- !u!114 &111765811
 MonoBehaviour:
@@ -2838,7 +2838,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.56640625, y: 0.421875}
+  savedTextUV0: {x: 0.08984375, y: 0.3642578}
   savedFill: 0
 --- !u!114 &270329609
 MonoBehaviour:
@@ -4489,7 +4489,7 @@ MonoBehaviour:
   savedUp: {x: 0.000000047572755, y: 0.9169208, z: 0.39906922}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.1171875, y: 0.5019531}
+  savedTextUV0: {x: 0.029296875, y: 0}
   savedFill: 0
 --- !u!222 &456003749
 CanvasRenderer:
@@ -4572,7 +4572,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.27148438, y: 0.043945312}
+  savedTextUV0: {x: 0.85546875, y: 0}
   savedFill: 0
 --- !u!114 &479215483
 MonoBehaviour:
@@ -6300,7 +6300,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.27148438, y: 0.043945312}
+  savedTextUV0: {x: 0.85546875, y: 0}
   savedFill: 0
 --- !u!114 &519144433
 MonoBehaviour:
@@ -7721,7 +7721,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.27148438, y: 0}
+  savedTextUV0: {x: 0.7792969, y: 0}
   savedFill: 0
 --- !u!114 &643157652
 MonoBehaviour:
@@ -8020,7 +8020,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.4453125, y: 0.20019531}
+  savedTextUV0: {x: 0.8515625, y: 0.045898438}
   savedFill: 0
 --- !u!114 &656847581
 MonoBehaviour:
@@ -10516,7 +10516,7 @@ MonoBehaviour:
   savedUp: {x: -0.0000000040066963, y: 0.98734117, z: -0.15861061}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.78125, y: 0.19042969}
+  savedTextUV0: {x: 0.37304688, y: 0.001953125}
   savedFill: 0
 --- !u!114 &839964666
 MonoBehaviour:
@@ -12032,7 +12032,7 @@ MonoBehaviour:
   savedUp: {x: -0.0000000040066963, y: 0.98734117, z: -0.15861061}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.15820312, y: 0.38378906}
+  savedTextUV0: {x: 0.1640625, y: 0.35742188}
   savedFill: 0
 --- !u!114 &872689155
 MonoBehaviour:
@@ -12649,7 +12649,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 874, y: 220.84}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.08984375, y: 0.3876953}
+  savedTextUV0: {x: 0.08203125, y: 0.4169922}
   savedFill: 0
 --- !u!114 &909684818
 MonoBehaviour:
@@ -13300,7 +13300,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.8828125, y: 0.046875}
+  savedTextUV0: {x: 0, y: 0.45117188}
   savedFill: 0
 --- !u!114 &962957345
 MonoBehaviour:
@@ -13743,7 +13743,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.4140625, y: 0.24511719}
+  savedTextUV0: {x: 0.7792969, y: 0.043945312}
   savedFill: 0
 --- !u!114 &1010953802
 MonoBehaviour:
@@ -13859,7 +13859,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 781.21, y: 350}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.0859375, y: 0.203125}
+  savedTextUV0: {x: 0.30078125, y: 0}
   savedFill: 0
 --- !u!114 &1050569592
 MonoBehaviour:
@@ -14780,7 +14780,7 @@ MonoBehaviour:
   savedUp: {x: -0.0000000040066963, y: 0.98734117, z: -0.15861061}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.123046875, y: 0.29785156}
+  savedTextUV0: {x: 0.41210938, y: 0.33984375}
   savedFill: 0
 --- !u!114 &1115270794
 MonoBehaviour:
@@ -15218,7 +15218,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.4453125, y: 0.20019531}
+  savedTextUV0: {x: 0.8515625, y: 0.045898438}
   savedFill: 0
 --- !u!114 &1157271994
 MonoBehaviour:
@@ -17655,7 +17655,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.48632812, y: 0.15429688}
+  savedTextUV0: {x: 0.7578125, y: 0.10449219}
   savedFill: 0
 --- !u!114 &1461047142
 MonoBehaviour:
@@ -19921,7 +19921,7 @@ MonoBehaviour:
   savedUp: {x: -0.0000000040066963, y: 0.98734117, z: -0.15861061}
   savedRectSize: {x: 700, y: 100}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0, y: 0.15527344}
+  savedTextUV0: {x: 0.85546875, y: 0.2861328}
   savedFill: 0
 --- !u!114 &1693595145
 MonoBehaviour:
@@ -21373,7 +21373,6 @@ GameObject:
   - component: {fileID: 1901195065}
   - component: {fileID: 1901195071}
   - component: {fileID: 1901195070}
-  - component: {fileID: 1901195068}
   m_Layer: 8
   m_Name: Museum
   m_TagString: ToggleMaterialDarkBright
@@ -21396,29 +21395,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1901195068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114444204773607660, guid: b0d7d4316cf180249960807ba4e7ff92,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1901195064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d2722c2401e34d51bf5b473ef7aeefb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftWall: 15
-  rightWall: 15
-  floor: 12
-  ceiling: 9
-  backWall: 15
-  frontWall: 15
-  reflectivity: 1
-  reverbGainDb: 0
-  reverbBrightness: -0.1
-  reverbTime: 0.75
-  size: {x: 1, y: 1, z: 1}
 --- !u!23 &1901195070
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22820,7 +22796,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 170, y: 170}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
-  savedTextUV0: {x: 0.4453125, y: 0.20019531}
+  savedTextUV0: {x: 0.8515625, y: 0.045898438}
   savedFill: 0
 --- !u!114 &2004314015
 MonoBehaviour:
@@ -23230,7 +23206,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 741.21, y: 325.7}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.78515625, y: 0.10644531}
+  savedTextUV0: {x: 0, y: 0.7011719}
   savedFill: 0
 --- !u!114 &2082138453
 MonoBehaviour:

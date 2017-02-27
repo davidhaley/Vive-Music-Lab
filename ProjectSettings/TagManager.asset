@@ -17,6 +17,8 @@ TagManager:
   - Arp
   - SequencerCanvas
   - AudioVisualizer
+  - LivePerformance
+  - LivePerformanceCollider
   layers:
   - Default
   - TransparentFX

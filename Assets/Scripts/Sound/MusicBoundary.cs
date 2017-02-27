@@ -63,9 +63,29 @@ public class MusicBoundary : MonoBehaviour {
             {
                 foreach (StatusIndicator statusIndicator in statusIndicators)
                 {
-                    statusIndicator.ToggleColor();
+                    if (statusIndicator.ToggledStatus() == true)
+                    {
+                        statusIndicator.ToggleColor();
+                    }
                 }
             }
+
+            //if (gameObject.tag == "LivePerformanceCollider")
+            //{
+            //    GameObject demoCanvas = GameObject.FindGameObjectWithTag("LivePerformance");
+
+            //    if (demoCanvas != null)
+            //    {
+            //        Button[] buttons = demoCanvas.GetComponentsInChildren<Button>();
+
+            //        foreach(Button button in buttons)
+            //        {
+            //            StatusIndicator statusIndicator = button.GetComponentInChildren<StatusIndicator>();
+            //            statusIndicator.ToggleColor();
+            //            Debug.Log("toggling color of status indicator on live performance booth");
+            //        }
+            //    }
+            //}
 
             if (gameObject.tag == "SequencerCanvas")
             {

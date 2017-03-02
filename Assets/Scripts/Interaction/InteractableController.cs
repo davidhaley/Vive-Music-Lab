@@ -16,27 +16,32 @@ public class InteractableController : MonoBehaviour {
         for (int i = 0; i < Player.instance.handCount; i++)
         {
             hand = Player.instance.GetHand(i);
-            laserInteractable = hand.gameObject.GetComponent<LaserPointerInteractable>();
-            SteamVR_LaserPointer steamVRLaserPointer = laserInteractable.GetSteamVRLaserPointer();
-            MeshRenderer laserMeshRenderer = steamVRLaserPointer.pointer.GetComponent<MeshRenderer>();
 
-            if (laserInteractable.target != null)
+            laserInteractable = hand.gameObject.GetComponent<LaserPointerInteractable>();
+            MeshRenderer laserRenderer = laserInteractable.GetLaserRenderer();
+
+            if (laserInteractable.validTarget == null)
             {
-                if (laserMeshRenderer.enabled == false)
+                laserRenderer.enabled = false;
+                return;
+            }
+            else
+            {
+                if (laserRenderer.enabled == false)
                 {
-                    laserMeshRenderer.enabled = true;
+                    laserRenderer.enabled = true;
                 }
 
-                laserEvents = laserInteractable.target.GetComponent<InteractableLaserEvents>();
+                laserEvents = laserInteractable.validTarget.GetComponent<InteractableLaserEvents>();
 
                 if (laserEvents == null)
                 {
-                    laserMeshRenderer.material.color = Color.red;
+                    laserRenderer.material.color = Color.red;
                     return;
                 }
                 else if (laserEvents != null)
                 {
-                    laserMeshRenderer.material.color = Color.green;
+                    laserRenderer.material.color = Color.green;
                 }
 
                 if (hand.controller.GetPressDown(Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger))
@@ -78,53 +83,47 @@ public class InteractableController : MonoBehaviour {
                 {
                     OnTouchpadRelease(i);
                 }
-
-                if (laserInteractable.target.name != null)
-                {
-                    Debug.Log(laserInteractable.target.gameObject.name);
-                }
-            }
-            else
-            {
-                Debug.Log("target is null");
-                laserMeshRenderer.enabled = false;
             }
         }
     }
 
     private void OnTriggerDown(int index)
     {
-        if (laserEvents != null)
-        {
-            laserEvents.onTriggerDown.Invoke();
-        }
+        laserEvents.onTriggerDown.Invoke();
     }
 
     private void OnTriggerUp(int index)
     {
+        laserEvents.onTriggerUp.Invoke();
     }
 
     private void OnGripDown(int index)
     {
+        laserEvents.onGripDown.Invoke();
     }
 
     private void OnGripUp(int index)
     {
+        laserEvents.onGripUp.Invoke();
     }
 
     private void OnTouchpadDown(int index)
     {
+        laserEvents.onTouchpadDown.Invoke();
     }
 
     private void OnTouchpadUp(int index)
     {
+        laserEvents.onTouchpadUp.Invoke();
     }
 
     private void OnTouchpadTouch(int index)
     {
+        laserEvents.onTouchpadTouch.Invoke();
     }
 
     private void OnTouchpadRelease(int index)
     {
+        laserEvents.onTouchpadRelease.Invoke();
     }
 }

@@ -604,7 +604,7 @@ public partial class CurvedUIVertexEffect : BaseVertexEffect {
         UIVertex TesselateQuad(UIVertex[] quad, float x, float y)
         {
 
-            UIVertex ret;
+            UIVertex ret = new UIVertex();
 
             //1. calculate weighting factors
             float[] weights = new float[4]{

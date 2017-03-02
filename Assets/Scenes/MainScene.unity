@@ -2625,28 +2625,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 513645477}
---- !u!1 &538085012 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 165334, guid: dc06161b6d97feb419f45f03b62e14b9, type: 2}
-  m_PrefabInternal: {fileID: 208004019}
---- !u!114 &538085014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 538085012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4e8a839a7c5b7e4580c59e305fb5f01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  color: {r: 0, g: 0, b: 0, a: 0}
-  thickness: 0.002
-  holder: {fileID: 0}
-  pointer: {fileID: 0}
-  addRigidBody: 0
-  reference: {fileID: 0}
 --- !u!1 &544100854
 GameObject:
   m_ObjectHideFlags: 0
@@ -4066,28 +4044,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c52cbb4c218d1b24fb1502ab71ddfaec, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &931113058 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100470, guid: dc06161b6d97feb419f45f03b62e14b9, type: 2}
-  m_PrefabInternal: {fileID: 208004019}
---- !u!114 &931113060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 931113058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4e8a839a7c5b7e4580c59e305fb5f01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  color: {r: 0, g: 0, b: 0, a: 0}
-  thickness: 0.002
-  holder: {fileID: 0}
-  pointer: {fileID: 0}
-  addRigidBody: 0
-  reference: {fileID: 0}
 --- !u!1 &934665195
 GameObject:
   m_ObjectHideFlags: 0
@@ -7655,61 +7611,6 @@ MonoBehaviour:
   m_cullLightsInSceneEditor: 0
   m_cullLightsFromEditorCamera: 0
   m_hideAllValveMaterials: 0
---- !u!1 &2112372904 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 133480, guid: dc06161b6d97feb419f45f03b62e14b9, type: 2}
-  m_PrefabInternal: {fileID: 208004019}
---- !u!114 &2112372908 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11461462, guid: dc06161b6d97feb419f45f03b62e14b9,
-    type: 2}
-  m_PrefabInternal: {fileID: 208004019}
-  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!114 &2112372909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2112372904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e569dc832500047bf4350b4dae9b97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EventSystem: {fileID: 2112372908}
-  m_InputOverride: {fileID: 0}
-  m_DefaultInput: {fileID: 0}
-  m_PrevActionTime: 0
-  m_LastMoveVector: {x: 0, y: 0}
-  m_ConsecutiveMoveCount: 0
-  m_LastMousePosition: {x: 0, y: 0}
-  m_MousePosition: {x: 0, y: 0}
-  m_HorizontalAxis: 486f72697a6f6e74616c
-  m_VerticalAxis: 566572746963616c
-  m_SubmitButton: 5375626d6974
-  m_CancelButton: 43616e63656c
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
-  controller: 4
-  submitButtonName: 4669726531
-  worldSpaceMouseSensitivity: 1
-  eventController: 1
-  currentDragging: {fileID: 0}
-  currentPointedAt: {fileID: 0}
-  customControllerTransform: {fileID: 0}
-  buttonClickTime: 0.5
-  dragThreshold: 10
-  buttonDownTime: 0
-  pressedDownExecuted: 0
-  pressedDown: 0
-  pressedLastFrame: 0
-  buttonPressed: {fileID: 0}
-  lastMouseOnScreenPos: {x: 0, y: 0, z: 0}
-  worldSpaceMouseInCanvasSpace: {x: 0, y: 0}
-  lastWorldSpaceMouseOnCanvas: {x: 0, y: 0}
-  worldSpaceMouseOnCanvasDelta: {x: 0, y: 0}
-  steamVRControllerManager: {fileID: 0}
 --- !u!4 &2136988336 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4492353651120708, guid: 6b259eee2afc4c74f845d1cff075f881,

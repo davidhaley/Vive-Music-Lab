@@ -138,11 +138,11 @@ QualitySettings:
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Fantastic
-    pixelLightCount: 0
+    pixelLightCount: 99
     shadows: 0
-    shadowResolution: 1
+    shadowResolution: 3
     shadowProjection: 1
-    shadowCascades: 4
+    shadowCascades: 1
     shadowDistance: 50
     shadowNearPlaneOffset: 3
     shadowCascade2Split: 0.5000001
@@ -150,11 +150,11 @@ QualitySettings:
     blendWeights: 4
     textureQuality: 0
     anisotropicTextures: 2
-    antiAliasing: 0
+    antiAliasing: 4
     softParticles: 0
     softVegetation: 1
-    realtimeReflectionProbes: 0
-    billboardsFaceCameraPosition: 0
+    realtimeReflectionProbes: 1
+    billboardsFaceCameraPosition: 1
     vSyncCount: 0
     lodBias: 2
     maximumLODLevel: 1

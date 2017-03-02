@@ -22,8 +22,8 @@ namespace Valve.VR.InteractionSystem
 		public UnityEvent onTouchpadTouch;
 		public UnityEvent onTouchpadRelease;
 
-		//-------------------------------------------------
-		void Update()
+        //-------------------------------------------------
+        void Update()
 		{
 			for ( int i = 0; i < Player.instance.handCount; i++ )
 			{
@@ -72,7 +72,6 @@ namespace Valve.VR.InteractionSystem
 					}
 				}
 			}
-
 		}
-	}
+    }
 }

@@ -8,7 +8,7 @@ using Valve.VR.InteractionSystem;
 //Let us know when a laser pointer finds an interactable object
 public class LaserPointerInteractable : MonoBehaviour {
 
-    [HideInInspector] public Transform target;
+    [HideInInspector] public Transform validTarget;
     public int interactableLayerMask = 5;
     private SteamVR_LaserPointer steamVRLaserPointer;
 
@@ -34,7 +34,7 @@ public class LaserPointerInteractable : MonoBehaviour {
     {
         if (e.target.gameObject.layer == interactableLayerMask)
         {
-            target = e.target;
+            validTarget = e.target;
         }
     }
 
@@ -43,12 +43,12 @@ public class LaserPointerInteractable : MonoBehaviour {
     {
         if (e.target.gameObject.layer == interactableLayerMask)
         {
-            target = null;
+            validTarget = null;
         }
     }
 
-    public SteamVR_LaserPointer GetSteamVRLaserPointer()
+    public MeshRenderer GetLaserRenderer()
     {
-        return steamVRLaserPointer;
+        return steamVRLaserPointer.pointer.GetComponent<MeshRenderer>();
     }
 }

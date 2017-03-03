@@ -1,9 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Valve.VR.InteractionSystem
 {
-    //[RequireComponent(typeof(Interactable))]
     [RequireComponent(typeof(BoxCollider))]
     public class LaserEvents : MonoBehaviour
     {
@@ -22,6 +22,11 @@ namespace Valve.VR.InteractionSystem
             BoxCollider boxCollider = GetComponent<BoxCollider>();
             boxCollider.isTrigger = true;
             boxCollider.size = new Vector3(gameObject.GetComponent<RectTransform>().sizeDelta.x, gameObject.GetComponent<RectTransform>().sizeDelta.y);
+        }
+
+        internal void OnTriggerDown(int i)
+        {
+            throw new NotImplementedException();
         }
     }
 }

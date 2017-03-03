@@ -9,44 +9,22 @@ using Valve.VR.InteractionSystem;
 public class LaserController : MonoBehaviour {
 
     private LaserEvents laserEvents;
-    [HideInInspector]
-    public Hand hand;
+    [HideInInspector] public Hand hand;
 
     private void Update()
     {
         for (int i = 0; i < Player.instance.handCount; i++)
         {
             hand = Player.instance.GetHand(i);
+            laserEvents = hand.GetComponent<LaserPointerInteractable>().GetLaserEvents();
 
-            LaserPointerInteractable laserInteractable = hand.gameObject.GetComponent<LaserPointerInteractable>();
-            MeshRenderer laserRenderer = laserInteractable.GetLaserRenderer();
-
-            //Disable the controller laser if target is not valid
-            if (laserInteractable.validTarget == null)
+            if (laserEvents == null)
             {
-                laserRenderer.enabled = false;
                 return;
             }
-            else if (laserInteractable.validTarget != null)
+
+            if (hand.controller != null)
             {
-                if (laserRenderer.enabled == false)
-                {
-                    laserRenderer.enabled = true;
-                }
-
-                laserEvents = laserInteractable.validTarget.GetComponent<LaserEvents>();
-
-                //If the target is valid but does not have laser events, color the laser red
-                if (laserEvents == null)
-                {
-                    laserRenderer.material.color = Color.red;
-                    return;
-                }
-                else if (laserEvents != null)
-                {
-                    laserRenderer.material.color = Color.green;
-                }
-
                 if (hand.controller.GetPressDown(Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger))
                 {
                     OnTriggerDown(i);
@@ -89,7 +67,6 @@ public class LaserController : MonoBehaviour {
             }
         }
     }
-
     private void OnTriggerDown(int index)
     {
         laserEvents.onTriggerDown.Invoke();

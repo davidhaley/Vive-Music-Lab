@@ -13,7 +13,10 @@ namespace Valve.VR.InteractionSystem
 	//-------------------------------------------------------------------------
 	public class Teleport : MonoBehaviour
 	{
-		public LayerMask traceLayerMask;
+        public bool rightHandOnly;
+        public bool leftHandOnly;
+
+        public LayerMask traceLayerMask;
 		public LayerMask floorFixupTraceLayerMask;
 		public float floorFixupMaximumTraceDistance = 1.0f;
 		public Material areaVisibleMaterial;
@@ -233,28 +236,70 @@ namespace Valve.VR.InteractionSystem
 		{
 			Hand oldPointerHand = pointerHand;
 			Hand newPointerHand = null;
+            Hand _hand = null;
 
-			foreach ( Hand hand in player.hands )
-			{
-				if ( visible )
-				{
-					if ( WasTeleportButtonReleased( hand ) )
-					{
-						if ( pointerHand == hand ) //This is the pointer hand
-						{
-							TryTeleportPlayer();
-						}
-					}
-				}
+            if (rightHandOnly)
+            {
+                _hand = player.rightHand;
 
-				if ( WasTeleportButtonPressed( hand ) )
-				{
-					newPointerHand = hand;
-				}
-			}
+                if (visible)
+                {
+                    if (WasTeleportButtonReleased(_hand))
+                    {
+                        if (pointerHand == _hand) //This is the pointer hand
+                        {
+                            TryTeleportPlayer();
+                        }
+                    }
+                }
+            }
+            else if (leftHandOnly)
+            {
+                _hand = player.leftHand;
 
-			//If something is attached to the hand that is preventing teleport
-			if ( allowTeleportWhileAttached && !allowTeleportWhileAttached.teleportAllowed )
+                if (visible)
+                {
+                    if (WasTeleportButtonReleased(_hand))
+                    {
+                        if (pointerHand == _hand) //This is the pointer hand
+                        {
+                            TryTeleportPlayer();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (Hand hand in player.hands)
+                {
+                    if (visible)
+                    {
+                        if (WasTeleportButtonReleased(hand))
+                        {
+                            if (pointerHand == hand) //This is the pointer hand
+                            {
+                                TryTeleportPlayer();
+                            }
+                        }
+                    }
+
+                    if (WasTeleportButtonPressed(hand))
+                    {
+                        newPointerHand = hand;
+                    }
+                }
+            }
+
+
+            if (WasTeleportButtonPressed(_hand))
+            {
+                newPointerHand = _hand;
+            }
+
+
+
+            //If something is attached to the hand that is preventing teleport
+            if ( allowTeleportWhileAttached && !allowTeleportWhileAttached.teleportAllowed )
 			{
 				HidePointer();
 			}

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class LightShow : MonoBehaviour
 {
@@ -11,10 +13,10 @@ public class LightShow : MonoBehaviour
 
     private GameObject[] lightShowLights;
     private GameObject[] mainLights;
-    private GameObject[] gameObjects;
 
     private bool mainLightsEnabled = true;
     private bool lightShowEnabled = false;
+    private bool controllerHintsShown = false;
 
     private void Awake()
     {
@@ -72,6 +74,16 @@ public class LightShow : MonoBehaviour
             foreach (GameObject go in mainLights)
             {
                 go.GetComponent<Light>().enabled = false;
+            }
+
+            if (!controllerHintsShown)
+            {
+                Hand hand = Player.instance.leftHand;
+                if (hand != null)
+                {
+                    ControllerButtonHints.ShowButtonHint(hand, EVRButtonId.k_EButton_SteamVR_Touchpad);
+                    ControllerButtonHints.ShowTextHint(hand, EVRButtonId.k_EButton_SteamVR_Touchpad, "Flashlight");
+                }
             }
         }
         else if (!mainLightsEnabled)

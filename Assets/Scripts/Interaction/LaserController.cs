@@ -5,9 +5,11 @@ using UnityEngine;
 using UnityEngine.Events;
 using Valve.VR.InteractionSystem;
 
-public class InteractableController : MonoBehaviour {
+//Purpose: Use the controller laser to find objects with laser events and send those events controller button presses
+public class LaserController : MonoBehaviour {
 
-    private InteractableLaserEvents laserEvents;
+    private LaserEvents laserEvents;
+    [HideInInspector]
     public Hand hand;
 
     private void Update()
@@ -19,6 +21,7 @@ public class InteractableController : MonoBehaviour {
             LaserPointerInteractable laserInteractable = hand.gameObject.GetComponent<LaserPointerInteractable>();
             MeshRenderer laserRenderer = laserInteractable.GetLaserRenderer();
 
+            //Disable the controller laser if target is not valid
             if (laserInteractable.validTarget == null)
             {
                 laserRenderer.enabled = false;
@@ -31,8 +34,9 @@ public class InteractableController : MonoBehaviour {
                     laserRenderer.enabled = true;
                 }
 
-                laserEvents = laserInteractable.validTarget.GetComponent<InteractableLaserEvents>();
+                laserEvents = laserInteractable.validTarget.GetComponent<LaserEvents>();
 
+                //If the target is valid but does not have laser events, color the laser red
                 if (laserEvents == null)
                 {
                     laserRenderer.material.color = Color.red;

@@ -3,9 +3,9 @@ using UnityEngine.Events;
 
 namespace Valve.VR.InteractionSystem
 {
-    [RequireComponent(typeof(Interactable))]
+    //[RequireComponent(typeof(Interactable))]
     [RequireComponent(typeof(BoxCollider))]
-    public class InteractableLaserEvents : MonoBehaviour
+    public class LaserEvents : MonoBehaviour
     {
         public UnityEvent onTriggerDown;
         public UnityEvent onTriggerUp;

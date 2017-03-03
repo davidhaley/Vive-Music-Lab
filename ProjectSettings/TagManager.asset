@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - MainLights
+  - LightShow
+  - ToggleMaterialDarkBright
+  - StageAudioSource
+  - FogMachine
+  - MovementCapable
+  - Kick
+  - Snare
+  - Hat
+  - Bass
+  - Arp
+  - SequencerCanvas
+  - AudioVisualizer
+  - LivePerformance
+  - LivePerformanceCollider
+  - Teleport
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - MovementCapable
+  - MovementDisabled
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

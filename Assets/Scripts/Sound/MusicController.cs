@@ -39,7 +39,7 @@ public class MusicController : MonoBehaviour
 
         foreach (AudioSource audioSource in audioSources)
         {
-            if (audioSource.isPlaying)
+            if (audioSource != null && audioSource.isPlaying)
             {
                 audioSource.Stop();
             }

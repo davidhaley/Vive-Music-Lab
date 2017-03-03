@@ -8,7 +8,7 @@ using Valve.VR.InteractionSystem;
 public class InteractableController : MonoBehaviour {
 
     private InteractableLaserEvents laserEvents;
-    private Hand hand;
+    public Hand hand;
 
     private void Update()
     {

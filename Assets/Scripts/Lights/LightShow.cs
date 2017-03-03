@@ -16,7 +16,7 @@ public class LightShow : MonoBehaviour
 
     private bool mainLightsEnabled = true;
     private bool lightShowEnabled = false;
-    private bool controllerHintsShown = false;
+    private bool flashLightHintShown = false;
 
     private void Awake()
     {
@@ -74,15 +74,17 @@ public class LightShow : MonoBehaviour
             foreach (GameObject go in mainLights)
             {
                 go.GetComponent<Light>().enabled = false;
+                mainLightsEnabled = false;
             }
 
-            if (!controllerHintsShown)
+            if (!flashLightHintShown)
             {
                 Hand hand = Player.instance.leftHand;
                 if (hand != null)
                 {
                     ControllerButtonHints.ShowButtonHint(hand, EVRButtonId.k_EButton_SteamVR_Touchpad);
                     ControllerButtonHints.ShowTextHint(hand, EVRButtonId.k_EButton_SteamVR_Touchpad, "Flashlight");
+                    flashLightHintShown = true;
                 }
             }
         }
@@ -91,6 +93,7 @@ public class LightShow : MonoBehaviour
             foreach (GameObject go in mainLights)
             {
                 go.GetComponent<Light>().enabled = true;
+                mainLightsEnabled = true;
             }
         }
     }

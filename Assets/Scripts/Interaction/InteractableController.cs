@@ -7,7 +7,6 @@ using Valve.VR.InteractionSystem;
 
 public class InteractableController : MonoBehaviour {
 
-    private LaserPointerInteractable laserInteractable;
     private InteractableLaserEvents laserEvents;
     private Hand hand;
 
@@ -17,7 +16,7 @@ public class InteractableController : MonoBehaviour {
         {
             hand = Player.instance.GetHand(i);
 
-            laserInteractable = hand.gameObject.GetComponent<LaserPointerInteractable>();
+            LaserPointerInteractable laserInteractable = hand.gameObject.GetComponent<LaserPointerInteractable>();
             MeshRenderer laserRenderer = laserInteractable.GetLaserRenderer();
 
             if (laserInteractable.validTarget == null)
@@ -25,7 +24,7 @@ public class InteractableController : MonoBehaviour {
                 laserRenderer.enabled = false;
                 return;
             }
-            else
+            else if (laserInteractable.validTarget != null)
             {
                 if (laserRenderer.enabled == false)
                 {

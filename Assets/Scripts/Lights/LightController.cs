@@ -19,9 +19,9 @@ public class LightController : MonoBehaviour
     public bool strobe;
     public float strobeSpeed = 10f;
     [Range(3f, 8f)]
-    public float upperIntensityBound;
-    [Range(0f, 8f)]
-    public float lowerIntensityBound;
+    public float upperIntensityBound = 1f;
+    [Range(0.5f, 8f)]
+    public float lowerIntensityBound = 1f;
     [Space(5)]
 
     [Header("Light Switch")]
@@ -68,10 +68,10 @@ public class LightController : MonoBehaviour
     private bool coRoutinesStopped;
     private float onOff;
 
-    public float xAngle;
-    public float yAngle;
-    public float zAngle;
-    public float period;
+    [Range(-360f, 360f)] public float xAngle;
+    [Range(-360f, 360f)] public float yAngle;
+    [Range(-360f, 360f)] public float zAngle;
+    [Range(0.10f, 8f)]public float period = 1f;
     private float time;
 
     private void Awake()

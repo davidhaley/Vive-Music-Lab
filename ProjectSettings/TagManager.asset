@@ -4,8 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - MainLights
-  - LightShow
   - ToggleMaterialDarkBright
   - StageAudioSource
   - FogMachine
@@ -21,6 +19,8 @@ TagManager:
   - LivePerformanceCollider
   - Teleport
   - LaserPointer
+  - MainLights
+  - LightShow
   layers:
   - Default
   - TransparentFX

@@ -55,7 +55,7 @@ namespace Valve.VR.InteractionSystem
 
 			foreach ( Hand hand in Player.instance.hands )
 			{
-				ControllerButtonHints.HideAllButtonHints( hand );
+				ControllerButtonHints.HideTextButtonHints( hand );
 				ControllerButtonHints.HideAllTextHints( hand );
 			}
 		}
@@ -66,7 +66,7 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		private IEnumerator TestButtonHints( Hand hand )
 		{
-			ControllerButtonHints.HideAllButtonHints( hand );
+			ControllerButtonHints.HideTextButtonHints( hand );
 
 			while ( true )
 			{
@@ -81,7 +81,7 @@ namespace Valve.VR.InteractionSystem
 				ControllerButtonHints.ShowButtonHint( hand, EVRButtonId.k_EButton_SteamVR_Touchpad );
 				yield return new WaitForSeconds( 1.0f );
 
-				ControllerButtonHints.HideAllButtonHints( hand );
+				ControllerButtonHints.HideTextButtonHints( hand );
 				yield return new WaitForSeconds( 1.0f );
 			}
 		}

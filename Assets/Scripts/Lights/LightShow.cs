@@ -6,7 +6,6 @@ using Valve.VR.InteractionSystem;
 
 public class LightShow : MonoBehaviour
 {
-
     public bool hideOnAwake;
     public bool playOnAwake;
     public bool mainLightsOffOnAwake;

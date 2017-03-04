@@ -2,71 +2,111 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
-//Place this next to the SteamVR_LaserPointer
-//Let us know when a laser pointer finds an interactable object
-[RequireComponent(typeof(SteamVR_LaserPointer))]
-public class LaserPointerInteractable : MonoBehaviour {
-
-    public int interactableLayerMask = 5;
-
-    public LaserEvents laserEvents;
-    public Transform validTarget;
-    private SteamVR_LaserPointer steamVRLaserPointer;
-    //private Material reference;
-
-    private void Awake()
+namespace MusicLab.InteractionSystem
+{
+    //Place this next to the SteamVR_LaserPointer
+    //Responsible for finding interactable objects
+    [RequireComponent(typeof(SteamVR_LaserPointer))]
+    public class LaserPointerInteractable : MonoBehaviour
     {
-        steamVRLaserPointer = GetComponent<SteamVR_LaserPointer>();
-    }
+        public float hintDelay = 2.5f;
 
-    private void OnEnable()
-    {
-        steamVRLaserPointer.PointerIn += OnPointerIn;
-        steamVRLaserPointer.PointerOut += OnPointerOut;
-    }
+        private SteamVR_LaserPointer steamVRLaserPointer;
+        private ControllerHints controllerHints;
+        private MeshRenderer laserRenderer;
+        private LaserEvents laserEvents;
+        private Transform validLaserTarget;
+        private Transform validHandTarget;
 
-    private void OnDisable()
-    {
-        steamVRLaserPointer.PointerIn -= OnPointerIn;
-        steamVRLaserPointer.PointerOut -= OnPointerOut;
-    }
+        private int uiHandMask = 10;
+        private int uiLaserMask = 11;
+        private int uiHandLaserMask = 12;
 
-    private void Update()
-    {
-        //Once we find a valid target, look for laser events
-        if (validTarget != null)
+        private void Awake()
         {
-            laserEvents = validTarget.GetComponent<LaserEvents>();
-            steamVRLaserPointer.pointer.GetComponent<MeshRenderer>().enabled = true;
+            steamVRLaserPointer = GetComponent<SteamVR_LaserPointer>();
+            controllerHints = FindObjectOfType<ControllerHints>();
         }
-        else if (validTarget == null)
+
+        private void OnEnable()
         {
+            steamVRLaserPointer.PointerIn += OnPointerIn;
+            steamVRLaserPointer.PointerOut += OnPointerOut;
+        }
+
+        private void Update()
+        {
+            LaserEvents();
+        }
+
+        public void OnPointerIn(object sender, PointerEventArgs e)
+        {
+            Transform targetTransform = e.target;
+            int targetLayer = e.target.gameObject.layer;
+
+            if (targetLayer == uiHandLaserMask)
+            {
+                validLaserTarget = validHandTarget = e.target;
+            }
+            else if (targetLayer == uiLaserMask)
+            {
+                validLaserTarget = e.target;
+                validHandTarget = null;
+            }
+            else if (targetLayer == uiHandMask)
+            {
+                validHandTarget = e.target;
+                validLaserTarget = null;
+            }
+            else
+            {
+                validLaserTarget = null;
+                validHandTarget = null;
+            }
+        }
+
+        public void OnPointerOut(object sender, PointerEventArgs e)
+        {
+            validLaserTarget = null;
+            validHandTarget = null;
             laserEvents = null;
-            steamVRLaserPointer.pointer.GetComponent<MeshRenderer>().enabled = false;
         }
-    }
 
-    //If we find an object within the interactable layer mask, save it as the valid target
-    public void OnPointerIn(object sender, PointerEventArgs e)
-    {
-        if (e.target.gameObject.layer == interactableLayerMask)
+        public LaserEvents LaserEvents()
         {
-            validTarget = e.target;
+            if (validLaserTarget != null)
+            {
+                laserEvents = validLaserTarget.GetComponent<LaserEvents>();
+            }
+            else if (validLaserTarget == null)
+            {
+                laserEvents = null;
+            }
 
-            //Enable laser if there are laser events
+            return laserEvents;
+        }
+
+        public Transform ValidLaserTarget()
+        {
+            return validLaserTarget;
+        }
+        public Transform ValidHandTarget()
+        {
+            return validHandTarget;
+        }
+
+        public void EnableLaser()
+        {
             steamVRLaserPointer.pointer.GetComponent<MeshRenderer>().enabled = true;
         }
-        else
+
+        public void DisableLaser()
         {
             steamVRLaserPointer.pointer.GetComponent<MeshRenderer>().enabled = false;
         }
-    }
-
-    //Set it free
-    public void OnPointerOut(object sender, PointerEventArgs e)
-    {
-        validTarget = null;
-        steamVRLaserPointer.pointer.GetComponent<MeshRenderer>().enabled = false;
     }
 }
+

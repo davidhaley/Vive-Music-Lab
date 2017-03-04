@@ -1,14 +1,12 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Demonstrates the use of the controller hint system
-//
-//=============================================================================
+﻿
+//Purpose: Interface to Valve's ControllerButtonHints script
 
 using UnityEngine;
 using System.Collections;
 using Valve.VR;
+using Valve.VR.InteractionSystem;
 
-namespace Valve.VR.InteractionSystem
+namespace MusicLab.InteractionSystem
 {
     //-------------------------------------------------------------------------
     public class ControllerHints : MonoBehaviour
@@ -55,7 +53,7 @@ namespace Valve.VR.InteractionSystem
 
             foreach (Hand hand in Player.instance.hands)
             {
-                ControllerButtonHints.HideAllButtonHints(hand);
+                ControllerButtonHints.HideTextButtonHints(hand);
                 ControllerButtonHints.HideAllTextHints(hand);
             }
         }
@@ -66,7 +64,7 @@ namespace Valve.VR.InteractionSystem
         //-------------------------------------------------
         private IEnumerator TestButtonHints(Hand hand)
         {
-            ControllerButtonHints.HideAllButtonHints(hand);
+            ControllerButtonHints.HideTextButtonHints(hand);
 
             while (true)
             {
@@ -81,7 +79,7 @@ namespace Valve.VR.InteractionSystem
                 ControllerButtonHints.ShowButtonHint(hand, EVRButtonId.k_EButton_SteamVR_Touchpad);
                 yield return new WaitForSeconds(1.0f);
 
-                ControllerButtonHints.HideAllButtonHints(hand);
+                ControllerButtonHints.HideTextButtonHints(hand);
                 yield return new WaitForSeconds(1.0f);
             }
         }
@@ -113,3 +111,4 @@ namespace Valve.VR.InteractionSystem
         }
     }
 }
+

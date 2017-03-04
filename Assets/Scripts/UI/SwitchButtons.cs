@@ -8,6 +8,11 @@ public class SwitchButtons : MonoBehaviour {
     public Button button1;
     public Button button2;
 
+    private void Awake()
+    {
+        button2.gameObject.SetActive(false);
+    }
+
     public void Switch()
     {
         if (button1.gameObject.activeSelf == true)

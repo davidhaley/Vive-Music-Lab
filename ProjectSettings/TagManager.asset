@@ -21,6 +21,7 @@ TagManager:
   - LaserPointer
   - MainLights
   - LightShow
+  - MaskLaser
   layers:
   - Default
   - TransparentFX
@@ -32,9 +33,9 @@ TagManager:
   - 
   - MovementCapable
   - MovementDisabled
-  - 
-  - 
-  - 
+  - UIHand
+  - UILaser
+  - UIHand&Laser
   - 
   - 
   - 

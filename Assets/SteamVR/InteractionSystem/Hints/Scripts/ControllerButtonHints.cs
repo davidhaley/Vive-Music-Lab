@@ -701,7 +701,7 @@ namespace Valve.VR.InteractionSystem
 
 
 		//-------------------------------------------------
-		public static void HideAllButtonHints( Hand hand )
+		public static void HideTextButtonHints( Hand hand )
 		{
 			ControllerButtonHints hints = GetControllerButtonHints( hand );
 			if ( hints != null )

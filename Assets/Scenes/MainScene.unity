@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 7602163}
   - component: {fileID: 7602162}
   - component: {fileID: 7602166}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleHat (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 27083568}
   - component: {fileID: 27083567}
   - component: {fileID: 27083571}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleSnare (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,7 +670,7 @@ GameObject:
   - component: {fileID: 33121085}
   - component: {fileID: 33121087}
   - component: {fileID: 33121086}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: RawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1438,7 +1438,7 @@ GameObject:
   - component: {fileID: 76225807}
   - component: {fileID: 76225806}
   - component: {fileID: 76225812}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonTogglePianoPad (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2621,9 +2621,9 @@ GameObject:
   - component: {fileID: 144139295}
   - component: {fileID: 144139299}
   - component: {fileID: 144139298}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: ButtonStopMusic
-  m_TagString: Untagged
+  m_TagString: MaskLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4350,9 +4350,9 @@ GameObject:
   - component: {fileID: 168681294}
   - component: {fileID: 168681293}
   - component: {fileID: 168681291}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: ButtonToggleMusic
-  m_TagString: Untagged
+  m_TagString: MaskLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6488,6 +6488,86 @@ Prefab:
       propertyPath: stopAudioOnColliderExit
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1200133339841264, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_TagString
+      value: MaskLaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711159544447522, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_TagString
+      value: MaskLaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638351638682224, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_TagString
+      value: MaskLaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781603205919618, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_TagString
+      value: MaskLaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101450772306960, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_TagString
+      value: MaskLaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301575821326560, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968722495372970, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280250592262982, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200133339841264, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807831367005808, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893926574436542, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711159544447522, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775597782242080, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638351638682224, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781603205919618, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291425696182130, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221181185720418, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152797811234720, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238557965274304, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101450772306960, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114738848907925500, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
     - {fileID: 114736938858993258, guid: 6b259eee2afc4c74f845d1cff075f881, type: 2}
@@ -7050,7 +7130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14cbd190a8126654eba7e74d1767ee7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableLayerMask: 5
   laserEvents: {fileID: 0}
   validTarget: {fileID: 0}
 --- !u!4 &208004022
@@ -7087,7 +7166,7 @@ MonoBehaviour:
   hoverSphereRadius: 0.05
   hoverLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1024
   hoverUpdateInterval: 0.1
   noSteamVRFallbackCamera: {fileID: 0}
   noSteamVRFallbackMaxDistanceNoItem: 10
@@ -7659,7 +7738,7 @@ GameObject:
   - component: {fileID: 261943701}
   - component: {fileID: 261943700}
   - component: {fileID: 261943706}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonTogglePianoPad (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7810,7 +7889,7 @@ GameObject:
   - component: {fileID: 265351182}
   - component: {fileID: 265351178}
   - component: {fileID: 265351180}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleKick (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8031,9 +8110,9 @@ GameObject:
   - component: {fileID: 273963098}
   - component: {fileID: 273963102}
   - component: {fileID: 273963103}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: ButtonPlayMusic
-  m_TagString: Untagged
+  m_TagString: MaskLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8288,7 +8367,7 @@ GameObject:
   - component: {fileID: 284144341}
   - component: {fileID: 284144340}
   - component: {fileID: 284144346}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonTogglePianoPad (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8836,9 +8915,9 @@ GameObject:
   - component: {fileID: 344888753}
   - component: {fileID: 344888763}
   - component: {fileID: 344888759}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: ButtonToggleLights
-  m_TagString: Untagged
+  m_TagString: MaskLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10068,7 +10147,7 @@ GameObject:
   - component: {fileID: 416102505}
   - component: {fileID: 416102501}
   - component: {fileID: 416102503}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleKick (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13086,7 +13165,7 @@ GameObject:
   - component: {fileID: 687124098}
   - component: {fileID: 687124097}
   - component: {fileID: 687124101}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleHat (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13552,7 +13631,7 @@ GameObject:
   - component: {fileID: 744433046}
   - component: {fileID: 744433045}
   - component: {fileID: 744433049}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleSnare (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14433,7 +14512,7 @@ GameObject:
   - component: {fileID: 795178765}
   - component: {fileID: 795178764}
   - component: {fileID: 795178763}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: RawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15010,7 +15089,7 @@ GameObject:
   - component: {fileID: 859843492}
   - component: {fileID: 859843491}
   - component: {fileID: 859843497}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleBass (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15162,7 +15241,7 @@ GameObject:
   - component: {fileID: 860668826}
   - component: {fileID: 860668825}
   - component: {fileID: 860668829}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleSnare (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15811,7 +15890,7 @@ GameObject:
   - component: {fileID: 897860846}
   - component: {fileID: 897860845}
   - component: {fileID: 897860849}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleHat (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16017,7 +16096,7 @@ GameObject:
   - component: {fileID: 908856323}
   - component: {fileID: 908856322}
   - component: {fileID: 908856328}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleBass (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17824,7 +17903,7 @@ GameObject:
   - component: {fileID: 1044780250}
   - component: {fileID: 1044780249}
   - component: {fileID: 1044780253}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleSnare (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25020,7 +25099,7 @@ GameObject:
   - component: {fileID: 1578205927}
   - component: {fileID: 1578205926}
   - component: {fileID: 1578205925}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Stop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25179,7 +25258,7 @@ GameObject:
   - component: {fileID: 1582593596}
   - component: {fileID: 1582593595}
   - component: {fileID: 1582593601}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleBass (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26230,7 +26309,7 @@ GameObject:
   - component: {fileID: 1671299674}
   - component: {fileID: 1671299673}
   - component: {fileID: 1671299677}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleHat (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26495,7 +26574,7 @@ GameObject:
   - component: {fileID: 1681874690}
   - component: {fileID: 1681874686}
   - component: {fileID: 1681874688}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleKick (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27686,7 +27765,7 @@ GameObject:
   - component: {fileID: 1818565976}
   - component: {fileID: 1818565972}
   - component: {fileID: 1818565974}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleKick (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28075,7 +28154,7 @@ GameObject:
   - component: {fileID: 1830137053}
   - component: {fileID: 1830137052}
   - component: {fileID: 1830137051}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30005,7 +30084,7 @@ GameObject:
   - component: {fileID: 2025796421}
   - component: {fileID: 2025796423}
   - component: {fileID: 2025796422}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: RawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30128,7 +30207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14cbd190a8126654eba7e74d1767ee7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableLayerMask: 5
   laserEvents: {fileID: 0}
   validTarget: {fileID: 0}
 --- !u!114 &2037884027
@@ -30149,7 +30227,7 @@ MonoBehaviour:
   hoverSphereRadius: 0.05
   hoverLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1024
   hoverUpdateInterval: 0.1
   noSteamVRFallbackCamera: {fileID: 0}
   noSteamVRFallbackMaxDistanceNoItem: 10
@@ -30205,7 +30283,7 @@ GameObject:
   - component: {fileID: 2058561454}
   - component: {fileID: 2058561453}
   - component: {fileID: 2058561459}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonToggleBass (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30484,7 +30562,7 @@ GameObject:
   - component: {fileID: 2082702348}
   - component: {fileID: 2082702347}
   - component: {fileID: 2082702353}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ButtonTogglePianoPad (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

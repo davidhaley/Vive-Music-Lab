@@ -1030,7 +1030,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: -4.3368084e-19
+  field of view: 1.219e-42
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -6289,6 +6289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableLayerMask: 5
+  laserEvents: {fileID: 0}
+  validTarget: {fileID: 0}
 --- !u!4 &208004022
 Transform:
   m_ObjectHideFlags: 0
@@ -6329,7 +6331,7 @@ MonoBehaviour:
   noSteamVRFallbackMaxDistanceNoItem: 10
   noSteamVRFallbackMaxDistanceWithItem: 0.5
   controllerPrefab: {fileID: 168468, guid: 3f39fc63a93686e4a8e9168ee73f24d9, type: 2}
-  showDebugText: 0
+  showDebugText: 1
   spewDebugText: 0
 --- !u!114 &208004024
 MonoBehaviour:
@@ -6925,8 +6927,6 @@ GameObject:
   - component: {fileID: 265351182}
   - component: {fileID: 265351178}
   - component: {fileID: 265351180}
-  - component: {fileID: 265351179}
-  - component: {fileID: 265351177}
   m_Layer: 5
   m_Name: ButtonToggleKick (4)
   m_TagString: Untagged
@@ -6953,57 +6953,6 @@ RectTransform:
   m_AnchoredPosition: {x: 935, y: 0.0002245903}
   m_SizeDelta: {x: 170, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &265351177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 265351175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7a463ede511c62408277c6147fe3c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onTriggerDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTriggerUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onGripDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onGripUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadTouch:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadRelease:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &265351178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7043,31 +6992,9 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 265351182}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayAudioSource
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &265351179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 265351175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &265351180
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9067,8 +8994,6 @@ GameObject:
   - component: {fileID: 416102505}
   - component: {fileID: 416102501}
   - component: {fileID: 416102503}
-  - component: {fileID: 416102502}
-  - component: {fileID: 416102500}
   m_Layer: 5
   m_Name: ButtonToggleKick (1)
   m_TagString: Untagged
@@ -9095,57 +9020,6 @@ RectTransform:
   m_AnchoredPosition: {x: 335, y: 0.00021362305}
   m_SizeDelta: {x: 170, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &416102500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 416102498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7a463ede511c62408277c6147fe3c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onTriggerDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTriggerUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onGripDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onGripUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadTouch:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadRelease:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &416102501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9185,31 +9059,9 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 416102505}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayAudioSource
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &416102502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 416102498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &416102503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10440,7 +10292,7 @@ AudioSource:
   m_GameObject: {fileID: 573788242}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243343114975261994, guid: 466cb649dcbf7204b803ce2b1aee323f,
+  OutputAudioMixerGroup: {fileID: 243494557097765652, guid: 466cb649dcbf7204b803ce2b1aee323f,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: da5393a202420b341ad030bc2154cd8d, type: 3}
   m_PlayOnAwake: 0
@@ -15131,7 +14983,7 @@ AudioSource:
   m_GameObject: {fileID: 980894093}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243343114975261994, guid: 466cb649dcbf7204b803ce2b1aee323f,
+  OutputAudioMixerGroup: {fileID: 243494557097765652, guid: 466cb649dcbf7204b803ce2b1aee323f,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: f729823d12969be42b5dc61d20750167, type: 3}
   m_PlayOnAwake: 0
@@ -15797,7 +15649,7 @@ AudioSource:
   m_GameObject: {fileID: 1010834647}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243343114975261994, guid: 466cb649dcbf7204b803ce2b1aee323f,
+  OutputAudioMixerGroup: {fileID: 243494557097765652, guid: 466cb649dcbf7204b803ce2b1aee323f,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 4fb06dc67bd5f0f43962294af21d2313, type: 3}
   m_PlayOnAwake: 0
@@ -17865,7 +17717,7 @@ AudioSource:
   m_GameObject: {fileID: 1161943363}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243343114975261994, guid: 466cb649dcbf7204b803ce2b1aee323f,
+  OutputAudioMixerGroup: {fileID: 243494557097765652, guid: 466cb649dcbf7204b803ce2b1aee323f,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 29ab04fb7d248b449a7a3d15d67a913a, type: 3}
   m_PlayOnAwake: 0
@@ -18043,7 +17895,7 @@ MonoBehaviour:
   partialOcclusionRadius: 1
   physicsBasedAttenuation: 1
   directMixFraction: 1
-  enableReflections: 0
+  enableReflections: 1
   simulationMode: 0
   indirectMixFraction: 1
   indirectBinauralEnabled: 0
@@ -20479,7 +20331,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1471720910}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9e05292e0d62b542ac5bba92674a86d, type: 3}
   m_Name: 
@@ -21725,7 +21577,7 @@ AudioSource:
   m_GameObject: {fileID: 1594252879}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243343114975261994, guid: 466cb649dcbf7204b803ce2b1aee323f,
+  OutputAudioMixerGroup: {fileID: 243494557097765652, guid: 466cb649dcbf7204b803ce2b1aee323f,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 2b1083957259c934f978775085d79186, type: 3}
   m_PlayOnAwake: 0
@@ -22678,8 +22530,6 @@ GameObject:
   - component: {fileID: 1681874690}
   - component: {fileID: 1681874686}
   - component: {fileID: 1681874688}
-  - component: {fileID: 1681874687}
-  - component: {fileID: 1681874685}
   m_Layer: 5
   m_Name: ButtonToggleKick (3)
   m_TagString: Untagged
@@ -22706,57 +22556,6 @@ RectTransform:
   m_AnchoredPosition: {x: 735, y: 0.0002245903}
   m_SizeDelta: {x: 170, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1681874685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1681874683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7a463ede511c62408277c6147fe3c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onTriggerDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTriggerUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onGripDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onGripUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadTouch:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadRelease:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &1681874686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22796,31 +22595,9 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1681874690}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayAudioSource
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1681874687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1681874683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1681874688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23540,8 +23317,6 @@ GameObject:
   - component: {fileID: 1818565976}
   - component: {fileID: 1818565972}
   - component: {fileID: 1818565974}
-  - component: {fileID: 1818565973}
-  - component: {fileID: 1818565971}
   m_Layer: 5
   m_Name: ButtonToggleKick (2)
   m_TagString: Untagged
@@ -23568,57 +23343,6 @@ RectTransform:
   m_AnchoredPosition: {x: 535, y: 0.0002245903}
   m_SizeDelta: {x: 170, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1818565971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1818565969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7a463ede511c62408277c6147fe3c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onTriggerDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTriggerUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onGripDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onGripUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadTouch:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onTouchpadRelease:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &1818565972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23658,31 +23382,9 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1818565976}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayAudioSource
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: GvrAudioSource, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1818565973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1818565969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1818565974
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24364,7 +24066,7 @@ MonoBehaviour:
   rigSteamVR: {fileID: 2088536682}
   rig2DFallback: {fileID: 1286651658}
   audioListener: {fileID: 1221119607}
-  allowToggleTo2D: 0
+  allowToggleTo2D: 1
 --- !u!4 &1908407813
 Transform:
   m_ObjectHideFlags: 0
@@ -24537,7 +24239,6 @@ GameObject:
   - component: {fileID: 1921799586}
   - component: {fileID: 1921799585}
   - component: {fileID: 1921799584}
-  - component: {fileID: 1921799583}
   - component: {fileID: 1921799582}
   m_Layer: 5
   m_Name: SequencerCanvas
@@ -24561,18 +24262,6 @@ MonoBehaviour:
   uiVisibleOnStart: 1
   fadeOnce: 0
   fadeSpeed: 1
---- !u!114 &1921799583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114829212621797624, guid: 8f634da6f7d5c534dba3c0e38c9f66a7,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1921799581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1921799584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25335,6 +25024,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableLayerMask: 5
+  laserEvents: {fileID: 0}
+  validTarget: {fileID: 0}
 --- !u!114 &2037884027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25359,7 +25050,7 @@ MonoBehaviour:
   noSteamVRFallbackMaxDistanceNoItem: 10
   noSteamVRFallbackMaxDistanceWithItem: 0.5
   controllerPrefab: {fileID: 168468, guid: 3f39fc63a93686e4a8e9168ee73f24d9, type: 2}
-  showDebugText: 0
+  showDebugText: 1
   spewDebugText: 0
 --- !u!1 &2039863350
 GameObject:
@@ -26350,7 +26041,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: NaN
+  field of view: 6.003e-42
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -26520,7 +26211,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: NaN
+  field of view: 4.56165e-40
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

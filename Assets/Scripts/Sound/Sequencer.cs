@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using Valve.VR.InteractionSystem;
 
 [RequireComponent(typeof(SequencerButton))]
 public class Sequencer : MonoBehaviour
@@ -239,6 +240,7 @@ public class Sequencer : MonoBehaviour
         }
     }
 
+    //Order matters - Listeners must be added before Interactables and UIElements
     void AddEventListeners()
     {
         foreach (Button kick in kicks)
@@ -246,6 +248,8 @@ public class Sequencer : MonoBehaviour
             kick.gameObject.AddComponent<SequencerButton>();
             kick.gameObject.AddComponent<ButtonImageColor>();
             kick.onClick.AddListener(() => { OnClickKick(kick); });
+            kick.gameObject.AddComponent<Interactable>();
+            kick.gameObject.AddComponent<UIElement>();
         }
 
         foreach (Button snare in snares)
@@ -253,6 +257,8 @@ public class Sequencer : MonoBehaviour
             snare.gameObject.AddComponent<SequencerButton>();
             snare.gameObject.AddComponent<ButtonImageColor>();
             snare.onClick.AddListener(() => { OnClickSnare(snare); });
+            snare.gameObject.AddComponent<Interactable>();
+            snare.gameObject.AddComponent<UIElement>();
         }
 
         foreach (Button hat in hats)
@@ -260,6 +266,8 @@ public class Sequencer : MonoBehaviour
             hat.gameObject.AddComponent<SequencerButton>();
             hat.gameObject.AddComponent<ButtonImageColor>();
             hat.onClick.AddListener(() => { OnClickHat(hat); });
+            hat.gameObject.AddComponent<Interactable>();
+            hat.gameObject.AddComponent<UIElement>();
         }
 
         foreach (Button bass in basses)
@@ -267,6 +275,8 @@ public class Sequencer : MonoBehaviour
             bass.gameObject.AddComponent<SequencerButton>();
             bass.gameObject.AddComponent<ButtonImageColor>();
             bass.onClick.AddListener(() => { OnClickBass(bass); });
+            bass.gameObject.AddComponent<Interactable>();
+            bass.gameObject.AddComponent<UIElement>();
         }
 
         foreach (Button pianoPad in pianoPads)
@@ -274,6 +284,8 @@ public class Sequencer : MonoBehaviour
             pianoPad.gameObject.AddComponent<SequencerButton>();
             pianoPad.gameObject.AddComponent<ButtonImageColor>();
             pianoPad.onClick.AddListener(() => { OnClickPianoPad(pianoPad); });
+            pianoPad.gameObject.AddComponent<Interactable>();
+            pianoPad.gameObject.AddComponent<UIElement>();
         }
     }
 
@@ -302,8 +314,9 @@ public class Sequencer : MonoBehaviour
         pianoPadAudio.clip = Resources.Load<AudioClip>("Sounds/Booth3Sequencer/PianoPad");
     }
 
-    void OnClickKick(Button kick)
+    public void OnClickKick(Button kick)
     {
+        Debug.Log("kick clicked");
         if (IsReady(kick))
         {
             QueueForPlay(kick);
@@ -316,7 +329,7 @@ public class Sequencer : MonoBehaviour
         }
     }
 
-    void OnClickSnare(Button snare)
+    public void OnClickSnare(Button snare)
     {
         if (IsReady(snare))
         {
@@ -330,7 +343,7 @@ public class Sequencer : MonoBehaviour
         }
     }
 
-    void OnClickHat(Button hat)
+    public void OnClickHat(Button hat)
     {
         if (IsReady(hat))
         {
@@ -344,7 +357,7 @@ public class Sequencer : MonoBehaviour
         }
     }
 
-    void OnClickBass(Button bass)
+    public void OnClickBass(Button bass)
     {
         if (IsReady(bass))
         {
@@ -358,7 +371,7 @@ public class Sequencer : MonoBehaviour
         }
     }
 
-    void OnClickPianoPad(Button pianoPad)
+    public void OnClickPianoPad(Button pianoPad)
     {
         if (IsReady(pianoPad))
         {

@@ -29,13 +29,13 @@ public class LaserEventHandler : MonoBehaviour {
         LaserPointerInteractable leftLaserPointer = leftHand.GetComponent<LaserPointerInteractable>();
         LaserPointerInteractable rightLaserPointer = rightHand.GetComponent<LaserPointerInteractable>();
 
-        if (leftLaserPointer.laserEvents != null && leftTriggerDown)
+        if (leftLaserPointer != null && leftLaserPointer.laserEvents != null && leftTriggerDown)
         {
             leftLaserPointer.laserEvents.onTriggerDown.Invoke();
             leftTriggerDown = false;
         }
 
-        if (rightLaserPointer.laserEvents != null && rightTriggerDown)
+        if (rightLaserPointer != null && rightLaserPointer.laserEvents != null && rightTriggerDown)
         {
             rightLaserPointer.laserEvents.onTriggerDown.Invoke();
             rightTriggerDown = false;

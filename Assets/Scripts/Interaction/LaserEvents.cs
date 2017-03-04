@@ -13,12 +13,4 @@ public class LaserEvents : MonoBehaviour
     public UnityEvent onTouchpadUp;
     public UnityEvent onTouchpadTouch;
     public UnityEvent onTouchpadRelease;
-
-    //Add collider for laser raycast
-    private void Awake()
-    {
-        BoxCollider boxCollider = GetComponent<BoxCollider>();
-        boxCollider.isTrigger = true;
-        boxCollider.size = new Vector3(gameObject.GetComponent<RectTransform>().sizeDelta.x, gameObject.GetComponent<RectTransform>().sizeDelta.y);
-    }
 }

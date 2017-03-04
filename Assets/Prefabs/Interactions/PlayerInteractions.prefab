@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114265575932984854}
   - component: {fileID: 114263584523836216}
   - component: {fileID: 114798096567661504}
+  - component: {fileID: 114468340563358644}
   m_Layer: 26
   m_Name: PlayerInteractions
   m_TagString: Untagged
@@ -161,6 +162,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62b1a24e7114bc841af9d2838a647ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114468340563358644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1748844521558262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a23413ff0368a340ad90c681429a9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114798096567661504

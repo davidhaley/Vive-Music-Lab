@@ -2,32 +2,23 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Valve.VR.InteractionSystem
+[RequireComponent(typeof(BoxCollider))]
+public class LaserEvents : MonoBehaviour
 {
-    [RequireComponent(typeof(BoxCollider))]
-    public class LaserEvents : MonoBehaviour
+    public UnityEvent onTriggerDown;
+    public UnityEvent onTriggerUp;
+    public UnityEvent onGripDown;
+    public UnityEvent onGripUp;
+    public UnityEvent onTouchpadDown;
+    public UnityEvent onTouchpadUp;
+    public UnityEvent onTouchpadTouch;
+    public UnityEvent onTouchpadRelease;
+
+    //Add collider for laser raycast
+    private void Awake()
     {
-        public UnityEvent onTriggerDown;
-        public UnityEvent onTriggerUp;
-        public UnityEvent onGripDown;
-        public UnityEvent onGripUp;
-        public UnityEvent onTouchpadDown;
-        public UnityEvent onTouchpadUp;
-        public UnityEvent onTouchpadTouch;
-        public UnityEvent onTouchpadRelease;
-
-        //Add collider for laser raycast
-        private void Awake()
-        {
-            BoxCollider boxCollider = GetComponent<BoxCollider>();
-            boxCollider.isTrigger = true;
-            boxCollider.size = new Vector3(gameObject.GetComponent<RectTransform>().sizeDelta.x, gameObject.GetComponent<RectTransform>().sizeDelta.y);
-        }
-
-        internal void OnTriggerDown(int i)
-        {
-            throw new NotImplementedException();
-        }
+        BoxCollider boxCollider = GetComponent<BoxCollider>();
+        boxCollider.isTrigger = true;
+        boxCollider.size = new Vector3(gameObject.GetComponent<RectTransform>().sizeDelta.x, gameObject.GetComponent<RectTransform>().sizeDelta.y);
     }
 }
-

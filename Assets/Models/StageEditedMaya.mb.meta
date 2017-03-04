@@ -2379,6 +2379,7 @@ ModelImporter:
     2301434: 'Mains '
     2301436: Cylinder_5_7_MeshPart0
     2301438: Cylinder_5_7_MeshPart1
+    2301440: //RootNode
     3300000: Bolt
     3300002: Bolt_2
     3300004: Bolt_3
@@ -3099,6 +3100,7 @@ ModelImporter:
     3301434: 'Mains '
     3301436: Cylinder_5_7_MeshPart0
     3301438: Cylinder_5_7_MeshPart1
+    3301440: //RootNode
     4300000: truss_wire
     4300002: Sweep_1
     4300004: Sweep_2
@@ -3819,6 +3821,7 @@ ModelImporter:
     4301434: 'Mains '
     4301436: Cylinder_5_7_MeshPart0
     4301438: Cylinder_5_7_MeshPart1
+    4301440: Museum
     7400000: Take 001
     9500000: //RootNode
   materials:

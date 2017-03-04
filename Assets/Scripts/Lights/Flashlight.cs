@@ -10,6 +10,12 @@ public class Flashlight : MonoBehaviour {
     private ControllerHints controllerHints;
     private bool on = false;
 
+    private void OnEnable()
+    {
+        SteamVRControllerEvents.OnLeftTouchpadDown += OnLeftTouchpadDown;
+        LightShow.MainLights += MainLightsStatus;
+    }
+
     private void Awake()
     {
         flashLight = GetComponent<Light>();
@@ -21,20 +27,15 @@ public class Flashlight : MonoBehaviour {
         }
     }
 
-    private void Start()
-    {
-        hand = Player.instance.leftHand;
-        gameObject.transform.SetParent(hand.transform);
-        gameObject.transform.localPosition = Vector3.zero;
-    }
-
     private void Update()
     {
-        gameObject.transform.rotation = hand.transform.rotation;
-
-        if (hand.controller != null && hand.controller.GetPressDown(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad))
+        //If flashlight is on, update, otherwise don't bother
+        if (on)
         {
-            ToggleFlashLight();
+            hand = Player.instance.leftHand;
+            gameObject.transform.SetParent(hand.transform);
+            gameObject.transform.localPosition = Vector3.zero;
+            gameObject.transform.rotation = hand.transform.rotation;
         }
     }
 
@@ -51,5 +52,16 @@ public class Flashlight : MonoBehaviour {
             flashLight.enabled = false;
             on = false;
         }
+    }
+
+    private void OnLeftTouchpadDown()
+    {
+        ToggleFlashLight();
+    }
+
+    private bool MainLightsStatus(bool status)
+    {
+        Debug.Log("lights are... " + status);
+        return status;
     }
 }

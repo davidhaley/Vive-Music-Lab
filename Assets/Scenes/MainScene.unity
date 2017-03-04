@@ -1030,7 +1030,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: NaN
+  field of view: -4.3368084e-19
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -6268,8 +6268,8 @@ GameObject:
   m_Component:
   - component: {fileID: 208004022}
   - component: {fileID: 208004023}
-  - component: {fileID: 208004021}
   - component: {fileID: 208004024}
+  - component: {fileID: 208004021}
   m_Layer: 26
   m_Name: Hand1
   m_TagString: Untagged
@@ -6288,7 +6288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14cbd190a8126654eba7e74d1767ee7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  validTarget: {fileID: 0}
   interactableLayerMask: 5
 --- !u!4 &208004022
 Transform:
@@ -6319,7 +6318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherHand: {fileID: 2037884027}
-  startingHandType: 1
+  startingHandType: 2
   hoverSphereTransform: {fileID: 0}
   hoverSphereRadius: 0.05
   hoverLayerMask:
@@ -6344,7 +6343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
-  color: {r: 0, g: 0.95862055, b: 1, a: 0}
+  color: {r: 0.48306137, g: 0.32515138, b: 0.71323526, a: 0}
   thickness: 0.002
   holder: {fileID: 0}
   pointer: {fileID: 0}
@@ -25281,8 +25280,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2037884024}
   - component: {fileID: 2037884027}
-  - component: {fileID: 2037884026}
   - component: {fileID: 2037884025}
+  - component: {fileID: 2037884026}
   m_Layer: 26
   m_Name: Hand2
   m_TagString: Untagged
@@ -25335,7 +25334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14cbd190a8126654eba7e74d1767ee7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  validTarget: {fileID: 0}
   interactableLayerMask: 5
 --- !u!114 &2037884027
 MonoBehaviour:
@@ -25350,7 +25348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherHand: {fileID: 208004023}
-  startingHandType: 0
+  startingHandType: 2
   hoverSphereTransform: {fileID: 0}
   hoverSphereRadius: 0.05
   hoverLayerMask:
@@ -26352,7 +26350,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: 1
+  field of view: NaN
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -26522,7 +26520,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 1
+  field of view: NaN
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

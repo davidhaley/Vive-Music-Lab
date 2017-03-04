@@ -18,6 +18,10 @@ public class LightShow : MonoBehaviour
     private bool lightShowEnabled = false;
     private bool flashLightHintShown = false;
 
+    public delegate bool LightStatus(bool status);
+
+    public static event LightStatus MainLights;
+
     private void Awake()
     {
         lightShowLights = GameObject.FindGameObjectsWithTag("LightShow");
@@ -96,5 +100,10 @@ public class LightShow : MonoBehaviour
                 mainLightsEnabled = true;
             }
         }
+    }
+
+    private bool MainLightsStatus()
+    {
+        return MainLights(mainLightsEnabled);
     }
 }

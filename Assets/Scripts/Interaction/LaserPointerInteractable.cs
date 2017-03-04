@@ -2,28 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using Valve.VR.InteractionSystem;
 
 //Place this next to the SteamVR_LaserPointer
 //Let us know when a laser pointer finds an interactable object
 [RequireComponent(typeof(SteamVR_LaserPointer))]
 public class LaserPointerInteractable : MonoBehaviour {
 
-    [HideInInspector] public Transform validTarget;
     public int interactableLayerMask = 5;
 
-    [HideInInspector] private LaserEvents laserEvents;
+    public LaserEvents laserEvents;
+    public Transform validTarget;
     private SteamVR_LaserPointer steamVRLaserPointer;
     private MeshRenderer meshRend;
 
     private void Awake()
     {
         steamVRLaserPointer = GetComponent<SteamVR_LaserPointer>();
-    }
-
-    private void Start()
-    {
-        meshRend = steamVRLaserPointer.pointer.GetComponent<MeshRenderer>();
     }
 
     private void OnEnable()
@@ -45,6 +39,11 @@ public class LaserPointerInteractable : MonoBehaviour {
         {
             laserEvents = validTarget.GetComponent<LaserEvents>();
         }
+        else if (validTarget == null)
+        {
+            laserEvents = null;
+        }
+
             ColorLaser();
     }
 
@@ -57,32 +56,20 @@ public class LaserPointerInteractable : MonoBehaviour {
         }
     }
 
-    //If we leave the interactable object, target is non-valid
+    //Set it free
     public void OnPointerOut(object sender, PointerEventArgs e)
     {
-        if (e.target.gameObject.layer == interactableLayerMask)
-        {
-            validTarget = null;
-        }
-    }
-
-    public LaserEvents GetLaserEvents()
-    {
-        return laserEvents;
+        validTarget = null;
     }
 
     //If the target is valid but does not have laser events, color the laser red, otherwise green
     private void ColorLaser()
     {
-        if (steamVRLaserPointer.pointer.GetComponent<MeshRenderer>() != null)
-        {
-            meshRend = steamVRLaserPointer.pointer.GetComponent<MeshRenderer>();
-        }
+        meshRend = steamVRLaserPointer.pointer.GetComponent<MeshRenderer>();
 
         if (laserEvents == null)
         {
             meshRend.material.color = Color.red;
-            return;
         }
         else if (laserEvents != null)
         {

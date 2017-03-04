@@ -13,7 +13,7 @@ public class LaserPointerInteractable : MonoBehaviour {
     public LaserEvents laserEvents;
     public Transform validTarget;
     private SteamVR_LaserPointer steamVRLaserPointer;
-    private MeshRenderer meshRend;
+    //private Material reference;
 
     private void Awake()
     {
@@ -38,13 +38,13 @@ public class LaserPointerInteractable : MonoBehaviour {
         if (validTarget != null)
         {
             laserEvents = validTarget.GetComponent<LaserEvents>();
+            steamVRLaserPointer.pointer.GetComponent<MeshRenderer>().enabled = true;
         }
         else if (validTarget == null)
         {
             laserEvents = null;
+            steamVRLaserPointer.pointer.GetComponent<MeshRenderer>().enabled = false;
         }
-
-            ColorLaser();
     }
 
     //If we find an object within the interactable layer mask, save it as the valid target
@@ -53,6 +53,13 @@ public class LaserPointerInteractable : MonoBehaviour {
         if (e.target.gameObject.layer == interactableLayerMask)
         {
             validTarget = e.target;
+
+            //Enable laser if there are laser events
+            steamVRLaserPointer.pointer.GetComponent<MeshRenderer>().enabled = true;
+        }
+        else
+        {
+            steamVRLaserPointer.pointer.GetComponent<MeshRenderer>().enabled = false;
         }
     }
 
@@ -60,20 +67,6 @@ public class LaserPointerInteractable : MonoBehaviour {
     public void OnPointerOut(object sender, PointerEventArgs e)
     {
         validTarget = null;
-    }
-
-    //If the target is valid but does not have laser events, color the laser red, otherwise green
-    private void ColorLaser()
-    {
-        meshRend = steamVRLaserPointer.pointer.GetComponent<MeshRenderer>();
-
-        if (laserEvents == null)
-        {
-            meshRend.material.color = Color.red;
-        }
-        else if (laserEvents != null)
-        {
-            meshRend.material.color = Color.green;
-        }
+        steamVRLaserPointer.pointer.GetComponent<MeshRenderer>().enabled = false;
     }
 }

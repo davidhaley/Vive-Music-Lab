@@ -6,14 +6,14 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: workshop
+  m_Name: ConcreteBin
   m_Shader: {fileID: 4800000, guid: 908b379d4818cd64184b95a21123d909, type: 3}
-  m_ShaderKeywords: S_SPECULAR_NONE S_UNLIT
-  m_LightmapFlags: 5
+  m_ShaderKeywords: S_RECEIVE_SHADOWS S_SPECULAR_METALLIC S_WORLD_ALIGNED_TEXTURE
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_CustomRenderQueue: -1
   stringTagMap:
-    OriginalShader: Unlit/Texture
+    OriginalShader: Standard
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -39,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a57cd5c56c9d75c4ba0ee9fbc6e1d8df, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4169245bef46f1c47b4a9b83c002052c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -69,7 +69,9 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _FogMultiplier: 1
+    - _GlossMapScale: 1
     - _Glossiness: 0.5
+    - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -78,14 +80,16 @@ Material:
     - _OcclusionStrengthIndirectDiffuse: 1
     - _OcclusionStrengthIndirectSpecular: 1
     - _Parallax: 0.02
-    - _SpecularMode: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SpecularMode: 2
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     - g_bReceiveShadows: 1
     - g_bRenderBackfaces: 0
-    - g_bUnlit: 1
-    - g_bWorldAlignedTexture: 0
+    - g_bUnlit: 0
+    - g_bWorldAlignedTexture: 1
     - g_flCubeMapScalar: 1
     - g_flReflectanceBias: 0
     - g_flReflectanceMax: 1
@@ -99,4 +103,4 @@ Material:
     - g_vWorldAlignedNormalTangentV: {r: 0, g: 0, b: 1, a: 0}
     - g_vWorldAlignedTextureNormal: {r: 0, g: 1, b: 0, a: 0}
     - g_vWorldAlignedTexturePosition: {r: 0, g: 0, b: 0, a: 0}
-    - g_vWorldAlignedTextureSize: {r: 1, g: 1, b: 1, a: 0}
+    - g_vWorldAlignedTextureSize: {r: -0.6, g: 1, b: -0.11, a: 0}

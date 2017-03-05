@@ -13,7 +13,7 @@ public class LightShow : MonoBehaviour
     private GameObject[] lightShowLights;
     private GameObject[] mainLights;
 
-    private bool mainLightsEnabled = true;
+    private static bool mainLightsEnabled = true;
     private bool lightShowEnabled = false;
     private bool flashLightHintShown = false;
 
@@ -101,7 +101,7 @@ public class LightShow : MonoBehaviour
         }
     }
 
-    private bool MainLightsStatus()
+    public static bool MainLightsEnabled()
     {
         return MainLights(mainLightsEnabled);
     }

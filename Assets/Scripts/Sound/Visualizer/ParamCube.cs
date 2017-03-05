@@ -11,8 +11,8 @@ public class ParamCube : MonoBehaviour
     public float scaleMagnitude;
     public bool useBuffer;
 
-    private Material material;
-    private Color baseColor;
+    protected Material material;
+    protected Color baseColor;
 
     private void Start()
     {
@@ -22,18 +22,21 @@ public class ParamCube : MonoBehaviour
 
     void Update()
     {
-        if (useBuffer)
+        if (audioVisualizer != null)
         {
-            Modulate(audioVisualizer.audioBandBuffer);
-        }
+            if (useBuffer)
+            {
+                Modulate(audioVisualizer.audioBandBuffer);
+            }
 
-        if (!useBuffer)
-        {
-            Modulate(audioVisualizer.audioBand);
+            if (!useBuffer)
+            {
+                Modulate(audioVisualizer.audioBand);
+            }
         }
     }
 
-    private void Modulate(float[] audio)
+    protected virtual void Modulate(float[] audio)
     {
         transform.localScale = new Vector3(transform.localScale.x, (audio[band] * scaleMagnitude) + startScale, transform.localScale.z);
         //Color color = new Color(audio[band], audio[band], audio[band]);

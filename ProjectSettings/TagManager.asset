@@ -5,8 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - ToggleMaterialDarkBright
-  - StageAudioSource
-  - FogMachine
   - MovementCapable
   - Kick
   - Snare
@@ -16,12 +14,11 @@ TagManager:
   - SequencerCanvas
   - AudioVisualizer
   - LivePerformance
-  - LivePerformanceCollider
-  - Teleport
-  - LaserPointer
   - MainLights
   - LightShow
   - MaskLaser
+  - Contaminable
+  - Contaminated
   layers:
   - Default
   - TransparentFX

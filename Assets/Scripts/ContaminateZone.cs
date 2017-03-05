@@ -7,6 +7,7 @@ public class ContaminateZone : MonoBehaviour {
 
     public AudioVisualizer audioVisualizer;
     public GameObject reference;
+    public StatusIndicator modConStatusIndicator;
 
     private StatusIndicator statusIndicator;
     private ParamCubeScale paramCubeScale;
@@ -58,6 +59,7 @@ public class ContaminateZone : MonoBehaviour {
         {
             statusIndicator = gameObject.GetComponent<StatusIndicator>();
             statusIndicator.image.CrossFadeColor(statusIndicator.activeColor, statusIndicator.fadeTime * 1.2f, false, false);
+            modConStatusIndicator.image.CrossFadeColor(statusIndicator.activeColor, statusIndicator.fadeTime * 1.2f, false, false);
         }
     }
 

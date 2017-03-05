@@ -1,23 +1,24 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-//public class ButtonSound : MonoBehaviour {
+public class ButtonSound : MonoBehaviour
+{
 
-//    public AudioClip clip;
-//    private GvrAudioSource gvrAudioSource;
+    public AudioClip clip;
+    private AudioSource audioSource;
 
-//    private void Awake()
-//    {
-//        gvrAudioSource = gameObject.AddComponent<GvrAudioSource>();
-//        gvrAudioSource.clip = clip;
-//        gvrAudioSource.loop = false;
-//        gvrAudioSource.playOnAwake = false;
-//        gvrAudioSource.bypassRoomEffects = true;
-//    }
+    private void Awake()
+    {
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = clip;
+        audioSource.loop = false;
+        audioSource.playOnAwake = false;
+        audioSource.bypassEffects = true;
+    }
 
-//    public void Play()
-//    {
-//        gvrAudioSource.Play();
-//    }
-//}
+    public void Play()
+    {
+        audioSource.PlayOneShot(clip);
+    }
+}

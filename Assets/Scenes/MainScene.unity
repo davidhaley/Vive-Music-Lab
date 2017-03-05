@@ -710,7 +710,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: NaN
+  field of view: 3.5270817e-38
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -920,9 +920,7 @@ GameObject:
   - component: {fileID: 81933549}
   - component: {fileID: 81933554}
   - component: {fileID: 81933553}
-  - component: {fileID: 81933552}
   - component: {fileID: 81933551}
-  - component: {fileID: 81933550}
   m_Layer: 5
   m_Name: BoothCanvas
   m_TagString: Untagged
@@ -953,18 +951,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000002861023, y: -0.041}
   m_SizeDelta: {x: 1100, y: 388.07}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &81933550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114630964499221322, guid: 8f0ee704d83ce2848b42f4bb6b600659,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 81933548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!225 &81933551
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -977,18 +963,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &81933552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114522654866643096, guid: 8f0ee704d83ce2848b42f4bb6b600659,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 81933548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &81933553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5177,6 +5151,10 @@ Prefab:
       propertyPath: traceLayerMask.m_Bits
       value: 4294967291
       objectReference: {fileID: 0}
+    - target: {fileID: 153878, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 2}
   m_IsPrefabParent: 0
@@ -5440,6 +5418,10 @@ Prefab:
     - target: {fileID: 4142566184616118, guid: ec67808a1b557154092a7fe5bb341c3c, type: 2}
       propertyPath: m_RootOrder
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886661114460346, guid: ec67808a1b557154092a7fe5bb341c3c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec67808a1b557154092a7fe5bb341c3c, type: 2}
@@ -8046,7 +8028,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &408817929
 Transform:
@@ -8354,7 +8336,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &452614224
 Transform:
@@ -9657,6 +9639,47 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.75, z: 0}
+--- !u!1 &541498738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 541498739}
+  - component: {fileID: 541498740}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &541498739
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 541498738}
+  m_LocalRotation: {x: 0.017858481, y: -0.008572997, z: 0.3567122, w: 0.9340043}
+  m_LocalPosition: {x: 0.00224, y: -0.15289, z: -0.00143}
+  m_LocalScale: {x: 0.23675917, y: 0.40879247, z: 0.49994516}
+  m_Children: []
+  m_Father: {fileID: 1441592556}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 2.262, y: -0.18800001, z: 41.802002}
+--- !u!65 &541498740
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 541498738}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: -0.04, y: 0.21, z: 0.16}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &550799838
 GameObject:
   m_ObjectHideFlags: 0
@@ -12867,6 +12890,10 @@ Prefab:
       propertyPath: m_Name
       value: ContaminateCube (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1886661114460346, guid: ec67808a1b557154092a7fe5bb341c3c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec67808a1b557154092a7fe5bb341c3c, type: 2}
   m_IsPrefabParent: 0
@@ -14721,6 +14748,14 @@ Prefab:
     - target: {fileID: 100000, guid: 18c97248cde717847a2d3d11a66d028d, type: 3}
       propertyPath: m_Name
       value: ModulationContaminateBin
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 18c97248cde717847a2d3d11a66d028d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 18c97248cde717847a2d3d11a66d028d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18c97248cde717847a2d3d11a66d028d, type: 3}
@@ -17336,6 +17371,7 @@ GameObject:
   - component: {fileID: 1109941389}
   - component: {fileID: 1109941388}
   - component: {fileID: 1109941387}
+  - component: {fileID: 1109941390}
   m_Layer: 5
   m_Name: BoothNumber
   m_TagString: Untagged
@@ -17415,6 +17451,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1109941385}
+--- !u!114 &1109941390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1109941385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef68243b7277694bb0feff6cbf7d396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicController: {fileID: 85146133}
 --- !u!1 &1114367684
 GameObject:
   m_ObjectHideFlags: 0
@@ -19059,7 +19107,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1337675357
 Transform:
@@ -19460,7 +19508,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1353583213
 Transform:
@@ -20534,6 +20582,10 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19997996, z: 0}
   m_Center: {x: 0.10501778, y: 0.9070928, z: -0.52133936}
+--- !u!4 &1441592556 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 492410, guid: a4c8402bb56ddc944a31eeead70f0ac4, type: 2}
+  m_PrefabInternal: {fileID: 1787401313}
 --- !u!1 &1447641940
 GameObject:
   m_ObjectHideFlags: 0
@@ -20793,7 +20845,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1487680940
 Transform:
@@ -22156,6 +22208,10 @@ Prefab:
       propertyPath: m_Name
       value: ContaminateCube (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1886661114460346, guid: ec67808a1b557154092a7fe5bb341c3c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec67808a1b557154092a7fe5bb341c3c, type: 2}
   m_IsPrefabParent: 0
@@ -22434,7 +22490,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!23 &1611759665
 MeshRenderer:
@@ -23720,6 +23776,18 @@ Prefab:
       propertyPath: m_Name
       value: ModulationContaminatePipe
       objectReference: {fileID: 0}
+    - target: {fileID: 135974, guid: a4c8402bb56ddc944a31eeead70f0ac4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 135974, guid: a4c8402bb56ddc944a31eeead70f0ac4, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 155208, guid: a4c8402bb56ddc944a31eeead70f0ac4, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4c8402bb56ddc944a31eeead70f0ac4, type: 2}
   m_IsPrefabParent: 0
@@ -24205,6 +24273,10 @@ Prefab:
       propertyPath: m_Name
       value: ContaminateCube (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1886661114460346, guid: ec67808a1b557154092a7fe5bb341c3c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec67808a1b557154092a7fe5bb341c3c, type: 2}
   m_IsPrefabParent: 0
@@ -24590,7 +24662,7 @@ MonoBehaviour:
   rigSteamVR: {fileID: 2088536682}
   rig2DFallback: {fileID: 1286651658}
   audioListener: {fileID: 1221119607}
-  allowToggleTo2D: 1
+  allowToggleTo2D: 0
 --- !u!4 &1908407813
 Transform:
   m_ObjectHideFlags: 0
@@ -26810,7 +26882,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2134763794
 Transform:
   m_ObjectHideFlags: 0
@@ -26910,7 +26982,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: -2.3513347e+14
+  field of view: NaN
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

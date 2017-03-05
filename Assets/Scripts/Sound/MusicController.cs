@@ -115,4 +115,16 @@ public class MusicController : MonoBehaviour
             }
         }
     }
+
+    public bool IsPlaying()
+    {
+        foreach (AudioSource audioSource in audioSources)
+        {
+            if (audioSource.isPlaying)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

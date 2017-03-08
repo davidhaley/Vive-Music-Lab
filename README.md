@@ -4,6 +4,14 @@
 
 Music Lab is a virtual reality application for HTC Vive. Taking inspiration from Valve's The Lab, my goal is to learn by prototyping features, then run those features through user tests, while maintaining a quick iteration cycle. The results will be compiled and used to create a complete VR experience.
 
+So far, the application features:
+
+1. A stage with speakers and spatial audio sources which reflect sound in real-time, and adjust their perceived volume depending on how close you are to the speakers. The stage also allows the user to turn off the lights in the room, subsequently providing them with a flashlight to explore the room.  
+2. A canvas with buttons that when activated with the laser attached to the player's controller, play audio loops in sync, allowing the player to create music in real-time.  
+3. An audio sequencer structured in a 5 row by 4 column grid (5 audio samples, and 4 beats to 1 bar grid). The player can enable or disable the buttons using their hands, and when the audio sequencer (120 beats per minute) detects the enabled button, it plays the sound.  
+4. An audio visualizer. The amplitude of the audio source is partitioned into 7 frequency bands. Each band represents a different part of the track (bass for example). Then, each band's amplitude is converted to a value range between 0 and 1, and those values are assigned to shapes, which move/dance according to those values.  
+5. A 'Modulation Contaminate Funnel'. The player can solve the puzzle, by throwing a cube into a large solid funnel, and the cube becomes "contaminated" with modulation (the same technique used for the audio visualizer). Then, when the player places the contaminated cube onto the dance floor, and turns on the music and turns off the lights, the cube will dance to the music.  
+
 #### Screenshots (March 8th 2017)
 
 ![alt text](https://cloud.githubusercontent.com/assets/11729897/23720137/11fe6bec-03fb-11e7-9735-a62548b546e3.png)

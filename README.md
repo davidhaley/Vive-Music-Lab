@@ -1,6 +1,6 @@
 # Music Lab
 
-##### This project is currently in development.
+##### This project is currently in development. The original Google Cardboard version can be found [here]: https://github.com/davidhaley/Udacity-VR-Nano-Degree-Project-5-Museum
 
 Music Lab is a virtual reality application for HTC Vive. Taking inspiration from Valve's The Lab, my goal is to learn by prototyping features, then run those features through user tests, while maintaining a quick iteration cycle. The results will be compiled and used to create a complete VR experience.
 

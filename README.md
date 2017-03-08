@@ -20,7 +20,7 @@ Music Lab is a virtual reality application for HTC Vive. Taking inspiration from
 
 #### Project Dependencies
 
-The Lab Renderer v1.0 - https://www.assetstore.unity3d.com/en/#!/content/63141
-SteamVR Unity Plugin - https://www.assetstore.unity3d.com/en/#!/content/32647
-Steam Audio (Phonon) - https://valvesoftware.github.io/steam-audio/
-Unity 5.6.0b11 - https://unity3d.com/unity/beta
+The Lab Renderer v1.0 - https://www.assetstore.unity3d.com/en/#!/content/63141  
+SteamVR Unity Plugin - https://www.assetstore.unity3d.com/en/#!/content/32647  
+Steam Audio (Phonon) - https://valvesoftware.github.io/steam-audio/  
+Unity 5.6.0b11 - https://unity3d.com/unity/beta  

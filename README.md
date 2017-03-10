@@ -1,10 +1,10 @@
 # Music Lab
 
+### Music Lab is a virtual reality application for HTC Vive containing a compilation of experiments using real-time spatial audio and player interactions.
+
 ##### This project is currently in development and is a continuation of the Google Cardboard version found [here](https://github.com/davidhaley/Udacity-VR-Nano-Degree-Project-5-Museum "Museum").
 
 #### [See how I created this project](http://www.davidhaley.io/portfolio/vr/music-lab).
-
-### Music Lab is a virtual reality application for HTC Vive containing a compilation of experiments using real-time spatial audio and player interactions.
 
 So far, the application features:
 

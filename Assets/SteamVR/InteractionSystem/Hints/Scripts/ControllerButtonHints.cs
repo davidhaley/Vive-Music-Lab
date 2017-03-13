@@ -8,6 +8,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System;
 
 namespace Valve.VR.InteractionSystem
 {
@@ -768,5 +769,10 @@ namespace Valve.VR.InteractionSystem
 
 			return string.Empty;
 		}
-	}
+
+        internal static void ShowButtonHint(Hand.HandType left, EVRButtonId k_EButton_SteamVR_Trigger)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

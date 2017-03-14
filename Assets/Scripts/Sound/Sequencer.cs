@@ -38,13 +38,13 @@ public class Sequencer : MonoBehaviour
 
     private void Awake()
     {
+        List<GameObject> listButtons = CreateListButtons();
+
         GetAllButtons();
-        AddEventListeners();
-        LoadAudioSource(kick);
-        LoadAudioSource(snare);
-        LoadAudioSource(hat);
-        LoadAudioSource(bass);
-        LoadAudioSource(pianoPad);
+        AddEventListeners(listButtons);
+        LoadAudioSources(listButtons);
+        LoadAudioClips();
+        MakeInteractable(listButtons);
     }
 
     private void OnDisable()
@@ -54,7 +54,6 @@ public class Sequencer : MonoBehaviour
 
     private void Start()
     {
-        LoadAudioClips();
         nextEventTime = AudioSettings.dspTime;
     }
 
@@ -228,75 +227,58 @@ public class Sequencer : MonoBehaviour
         }
     }
 
-    private bool Queued(Button[] buttons, int column)
+    public void OnClickButton(Button button)
     {
-        if (buttons[column + 1].GetComponent<SequencerButton>().Queued())
+        if (IsReady(button))
         {
-            return true;
+            QueueForPlay(button);
+            ChangeColor(button);
         }
-        else
+        else if (!IsReady(button))
         {
-            return false;
+            RemoveFromQueue(button);
+            ChangeColor(button);
         }
     }
 
-    //Order matters - Listeners must be added before Interactables and UIElements
-    void AddEventListeners()
+    private void GetAllButtons()
     {
-        foreach (Button kick in kicks)
-        {
-            kick.gameObject.AddComponent<SequencerButton>();
-            kick.gameObject.AddComponent<ButtonImageColor>();
-            kick.onClick.AddListener(() => { OnClickKick(kick); });
-            kick.gameObject.AddComponent<Interactable>();
-            kick.gameObject.AddComponent<UIElement>();
-        }
+        kicks = kick.GetComponentsInChildren<Button>();
+        snares = snare.GetComponentsInChildren<Button>();
+        hats = hat.GetComponentsInChildren<Button>();
+        basses = bass.GetComponentsInChildren<Button>();
+        pianoPads = pianoPad.GetComponentsInChildren<Button>();
+    }
 
-        foreach (Button snare in snares)
+    private void AddEventListeners(List<GameObject> gameObjectList)
+    {
+        foreach (GameObject gameObject in gameObjectList)
         {
-            snare.gameObject.AddComponent<SequencerButton>();
-            snare.gameObject.AddComponent<ButtonImageColor>();
-            snare.onClick.AddListener(() => { OnClickSnare(snare); });
-            snare.gameObject.AddComponent<Interactable>();
-            snare.gameObject.AddComponent<UIElement>();
-        }
+            Button[] buttons = gameObject.GetComponentsInChildren<Button>();
 
-        foreach (Button hat in hats)
-        {
-            hat.gameObject.AddComponent<SequencerButton>();
-            hat.gameObject.AddComponent<ButtonImageColor>();
-            hat.onClick.AddListener(() => { OnClickHat(hat); });
-            hat.gameObject.AddComponent<Interactable>();
-            hat.gameObject.AddComponent<UIElement>();
-        }
-
-        foreach (Button bass in basses)
-        {
-            bass.gameObject.AddComponent<SequencerButton>();
-            bass.gameObject.AddComponent<ButtonImageColor>();
-            bass.onClick.AddListener(() => { OnClickBass(bass); });
-            bass.gameObject.AddComponent<Interactable>();
-            bass.gameObject.AddComponent<UIElement>();
-        }
-
-        foreach (Button pianoPad in pianoPads)
-        {
-            pianoPad.gameObject.AddComponent<SequencerButton>();
-            pianoPad.gameObject.AddComponent<ButtonImageColor>();
-            pianoPad.onClick.AddListener(() => { OnClickPianoPad(pianoPad); });
-            pianoPad.gameObject.AddComponent<Interactable>();
-            pianoPad.gameObject.AddComponent<UIElement>();
+            foreach (Button button in buttons)
+            {
+                button.onClick.AddListener(() => { OnClickButton(button); });
+            }
         }
     }
 
-    void LoadAudioSource(GameObject go)
+    private void LoadAudioSources(List<GameObject> gameObjectList)
     {
-        AudioSource gvrAudioSource = go.AddComponent<AudioSource>();
-        gvrAudioSource.loop = false;
-        gvrAudioSource.playOnAwake = false;
+        foreach (GameObject gameObject in gameObjectList)
+        {
+            AudioSource audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.loop = false;
+            audioSource.playOnAwake = false;
+
+            //Steam Audio
+            Phonon.PhononEffect phononEffect = gameObject.AddComponent<Phonon.PhononEffect>();
+            phononEffect.enableReflections = true;
+            phononEffect.directBinauralEnabled = true;
+        }
     }
 
-    void LoadAudioClips()
+    private void LoadAudioClips()
     {
         kickAudio = kick.GetComponent<AudioSource>();
         kickAudio.clip = Resources.Load<AudioClip>("Sounds/Booth3Sequencer/Kick");
@@ -314,109 +296,61 @@ public class Sequencer : MonoBehaviour
         pianoPadAudio.clip = Resources.Load<AudioClip>("Sounds/Booth3Sequencer/PianoPad");
     }
 
-    public void OnClickKick(Button kick)
+    private void MakeInteractable(List<GameObject> gameObjectList)
     {
-        Debug.Log("kick clicked");
-        if (IsReady(kick))
+        foreach (GameObject gameObject in gameObjectList)
         {
-            QueueForPlay(kick);
-            ChangeColor(kick);
-        }
-        else if (!IsReady(kick))
-        {
-            RemoveFromQueue(kick);
-            ChangeColor(kick);
+            Button[] buttons = gameObject.GetComponentsInChildren<Button>();
+
+            foreach (Button button in buttons)
+            {
+                button.gameObject.AddComponent<SequencerButton>();
+                button.gameObject.AddComponent<ButtonImageColor>();
+                button.gameObject.AddComponent<Interactable>();
+                button.gameObject.AddComponent<UIElement>();
+            }
         }
     }
-
-    public void OnClickSnare(Button snare)
+    
+    private void RemoveFromQueue(Button button)
     {
-        if (IsReady(snare))
-        {
-            QueueForPlay(snare);
-            ChangeColor(snare);
-        }
-        else if (!IsReady(snare))
-        {
-            RemoveFromQueue(snare);
-            ChangeColor(snare);
-        }
+        button.GetComponent<SequencerButton>().Ready = true;
     }
 
-    public void OnClickHat(Button hat)
-    {
-        if (IsReady(hat))
-        {
-            QueueForPlay(hat);
-            ChangeColor(hat);
-        }
-        else if (!IsReady(hat))
-        {
-            RemoveFromQueue(hat);
-            ChangeColor(hat);
-        }
-    }
-
-    public void OnClickBass(Button bass)
-    {
-        if (IsReady(bass))
-        {
-            QueueForPlay(bass);
-            ChangeColor(bass);
-        }
-        else if (!IsReady(bass))
-        {
-            RemoveFromQueue(bass);
-            ChangeColor(bass);
-        }
-    }
-
-    public void OnClickPianoPad(Button pianoPad)
-    {
-        if (IsReady(pianoPad))
-        {
-            QueueForPlay(pianoPad);
-            ChangeColor(pianoPad);
-        }
-        else if (!IsReady(pianoPad))
-        {
-            RemoveFromQueue(pianoPad);
-            ChangeColor(pianoPad);
-        }
-    }
-
-    void ChangeColor(Button button)
+    private void ChangeColor(Button button)
     {
         ButtonImageColor buttonImageColor = button.GetComponent<ButtonImageColor>();
         Color toggleColor = new Color32(189, 255, 64, 255);
         buttonImageColor.Toggle(button, toggleColor);
     }
 
-    void GetAllButtons()
+    private bool Queued(Button[] buttons, int column)
     {
-        kicks = kick.GetComponentsInChildren<Button>();
-        snares = snare.GetComponentsInChildren<Button>();
-        hats = hat.GetComponentsInChildren<Button>();
-        basses = bass.GetComponentsInChildren<Button>();
-        pianoPads = pianoPad.GetComponentsInChildren<Button>();
+        if (buttons[column + 1].GetComponent<SequencerButton>().Queued())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
-    bool IsReady(Button button)
+    private bool IsReady(Button button)
     {
         return button.GetComponent<SequencerButton>().Ready;
     }
-
-    public void RemoveFromQueue(Button button)
-    {
-        button.GetComponent<SequencerButton>().Ready = true;
-    }
-
+    
     private void QueueForPlay(Button button)
     {
         button.GetComponent<SequencerButton>().Ready = false;
         running = true;
     }
+
+    private List<GameObject> CreateListButtons()
+    {
+        List<GameObject> gameObjectList = new List<GameObject> { };
+        gameObjectList.AddMany(kick, snare, hat, bass, pianoPad);
+        return gameObjectList;
+    }
 }
-
-
-

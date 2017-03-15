@@ -1042,12 +1042,7 @@ MonoBehaviour:
   - {fileID: 698442380}
   - {fileID: 93287590}
   - {fileID: 1926789597}
-  stopAudioOnColliderExit: 0
   master: {fileID: 85146134}
-  playMasterOnAwake: 0
-  playMasterOnColliderEnter: 0
-  stopMasterOnColliderExit: 0
-  roomEffectText: {fileID: 0}
 --- !u!82 &85146134
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3740,7 +3735,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 180317457}
-        m_MethodName: PlayAudioSources
+        m_MethodName: TogglePlayAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3940,12 +3935,7 @@ MonoBehaviour:
   audioSources:
   - {fileID: 1497248023}
   - {fileID: 747235305}
-  stopAudioOnColliderExit: 0
   master: {fileID: 0}
-  playMasterOnAwake: 0
-  playMasterOnColliderEnter: 0
-  stopMasterOnColliderExit: 0
-  roomEffectText: {fileID: 0}
 --- !u!114 &180317458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5172,12 +5162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSources:
   - {fileID: 182725437}
-  stopAudioOnColliderExit: 0
   master: {fileID: 0}
-  playMasterOnAwake: 0
-  playMasterOnColliderEnter: 0
-  stopMasterOnColliderExit: 0
-  roomEffectText: {fileID: 0}
 --- !u!1001 &189775192
 Prefab:
   m_ObjectHideFlags: 0
@@ -6463,7 +6448,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 182725438}
-        m_MethodName: PlayAudioSources
+        m_MethodName: TogglePlayAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7164,7 +7149,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 85146133}
-        m_MethodName: PlayAudioSource
+        m_MethodName: TogglePlayOne
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10910,7 +10895,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 85146133}
-        m_MethodName: PlayAudioSource
+        m_MethodName: TogglePlayOne
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11686,7 +11671,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 85146133}
-        m_MethodName: PlayAudioSource
+        m_MethodName: TogglePlayOne
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19848,7 +19833,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 85146133}
-        m_MethodName: PlayAudioSource
+        m_MethodName: TogglePlayOne
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24304,7 +24289,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 85146133}
-        m_MethodName: PlayAudioSource
+        m_MethodName: TogglePlayOne
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

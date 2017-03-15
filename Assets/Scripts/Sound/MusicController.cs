@@ -5,50 +5,20 @@ using UnityEngine.UI;
 
 public class MusicController : MonoBehaviour
 {
-
     public AudioSource[] audioSources;
-    public bool stopAudioOnColliderExit;
 
     [Header("Sync With Master Track (Optional)")]
     public AudioSource master;
-    public bool playMasterOnAwake;
-    public bool playMasterOnColliderEnter;
-    public bool stopMasterOnColliderExit;
-
-    [Header("Room Effect Canvas (Optional)")]
-    public Text roomEffectText;
-
-    private void Awake()
-    {
-        if (playMasterOnAwake && master != null)
-        {
-            master.playOnAwake = true;
-        }
-        else if (!playMasterOnAwake && master != null)
-        {
-            master.playOnAwake = false;
-        }
-    }
 
     private void OnDisable()
     {
-        if (master != null && master.isPlaying)
-        {
-            master.Stop();
-        }
-
-        foreach (AudioSource audioSource in audioSources)
-        {
-            if (audioSource != null && audioSource.isPlaying)
-            {
-                audioSource.Stop();
-            }
-        }
+        StopMaster();
+        StopAll();
     }
 
     public void PlayMaster()
     {
-        if (master != null && master.isPlaying == false)
+        if (master != null && !master.isPlaying)
         {
             master.Play();
         }
@@ -56,13 +26,13 @@ public class MusicController : MonoBehaviour
 
     public void StopMaster()
     {
-        if (master != null && master.isPlaying == true)
+        if (master != null && master.isPlaying)
         {
             master.Stop();
         }
     }
 
-    public void PlayAudioSources()
+    public void TogglePlayAll()
     {
         foreach (AudioSource audioSource in audioSources)
         {
@@ -82,7 +52,18 @@ public class MusicController : MonoBehaviour
         }
     }
 
-    public void PlayAudioSource(int index)
+    public void StopAll()
+    {
+        foreach (AudioSource audioSource in audioSources)
+        {
+            if (audioSource != null && audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+        }
+    }
+
+    public void TogglePlayOne(int index)
     {
         if (master != null)
         {
@@ -99,24 +80,7 @@ public class MusicController : MonoBehaviour
         }
     }
 
-    public void ToggleGVRRoomEffect()
-    {
-        foreach (AudioSource audioSource in audioSources)
-        {
-            if (audioSource.bypassEffects == false)
-            {
-                audioSource.bypassEffects = true;
-                roomEffectText.text = "Enable Room Effect:";
-            }
-            else if (audioSource.bypassEffects == true)
-            {
-                audioSource.bypassEffects = false;
-                roomEffectText.text = "Disable Room Effect:";
-            }
-        }
-    }
-
-    public bool IsPlaying()
+    public bool IsAnyPlaying()
     {
         foreach (AudioSource audioSource in audioSources)
         {

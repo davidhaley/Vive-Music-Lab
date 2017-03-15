@@ -18,7 +18,7 @@ public class LivePerformanceStatusIndicator : MonoBehaviour
 
     void Update()
     {
-        if (musicController.IsPlaying() && !toggled)
+        if (musicController.IsAnyPlaying() && !toggled)
         {
             statusIndicator.ToggleColor();
             toggled = true;

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 //using UnityEditorInternal;
 using UnityEngine;
 
-public class LightController : MonoBehaviour
+public class LightShowLight : MonoBehaviour
 {
 
     //This becomes enabled when the canvas button is selected

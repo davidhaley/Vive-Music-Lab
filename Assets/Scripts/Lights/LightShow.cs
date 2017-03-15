@@ -30,7 +30,7 @@ public class LightShow : MonoBehaviour
         {
             foreach (GameObject go in lightShowLights)
             {
-                go.GetComponent<LightController>().enableScript = false;
+                go.GetComponent<LightShowLight>().enableScript = false;
                 go.GetComponent<Light>().enabled = false;
             }
         }
@@ -52,7 +52,7 @@ public class LightShow : MonoBehaviour
         {
             foreach (GameObject go in lightShowLights)
             {
-                go.GetComponent<LightController>().enableScript = false;
+                go.GetComponent<LightShowLight>().enableScript = false;
                 go.GetComponent<Light>().enabled = false;
             }
 
@@ -62,7 +62,7 @@ public class LightShow : MonoBehaviour
         {
             foreach (GameObject go in lightShowLights)
             {
-                go.GetComponent<LightController>().enableScript = true;
+                go.GetComponent<LightShowLight>().enableScript = true;
                 go.GetComponent<Light>().enabled = true;
             }
 

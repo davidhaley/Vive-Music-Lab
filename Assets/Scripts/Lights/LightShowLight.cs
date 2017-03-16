@@ -1,164 +1,163 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-//using UnityEditorInternal;
 using UnityEngine;
 
 public class LightShowLight : MonoBehaviour
 {
-
-    //This becomes enabled when the canvas button is selected
-    [HideInInspector]
-    public bool enableScript = false;
-
-    [Header("MODES")]
-    [Space(5)]
-
-    [Header("Strobe")]
-    [Space(3)]
+    //---------------------------------------------------------
+    //Light mode fade over time or strobe (on/off switch)
+    //---------------------------------------------------------
+    [Header("Strobe (Fade Default)")]
     public bool strobe;
-    public float strobeSpeed = 10f;
-    [Range(3f, 8f)]
-    public float upperIntensityBound = 1f;
-    [Range(0.5f, 8f)]
-    public float lowerIntensityBound = 1f;
-    [Space(5)]
+    public float speed = 3f;
+    [Range(3f, 8f)]     public float upperIntensityBounds = 8f;
+    [Range(0.5f, 8f)]   public float lowerIntensityBounds = 1f;
+    [Space(15)]
 
-    [Header("Light Switch")]
-    [Space(3)]
-    public bool lightSwitch;
-    [Range(0f, 1f)]
-    public float onOffSpeed;
-    [Space(5)]
-
-    [Header("Light Audio Visualizer")]
-    [Space(3)]
+    //---------------------------------------------------------
+    //Light intensity modulates by audio amplitude
+    //---------------------------------------------------------
+    [Space(15)]
     public AudioVisualizer audioVisualizer;
-    public bool lightAudioVisualizer;
-    [Range(0, 7)]
-    public int band;
-    [Range(0f, 8f)]
-    public float minIntensity = 0f;
-    [Range(0f, 8f)]
-    public float maxIntensity = 8f;
+    public bool visualize;
     public float scaleMagnitude = 1f;
-    [Space(5)]
+    [Range(0, 7)]      public int band;
+    [Range(0f, 8f)]    public float minIntensity = 0f;
+    [Range(0f, 8f)]    public float maxIntensity = 8f;
+    [Space(15)]
 
-
-    [Header("OPTIONS")]
-    [Space(5)]
-
-    [Header("Color Randomizer")]
-    [Space(3)]
-    public bool colorRandomizer;
-    public float changeColorInSeconds;
-    [Space(5)]
-
+    //---------------------------------------------------------
+    //Light rotates over time
+    //---------------------------------------------------------
     [Header("Rotation")]
-    [Space(3)]
-    public bool rotate;
-    public float rotationSpeed;
-
-    private Light lightObj;
-    private Color color;
-
-    //State Variables
-    private bool toggleLightReady = true;
-    private bool switchColorReady = true;
-    private bool coRoutinesStopped;
-    private float onOff;
-
+    [Space(15)]
+    private IRotate rotateType = new RotateDynamic();
     [Range(-360f, 360f)] public float xAngle;
     [Range(-360f, 360f)] public float yAngle;
     [Range(-360f, 360f)] public float zAngle;
-    [Range(0.10f, 8f)]public float period = 1f;
-    private float time;
+    [Range(0.10f, 8f)]   public float period = 1f;
+    public float rotationSpeed;
+    private bool rotate = true;
+    private bool rotateOnAwake = false;
+    [Space(15)]
+
+    //---------------------------------------------------------
+    //Change color of light to a random color at fixed time intervals
+    //---------------------------------------------------------
+    [Header("Randomize Color")]
+    [Space(15)]
+    public bool colorRandomizer;
+    public float randomizeTime;
+
+    private ILightAction lightAction;
+    private RandomColor randomColor;
+    private Light lightObj;
+    private Color color;
+    private bool coRoutinesStopped;
+    private bool lightEnabled;
+
+    private void OnEnable()
+    {
+        RandomColor.RandomizeColor += SetRandColor;
+    }
+
+    private void OnDisable()
+    {
+        RandomColor.RandomizeColor -= SetRandColor;
+    }
 
     private void Awake()
     {
         lightObj = this.gameObject.GetComponent<Light>();
 
-        if (lightAudioVisualizer)
+        lightAction = GetLightAction();
+
+        if (visualize)
         {
-            lightSwitch = false;
-            colorRandomizer = false;
-            strobe = false;
+            strobe = colorRandomizer = false;
+        }
+
+        if (rotateOnAwake)
+        {
+            StartRotate();
         }
     }
 
     void Update()
     {
-
-        if (!enableScript && !coRoutinesStopped)
+        if (!LightEnabled && !coRoutinesStopped)
         {
             StopAllCoroutines();
             coRoutinesStopped = true;
         }
-        else if (enableScript)
+
+        if (!visualize)
         {
-            RotateLight();
+            lightAction = GetLightAction();
+            StartCoroutine(lightAction.ModulateLight(lightObj, speed, upperIntensityBounds, lowerIntensityBounds));
+        }
+        else if (visualize)
+        {
+            lightObj.intensity = ((audioVisualizer.audioBandBuffer[band] * scaleMagnitude) * (maxIntensity - minIntensity) + minIntensity);
+        }
 
-            if (lightSwitch && toggleLightReady && !strobe)
-            {
-                StartCoroutine("ToggleLight");
-                coRoutinesStopped = false;
+        if (rotate)
+        {
+            rotateType.Rotate(gameObject, xAngle, yAngle, zAngle, period, rotationSpeed);
+        }
 
-            }
-            else if (!lightSwitch && !lightAudioVisualizer && strobe)
+        if (colorRandomizer)
+        {
+            if (gameObject.GetComponent<RandomColor>() == null)
             {
-                StartCoroutine("StrobeLight");
-                coRoutinesStopped = false;
-            }
-
-            if (colorRandomizer && switchColorReady)
-            {
-                StartCoroutine(SwitchColor(ChangeColorInSeconds));
-                coRoutinesStopped = false;
+                randomColor = gameObject.AddComponent<RandomColor>();
             }
 
-            if (lightAudioVisualizer)
-            {
-                lightObj.intensity = ((audioVisualizer.audioBandBuffer[band] * scaleMagnitude) * (maxIntensity - minIntensity) + minIntensity);
-            }
+            randomColor.Randomize(randomizeTime);
         }
     }
 
-    public float ChangeColorInSeconds { get; set; }
-
-    private void RotateLight()
+    public void StartRotate()
     {
-        time = time + (Time.deltaTime * rotationSpeed);
-        float phase = Mathf.Sin(time / period);
-        transform.localRotation = Quaternion.Euler(new Vector3(phase * xAngle, phase * yAngle, phase * zAngle));
+        rotate = true;
     }
 
-    IEnumerator ToggleLight()
+    public void StopRotate()
     {
-        toggleLightReady = false;
+        rotate = false;
+    }
 
-        onOff = Mathf.Lerp(0f, 1f, 0f);
-
-        if (onOff == 1 || onOff == 0)
+    public bool LightEnabled
+    {
+        get { return lightEnabled; }
+        set
         {
-            yield return new WaitForSeconds(onOffSpeed);
-            lightObj.enabled = !lightObj.enabled;
-            toggleLightReady = true;
+            lightEnabled = value;
+            //Coroutines allowed when light is enabled
+            coRoutinesStopped = false;
         }
     }
 
-    IEnumerator StrobeLight()
+    private void SetRandColor(Color color)
     {
-        lightObj.intensity = Mathf.PingPong(Time.time * strobeSpeed, upperIntensityBound);
-        yield return null;
-    }
-
-    IEnumerator SwitchColor(float changeColorInSeconds)
-    {
-        switchColorReady = false;
-        yield return new WaitForSeconds(changeColorInSeconds);
-        color = new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value);
         lightObj.color = color;
-        switchColorReady = true;
+    }
+
+    private ILightAction GetLightAction()
+    {
+        if (strobe)
+        {
+            lightAction = new LightActionStrobe();
+        }
+        else if (!strobe)
+        {
+            lightAction = new LightActionFade();
+        }
+
+        //lightAction.GetType() != typeof(LightActionStrobe)
+
+        return lightAction;
     }
 }
 

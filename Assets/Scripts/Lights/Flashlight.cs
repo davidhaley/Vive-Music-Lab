@@ -63,7 +63,6 @@ namespace MusicLab.InteractionSystem
 
         private bool MainLightsStatus(bool status)
         {
-            Debug.Log("lights are... " + status);
             return status;
         }
     }

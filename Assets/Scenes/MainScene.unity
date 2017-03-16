@@ -710,7 +710,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: 3.8464766e-15
+  field of view: 1.1488854e+23
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -6727,27 +6727,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4218219f81d431b4ea6afa566b2315f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableScript: 0
   strobe: 0
-  strobeSpeed: 10
-  upperIntensityBound: 0
-  lowerIntensityBound: 0
-  lightSwitch: 0
-  onOffSpeed: 0
+  speed: 1
+  upperIntensityBounds: 3
+  lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 180317458}
-  lightAudioVisualizer: 1
+  visualize: 1
+  scaleMagnitude: 1
   band: 6
   minIntensity: 0
   maxIntensity: 3
-  scaleMagnitude: 1
-  colorRandomizer: 0
-  changeColorInSeconds: 0
-  rotate: 0
-  rotationSpeed: 0
   xAngle: 0
   yAngle: 0
   zAngle: 0
   period: 1
+  rotationSpeed: 0.5
+  colorRandomizer: 0
+  randomizeTime: 0
 --- !u!1 &303261037
 GameObject:
   m_ObjectHideFlags: 0
@@ -8171,27 +8167,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4218219f81d431b4ea6afa566b2315f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableScript: 0
-  strobe: 1
-  strobeSpeed: 1
-  upperIntensityBound: 4
-  lowerIntensityBound: 0
-  lightSwitch: 0
-  onOffSpeed: 0
+  strobe: 0
+  speed: 6
+  upperIntensityBounds: 6
+  lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 0}
-  lightAudioVisualizer: 0
+  visualize: 0
+  scaleMagnitude: 1
   band: 0
   minIntensity: 0
   maxIntensity: 8
-  scaleMagnitude: 1
-  colorRandomizer: 0
-  changeColorInSeconds: 0
-  rotate: 1
-  rotationSpeed: 1
   xAngle: 10
   yAngle: 25
   zAngle: 0
   period: 1
+  rotationSpeed: 1
+  colorRandomizer: 0
+  randomizeTime: 0
 --- !u!1 &408817928
 GameObject:
   m_ObjectHideFlags: 0
@@ -11600,7 +11592,23 @@ Prefab:
     - target: {fileID: 114490331846832440, guid: 5425cae89f26b614aa9e6a6fed18c8b8,
         type: 2}
       propertyPath: mainLightsOffOnAwake
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332834545834412, guid: 5425cae89f26b614aa9e6a6fed18c8b8, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345344997645838, guid: 5425cae89f26b614aa9e6a6fed18c8b8, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942674594393648, guid: 5425cae89f26b614aa9e6a6fed18c8b8, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908289775058400, guid: 5425cae89f26b614aa9e6a6fed18c8b8, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114759440775016298, guid: 5425cae89f26b614aa9e6a6fed18c8b8, type: 2}
@@ -12564,7 +12572,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243343114975261994, guid: 466cb649dcbf7204b803ce2b1aee323f,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: fea897a5ff9f1564195a6435d70579ba, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -15057,27 +15065,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4218219f81d431b4ea6afa566b2315f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableScript: 0
-  strobe: 1
-  strobeSpeed: 2
-  upperIntensityBound: 3
-  lowerIntensityBound: 0
-  lightSwitch: 0
-  onOffSpeed: 0
+  strobe: 0
+  speed: 2
+  upperIntensityBounds: 4
+  lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 0}
-  lightAudioVisualizer: 0
+  visualize: 0
+  scaleMagnitude: 1
   band: 0
   minIntensity: 0
   maxIntensity: 8
-  scaleMagnitude: 1
-  colorRandomizer: 0
-  changeColorInSeconds: 0
-  rotate: 1
-  rotationSpeed: 0.5
   xAngle: 25
   yAngle: -15
   zAngle: 0
   period: 1
+  rotationSpeed: 1.5
+  colorRandomizer: 0
+  randomizeTime: 0.63
 --- !u!1 &971684182
 GameObject:
   m_ObjectHideFlags: 0
@@ -18553,27 +18557,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4218219f81d431b4ea6afa566b2315f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableScript: 0
   strobe: 0
-  strobeSpeed: 10
-  upperIntensityBound: 0
-  lowerIntensityBound: 0
-  lightSwitch: 0
-  onOffSpeed: 0
+  speed: 1
+  upperIntensityBounds: 3
+  lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 180317458}
-  lightAudioVisualizer: 1
+  visualize: 1
+  scaleMagnitude: 1
   band: 6
   minIntensity: 0
   maxIntensity: 3
-  scaleMagnitude: 1
-  colorRandomizer: 0
-  changeColorInSeconds: 0
-  rotate: 0
-  rotationSpeed: 0
   xAngle: 0
   yAngle: 0
   zAngle: 0
   period: 1
+  rotationSpeed: 0.5
+  colorRandomizer: 0
+  randomizeTime: 0
 --- !u!1 &1278717238
 GameObject:
   m_ObjectHideFlags: 0
@@ -20910,7 +20910,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243343114975261994, guid: 466cb649dcbf7204b803ce2b1aee323f,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: fea897a5ff9f1564195a6435d70579ba, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -23234,27 +23234,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4218219f81d431b4ea6afa566b2315f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableScript: 0
-  strobe: 1
-  strobeSpeed: 2
-  upperIntensityBound: 3
-  lowerIntensityBound: 0
-  lightSwitch: 0
-  onOffSpeed: 0
+  strobe: 0
+  speed: 2
+  upperIntensityBounds: 4
+  lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 0}
-  lightAudioVisualizer: 0
+  visualize: 0
+  scaleMagnitude: 1
   band: 0
   minIntensity: 0
   maxIntensity: 8
-  scaleMagnitude: 1
-  colorRandomizer: 0
-  changeColorInSeconds: 0
-  rotate: 1
-  rotationSpeed: 1
   xAngle: -30
   yAngle: 20
   zAngle: 0
   period: 1
+  rotationSpeed: 2
+  colorRandomizer: 0
+  randomizeTime: 0
 --- !u!1 &1743701720
 GameObject:
   m_ObjectHideFlags: 0
@@ -26604,7 +26600,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: 4.14147e-40
+  field of view: NaN
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -26966,7 +26962,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 1.29268705e-11
+  field of view: 3.3079e-40
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

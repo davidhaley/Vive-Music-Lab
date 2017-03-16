@@ -40,7 +40,7 @@ public class Sequencer : MonoBehaviour
     {
         List<GameObject> listButtons = CreateListButtons();
 
-        GetAllButtons();
+        GetChildButtons();
         AddEventListeners(listButtons);
         LoadAudioSources(listButtons);
         LoadAudioClips();
@@ -241,7 +241,7 @@ public class Sequencer : MonoBehaviour
         }
     }
 
-    private void GetAllButtons()
+    private void GetChildButtons()
     {
         kicks = kick.GetComponentsInChildren<Button>();
         snares = snare.GetComponentsInChildren<Button>();

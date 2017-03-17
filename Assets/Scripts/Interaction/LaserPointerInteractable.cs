@@ -7,8 +7,10 @@ using Valve.VR.InteractionSystem;
 
 namespace MusicLab.InteractionSystem
 {
-    //Place this next to the SteamVR_LaserPointer
-    //Responsible for finding interactable objects
+    //---------------------------------------------------
+    // Place this next to the SteamVR_LaserPointer
+    // Responsible for finding interactable objects
+    //---------------------------------------------------
     [RequireComponent(typeof(SteamVR_LaserPointer))]
     public class LaserPointerInteractable : MonoBehaviour
     {
@@ -89,13 +91,21 @@ namespace MusicLab.InteractionSystem
             return laserEvents;
         }
 
-        public Transform ValidLaserTarget()
+        public Transform ValidLaserTarget
         {
-            return validLaserTarget;
+            get { return validLaserTarget; }
+            private set
+            {
+                validLaserTarget = value;
+            }
         }
-        public Transform ValidHandTarget()
+        public Transform ValidHandTarget
         {
-            return validHandTarget;
+            get { return validHandTarget; }
+            private set
+            {
+                validHandTarget = value;
+            }
         }
 
         public void EnableLaser()
@@ -106,6 +116,16 @@ namespace MusicLab.InteractionSystem
         public void DisableLaser()
         {
             steamVRLaserPointer.pointer.GetComponent<MeshRenderer>().enabled = false;
+        }
+
+        public void TargetInvalidColor()
+        {
+            steamVRLaserPointer.pointer.GetComponent<MeshRenderer>().material.color = Color.red;
+        }
+
+        public void TargetValidColor()
+        {
+            steamVRLaserPointer.pointer.GetComponent<MeshRenderer>().material.color = Color.green;
         }
     }
 }

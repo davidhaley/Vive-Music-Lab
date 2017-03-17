@@ -710,7 +710,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: 1.1488854e+23
+  field of view: 1.18351795e+33
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -6728,7 +6728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strobe: 0
-  speed: 1
+  speed: 2
   upperIntensityBounds: 3
   lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 180317458}
@@ -8168,7 +8168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strobe: 0
-  speed: 6
+  speed: 4
   upperIntensityBounds: 6
   lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 0}
@@ -15066,7 +15066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strobe: 0
-  speed: 2
+  speed: 1
   upperIntensityBounds: 4
   lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 0}
@@ -18558,7 +18558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strobe: 0
-  speed: 1
+  speed: 2
   upperIntensityBounds: 3
   lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 180317458}
@@ -26962,7 +26962,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 3.3079e-40
+  field of view: NaN
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

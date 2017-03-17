@@ -8,10 +8,6 @@ namespace MusicLab.InteractionSystem
 {
     public class LaserEventHandler : MonoBehaviour
     {
-        //public delegate void HintEvent(Hand hand);
-
-        //public static event HintEvent HandHint;
-
         private void Update()
         {
             for (int i = 0; i < Player.instance.handCount; i++)
@@ -21,20 +17,15 @@ namespace MusicLab.InteractionSystem
                 LaserPointerInteractable laserPointer = hand.GetComponent<LaserPointerInteractable>();
                 LaserEvents laserEvents = laserPointer.LaserEvents();
 
-                //if (laserPointer.ValidHandTarget())
-                //{
-                //    HandHint(hand);
-                //}
-
                 if (laserPointer != null)
                 {
-                    if (laserPointer.ValidLaserTarget() == null)
+                    if (laserPointer.ValidLaserTarget == null)
                     {
-                        laserPointer.DisableLaser();
+                        laserPointer.TargetInvalidColor();
                     }
-                    else if (laserPointer.ValidLaserTarget() != null)
+                    else if (laserPointer.ValidLaserTarget != null)
                     {
-                        laserPointer.EnableLaser();
+                        laserPointer.TargetValidColor();
                     }
                 }
 

@@ -8,6 +8,14 @@ using Valve.VR.InteractionSystem;
 //Purpose: Manage SteamVR Controller button events
 public class SteamVRControllerEvents : MonoBehaviour
 {
+    public struct ControllerInteractionEventArgs
+    {
+        public uint controllerIndex;
+        public float buttonPressure;
+        public Vector2 touchpadAxis;
+        public float touchpadAngle;
+    }
+
     public delegate void ControllerEvent();
 
     //Left controller events

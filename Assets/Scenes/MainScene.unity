@@ -710,7 +710,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: NaN
+  field of view: -1e+32
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -5212,7 +5212,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445746, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 2}
       propertyPath: traceLayerMask.m_Bits
-      value: 4294959579
+      value: 4294967291
       objectReference: {fileID: 0}
     - target: {fileID: 153878, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 2}
       propertyPath: m_IsActive
@@ -11592,7 +11592,7 @@ Prefab:
     - target: {fileID: 114490331846832440, guid: 5425cae89f26b614aa9e6a6fed18c8b8,
         type: 2}
       propertyPath: mainLightsOffOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1332834545834412, guid: 5425cae89f26b614aa9e6a6fed18c8b8, type: 2}
       propertyPath: m_IsActive
@@ -12572,7 +12572,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243343114975261994, guid: 466cb649dcbf7204b803ce2b1aee323f,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: fea897a5ff9f1564195a6435d70579ba, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -20910,7 +20910,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243343114975261994, guid: 466cb649dcbf7204b803ce2b1aee323f,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: fea897a5ff9f1564195a6435d70579ba, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -25545,22 +25545,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1996941210}
---- !u!1 &2015814688 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1748844521558262, guid: 7fcb353345f640842b1caf0064ddf05c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1745325482}
---- !u!114 &2015814694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2015814688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1ea69a686a59604c87c706d6e574624, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2025796420
 GameObject:
   m_ObjectHideFlags: 0
@@ -26616,7 +26600,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: 250819100
+  field of view: NaN
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

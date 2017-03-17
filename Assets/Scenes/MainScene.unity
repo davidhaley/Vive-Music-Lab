@@ -710,7 +710,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: 1.18351795e+33
+  field of view: NaN
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -5212,7 +5212,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445746, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 2}
       propertyPath: traceLayerMask.m_Bits
-      value: 4294967291
+      value: 4294959579
       objectReference: {fileID: 0}
     - target: {fileID: 153878, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 2}
       propertyPath: m_IsActive
@@ -8168,8 +8168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strobe: 0
-  speed: 4
-  upperIntensityBounds: 6
+  speed: 2
+  upperIntensityBounds: 4
   lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 0}
   visualize: 0
@@ -15066,8 +15066,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strobe: 0
-  speed: 1
-  upperIntensityBounds: 4
+  speed: 0.5
+  upperIntensityBounds: 3
   lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 0}
   visualize: 0
@@ -17794,7 +17794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1148032693}
   - component: {fileID: 1148032694}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17809,15 +17809,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1148032692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 158}
-  m_LocalScale: {x: 299.60526, y: 8.640918, z: 3.6804514}
+  m_LocalPosition: {x: 0, y: 0, z: 138.8}
+  m_LocalScale: {x: 299.60526, y: 0.108431734, z: 5.032282}
   m_Children: []
   m_Father: {fileID: 113428246}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -66}
+  m_AnchoredPosition: {x: 0, y: -332}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &1148032694
@@ -23235,8 +23235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strobe: 0
-  speed: 2
-  upperIntensityBounds: 4
+  speed: 1
+  upperIntensityBounds: 3
   lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 0}
   visualize: 0
@@ -25545,6 +25545,22 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1996941210}
+--- !u!1 &2015814688 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1748844521558262, guid: 7fcb353345f640842b1caf0064ddf05c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1745325482}
+--- !u!114 &2015814694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2015814688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ea69a686a59604c87c706d6e574624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2025796420
 GameObject:
   m_ObjectHideFlags: 0
@@ -26600,7 +26616,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: NaN
+  field of view: 250819100
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -26962,7 +26978,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: NaN
+  field of view: 5.41352e-40
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

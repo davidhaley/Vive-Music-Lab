@@ -6,6 +6,9 @@ using Valve.VR.InteractionSystem;
 
 namespace MusicLab.InteractionSystem
 {
+    //--------------------------------------------------------------------
+    // Purpose: Enable/Disable laser pointer and invoke laser events
+    //--------------------------------------------------------------------
     public class LaserEventHandler : MonoBehaviour
     {
         private void Update()
@@ -21,11 +24,11 @@ namespace MusicLab.InteractionSystem
                 {
                     if (laserPointer.ValidLaserTarget == null)
                     {
-                        laserPointer.TargetInvalidColor();
+                        laserPointer.DisableLaser();
                     }
                     else if (laserPointer.ValidLaserTarget != null)
                     {
-                        laserPointer.TargetValidColor();
+                        laserPointer.EnableLaser();
                     }
                 }
 

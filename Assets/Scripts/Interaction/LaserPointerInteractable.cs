@@ -8,8 +8,8 @@ using Valve.VR.InteractionSystem;
 namespace MusicLab.InteractionSystem
 {
     //---------------------------------------------------
+    // Purpose: Find interactable objects (Hand & Laser)
     // Place this next to the SteamVR_LaserPointer
-    // Responsible for finding interactable objects
     //---------------------------------------------------
     [RequireComponent(typeof(SteamVR_LaserPointer))]
     public class LaserPointerInteractable : MonoBehaviour
@@ -23,6 +23,7 @@ namespace MusicLab.InteractionSystem
         private Transform validLaserTarget;
         private Transform validHandTarget;
 
+        private int teleportDisabledMask = 9;
         private int uiHandMask = 10;
         private int uiLaserMask = 11;
         private int uiHandLaserMask = 12;

@@ -1397,13 +1397,12 @@ RectTransform:
   - {fileID: 1006095325}
   - {fileID: 1921799586}
   - {fileID: 109260273}
-  - {fileID: 1148032693}
   m_Father: {fileID: 1349193729}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.000024795532, y: -0.00000023841858}
+  m_AnchoredPosition: {x: 1.073, y: -0.00000023841858}
   m_SizeDelta: {x: 1100, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &113428247
@@ -5342,7 +5341,6 @@ GameObject:
   - component: {fileID: 204923230}
   - component: {fileID: 204923234}
   - component: {fileID: 204923233}
-  - component: {fileID: 204923232}
   - component: {fileID: 204923231}
   m_Layer: 5
   m_Name: DialogCanvas
@@ -5388,18 +5386,6 @@ MonoBehaviour:
   uiVisibleOnStart: 1
   fadeOnce: 0
   fadeSpeed: 1
---- !u!114 &204923232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114764339012716190, guid: 57366c41177010b47af1619eca312d18,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 204923229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &204923233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17784,55 +17770,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.611}
   m_SizeDelta: {x: 700, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1148032692
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1931622970029960, guid: 8f634da6f7d5c534dba3c0e38c9f66a7,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1148032693}
-  - component: {fileID: 1148032694}
-  m_Layer: 9
-  m_Name: Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1148032693
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 224214797070389436, guid: 8f634da6f7d5c534dba3c0e38c9f66a7,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1148032692}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 138.8}
-  m_LocalScale: {x: 299.60526, y: 0.108431734, z: 5.032282}
-  m_Children: []
-  m_Father: {fileID: 113428246}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -332}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &1148032694
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 65027500357122552, guid: 8f634da6f7d5c534dba3c0e38c9f66a7,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1148032692}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.74, y: 59.7, z: 59.5}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1161943363
 GameObject:
   m_ObjectHideFlags: 0
@@ -24049,10 +23986,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Preset: 7
   Value:
-    LowFreqAbsorption: 0
-    MidFreqAbsorption: 0
-    HighFreqAbsorption: 0
-    Scattering: 0
+    LowFreqAbsorption: 0.12
+    MidFreqAbsorption: 0.06
+    HighFreqAbsorption: 0.04
+    Scattering: 0.05
 --- !u!65 &1867731247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26962,7 +26899,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 5.41352e-40
+  field of view: 1.6494419e+28
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

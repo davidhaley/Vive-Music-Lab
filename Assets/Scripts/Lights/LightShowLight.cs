@@ -38,8 +38,7 @@ public class LightShowLight : MonoBehaviour
     [Range(-360f, 360f)] public float zAngle;
     [Range(0.10f, 8f)]   public float period = 1f;
     public float rotationSpeed;
-    private bool rotate = true;
-    private bool rotateOnAwake = false;
+    private bool rotate = false;
     [Space(15)]
 
     //---------------------------------------------------------
@@ -77,16 +76,11 @@ public class LightShowLight : MonoBehaviour
         {
             strobe = colorRandomizer = false;
         }
-
-        if (rotateOnAwake)
-        {
-            StartRotate();
-        }
     }
 
     void Update()
     {
-        if (!LightEnabled && !coRoutinesStopped)
+        if (!Enabled && !coRoutinesStopped)
         {
             StopAllCoroutines();
             coRoutinesStopped = true;
@@ -128,7 +122,7 @@ public class LightShowLight : MonoBehaviour
         rotate = false;
     }
 
-    public bool LightEnabled
+    public bool Enabled
     {
         get { return lightEnabled; }
         set
@@ -154,8 +148,6 @@ public class LightShowLight : MonoBehaviour
         {
             lightAction = new LightActionFade();
         }
-
-        //lightAction.GetType() != typeof(LightActionStrobe)
 
         return lightAction;
     }

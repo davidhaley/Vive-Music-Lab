@@ -12,6 +12,7 @@ public class SteamVRControllerEvents : MonoBehaviour
     public struct ControllerEventArgs
     {
         public int deviceIndex;
+        public String handOrientation;
         public Vector2 touchpadAxis;
         public float touchpadAngle;
     }
@@ -48,6 +49,11 @@ public class SteamVRControllerEvents : MonoBehaviour
     {
         for (int i = 0; i < Player.instance.handCount; i++)
         {
+            if (Player.instance.hands[i].controller == null)
+            {
+                return;
+            }
+
             //----------
             // Trigger
             //----------
@@ -117,6 +123,7 @@ public class SteamVRControllerEvents : MonoBehaviour
                     e.deviceIndex = i;
                     e.touchpadAxis = Player.instance.hands[i].controller.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
                     e.touchpadAngle = CalculateTouchpadAxisAngle(e.touchpadAxis);
+                    e.handOrientation = GetHandOrientation(Player.instance.hands[i].controller.index);
                     OnTouchpadDown(e);
                 }
             }
@@ -156,6 +163,22 @@ public class SteamVRControllerEvents : MonoBehaviour
                     OnTouchpadRelease(e);
                 }
             }
+        }
+    }
+
+    private String GetHandOrientation(uint handControllerIndex)
+    {
+        if (handControllerIndex == SteamVR_Controller.GetDeviceIndex(SteamVR_Controller.DeviceRelation.FarthestLeft))
+        {
+            return "LeftHand";
+        }
+        else if (handControllerIndex == SteamVR_Controller.GetDeviceIndex(SteamVR_Controller.DeviceRelation.FarthestRight))
+        {
+            return "RightHand";
+        }
+        else
+        {
+            return "Left or Right Hand not found";
         }
     }
 

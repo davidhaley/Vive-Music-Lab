@@ -3,43 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Valve.VR;
 using Valve.VR.InteractionSystem;
 
 //Purpose: Manage SteamVR Controller button events
 public class SteamVRControllerEvents : MonoBehaviour
 {
-    public struct ControllerInteractionEventArgs
+    public struct ControllerEventArgs
     {
-        public uint controllerIndex;
-        public float buttonPressure;
+        public int deviceIndex;
         public Vector2 touchpadAxis;
         public float touchpadAngle;
     }
 
-    public delegate void ControllerEvent();
+    public delegate void ControllerEvent(ControllerEventArgs e);
 
-    //Left controller events
-    public static event ControllerEvent OnLeftTriggerDown;
-    public static event ControllerEvent OnLeftTriggerUp;
-    public static event ControllerEvent OnLeftGripDown;
-    public static event ControllerEvent OnLeftGripUp;
-    public static event ControllerEvent OnLeftTouchpadDown;
-    public static event ControllerEvent OnLeftTouchpadUp;
-    public static event ControllerEvent OnLeftTouchpadTouch;
-    public static event ControllerEvent OnLeftTouchpadRelease;
-    
-    //Right controller events
-    public static event ControllerEvent OnRightTriggerDown;
-    public static event ControllerEvent OnRightTriggerUp;
-    public static event ControllerEvent OnRightGripDown;
-    public static event ControllerEvent OnRightGripUp;
-    public static event ControllerEvent OnRightTouchpadDown;
-    public static event ControllerEvent OnRightTouchpadUp;
-    public static event ControllerEvent OnRightTouchpadTouch;
-    public static event ControllerEvent OnRightTouchpadRelease;
-
-    //Any controller events
-    public static event ControllerEvent OnAnyTriggerDown;
+    //Controller events
+    public static event ControllerEvent OnTriggerDown;
+    public static event ControllerEvent OnTriggerUp;
+    public static event ControllerEvent OnGripDown;
+    public static event ControllerEvent OnGripUp;
+    public static event ControllerEvent OnTouchpadDown;
+    public static event ControllerEvent OnTouchpadUp;
+    public static event ControllerEvent OnTouchpadTouch;
+    public static event ControllerEvent OnTouchpadRelease;
 
     //Buttons
     private ulong grip;
@@ -59,151 +46,127 @@ public class SteamVRControllerEvents : MonoBehaviour
 
     private void Update()
     {
-        SteamVR_Controller.Device leftController = SteamVR_Controller.Input(SteamVR_Controller.GetDeviceIndex(SteamVR_Controller.DeviceRelation.Leftmost));
-        SteamVR_Controller.Device rightController = SteamVR_Controller.Input(SteamVR_Controller.GetDeviceIndex(SteamVR_Controller.DeviceRelation.Rightmost));
-
-        if (leftController != null)
+        for (int i = 0; i < Player.instance.handCount; i++)
         {
-            if (leftController.GetHairTriggerDown())
+            //----------
+            // Trigger
+            //----------
+            if (Player.instance.hands[i].controller.GetHairTriggerDown())
             {
-                if (OnLeftTriggerDown != null)
+                if (OnTriggerDown != null)
                 {
-                    OnLeftTriggerDown();
-                }
-
-                if (OnAnyTriggerDown != null)
-                {
-                    OnAnyTriggerDown();
-                }
-            }
-
-            if (leftController.GetHairTriggerUp())
-            {
-                if (OnLeftTriggerUp != null)
-                {
-                    OnLeftTriggerUp();
+                    ControllerEventArgs e = new ControllerEventArgs();
+                    e.deviceIndex = i;
+                    OnTriggerDown(e);
                 }
             }
 
-            if (leftController.GetPressDown(grip))
+            if (Player.instance.hands[i].controller.GetHairTriggerUp())
             {
-                if (OnLeftGripDown != null)
+                if (OnTriggerUp != null)
                 {
-                    OnLeftGripDown();
+                    ControllerEventArgs e = new ControllerEventArgs();
+                    e.deviceIndex = i;
+                    OnTriggerUp(e);
                 }
             }
 
-            if (leftController.GetPressUp(grip))
+            //----------
+            // Grip
+            //----------
+
+            if (Player.instance.hands[i].controller.GetPressDown(grip))
             {
-                if (OnLeftGripUp != null)
+                if (OnGripDown != null)
                 {
-                    OnLeftGripUp();
+                    ControllerEventArgs e = new ControllerEventArgs();
+                    e.deviceIndex = i;
+                    OnGripDown(e);
                 }
             }
 
-            if (leftController.GetPressDown(touchpad))
+            if (Player.instance.hands[i].controller.GetPressUp(grip))
             {
-                if (OnLeftTouchpadDown != null)
+                if (OnGripUp != null)
                 {
-                    OnLeftTouchpadDown();
+                    ControllerEventArgs e = new ControllerEventArgs();
+                    e.deviceIndex = i;
+                    OnGripUp(e);
                 }
             }
 
-            if (leftController.GetPressUp(touchpad))
+            if (Player.instance.hands[i].controller.GetPressUp(grip))
             {
-                if (OnLeftTouchpadUp != null)
+                if (OnGripUp != null)
                 {
-                    OnLeftTouchpadUp();
+                    ControllerEventArgs e = new ControllerEventArgs();
+                    e.deviceIndex = i;
+                    OnGripUp(e);
                 }
             }
 
-            if (leftController.GetTouch(touchpad))
+            //----------
+            // Touchpad
+            //----------
+
+            if (Player.instance.hands[i].controller.GetPressDown(touchpad))
             {
-                if (OnLeftTouchpadTouch != null)
+                if (OnTouchpadDown != null)
                 {
-                    OnLeftTouchpadTouch();
+                    ControllerEventArgs e = new ControllerEventArgs();
+                    e.deviceIndex = i;
+                    e.touchpadAxis = Player.instance.hands[i].controller.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
+                    e.touchpadAngle = CalculateTouchpadAxisAngle(e.touchpadAxis);
+                    OnTouchpadDown(e);
                 }
             }
 
-            if (leftController.GetTouchUp(touchpad))
+            if (Player.instance.hands[i].controller.GetPressUp(touchpad))
             {
-                if (OnLeftTouchpadRelease != null)
+                if (OnTouchpadUp != null)
                 {
-                    OnLeftTouchpadRelease();
+                    ControllerEventArgs e = new ControllerEventArgs();
+                    e.deviceIndex = i;
+                    e.touchpadAxis = Player.instance.hands[i].controller.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
+                    e.touchpadAngle = CalculateTouchpadAxisAngle(e.touchpadAxis);
+                    OnTouchpadUp(e);
+                }
+            }
+
+            if (Player.instance.hands[i].controller.GetTouch(touchpad))
+            {
+                if (OnTouchpadTouch != null)
+                {
+                    ControllerEventArgs e = new ControllerEventArgs();
+                    e.deviceIndex = i;
+                    e.touchpadAxis = Player.instance.hands[i].controller.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
+                    e.touchpadAngle = CalculateTouchpadAxisAngle(e.touchpadAxis);
+                    OnTouchpadTouch(e);
+                }
+            }
+
+            if (Player.instance.hands[i].controller.GetTouchUp(touchpad))
+            {
+                if (OnTouchpadRelease != null)
+                {
+                    ControllerEventArgs e = new ControllerEventArgs();
+                    e.deviceIndex = i;
+                    e.touchpadAxis = Player.instance.hands[i].controller.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
+                    e.touchpadAngle = CalculateTouchpadAxisAngle(e.touchpadAxis);
+                    OnTouchpadRelease(e);
                 }
             }
         }
+    }
 
-        if (rightController != null)
+    protected float CalculateTouchpadAxisAngle(Vector2 axis)
+    {
+        float angle = Mathf.Atan2(axis.y, axis.x) * Mathf.Rad2Deg;
+        angle = 90.0f - angle;
+        if (angle < 0)
         {
-            if (rightController.GetHairTriggerDown())
-            {
-                if (OnRightTriggerDown != null)
-                {
-                    OnRightTriggerDown();
-                }
-
-                if (OnAnyTriggerDown != null)
-                {
-                    OnAnyTriggerDown();
-                }
-            }
-
-            if (rightController.GetHairTriggerUp())
-            {
-                if (OnRightTriggerUp != null)
-                {
-                    OnRightTriggerUp();
-                }
-            }
-
-            if (rightController.GetPressDown(grip))
-            {
-                if (OnRightGripDown != null)
-                {
-                    OnRightGripDown();
-                }
-            }
-
-            if (rightController.GetPressUp(grip))
-            {
-                if (OnRightGripUp != null)
-                {
-                    OnRightGripUp();
-                }
-            }
-
-            if (rightController.GetPressDown(touchpad))
-            {
-                if (OnRightTouchpadDown != null)
-                {
-                    OnRightTouchpadDown();
-                }
-            }
-
-            if (rightController.GetPressUp(touchpad))
-            {
-                if (OnRightTouchpadUp != null)
-                {
-                    OnRightTouchpadUp();
-                }
-            }
-
-            if (rightController.GetTouch(touchpad))
-            {
-                if (OnRightTouchpadTouch != null)
-                {
-                    OnRightTouchpadTouch();
-                }
-            }
-
-            if (rightController.GetTouchUp(touchpad))
-            {
-                if (OnRightTouchpadRelease != null)
-                {
-                    OnRightTouchpadRelease();
-                }
-            }
+            angle += 360.0f;
         }
+        return angle;
     }
 }

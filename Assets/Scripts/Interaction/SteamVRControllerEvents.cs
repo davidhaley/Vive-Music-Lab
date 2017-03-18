@@ -178,7 +178,7 @@ public class SteamVRControllerEvents : MonoBehaviour
         }
         else
         {
-            return "Left or Right Hand not found";
+            return "Warning: Cannot find a LEFT or RIGHT hand";
         }
     }
 

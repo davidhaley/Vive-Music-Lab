@@ -14,7 +14,7 @@ namespace MusicLab.InteractionSystem
 
         private void OnEnable()
         {
-            SteamVRControllerEvents.OnLeftTouchpadDown += OnLeftTouchpadDown;
+            SteamVRControllerEvents.OnTouchpadDown += OnTouchpadDown;
             LightShow.MainLights += MainLightsStatus;
         }
 
@@ -56,9 +56,12 @@ namespace MusicLab.InteractionSystem
             }
         }
 
-        private void OnLeftTouchpadDown()
+        private void OnTouchpadDown(SteamVRControllerEvents.ControllerEventArgs e)
         {
-            ToggleFlashLight();
+            if (e.handOrientation == "LeftHand")
+            {
+                ToggleFlashLight();
+            }
         }
 
         private bool MainLightsStatus(bool status)

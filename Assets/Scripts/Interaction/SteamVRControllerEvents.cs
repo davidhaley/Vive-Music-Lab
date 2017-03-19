@@ -53,8 +53,7 @@ public class SteamVRControllerEvents : MonoBehaviour
                 if (OnTriggerDown != null)
                 {
                     ControllerEventArgs e = new ControllerEventArgs();
-                    e.deviceIndex = i;
-                    e.handOrientation = GetHandOrientation(Player.instance.hands[i].controller.index);
+                    e = ApplyEventArgs(e, i);
                     OnTriggerDown(e);
                 }
             }
@@ -64,8 +63,7 @@ public class SteamVRControllerEvents : MonoBehaviour
                 if (OnTriggerUp != null)
                 {
                     ControllerEventArgs e = new ControllerEventArgs();
-                    e.deviceIndex = i;
-                    e.handOrientation = GetHandOrientation(Player.instance.hands[i].controller.index);
+                    e = ApplyEventArgs(e, i);
                     OnTriggerUp(e);
                 }
             }
@@ -79,8 +77,7 @@ public class SteamVRControllerEvents : MonoBehaviour
                 if (OnGripDown != null)
                 {
                     ControllerEventArgs e = new ControllerEventArgs();
-                    e.deviceIndex = i;
-                    e.handOrientation = GetHandOrientation(Player.instance.hands[i].controller.index);
+                    e = ApplyEventArgs(e, i);
                     OnGripDown(e);
                 }
             }
@@ -90,8 +87,7 @@ public class SteamVRControllerEvents : MonoBehaviour
                 if (OnGripUp != null)
                 {
                     ControllerEventArgs e = new ControllerEventArgs();
-                    e.deviceIndex = i;
-                    e.handOrientation = GetHandOrientation(Player.instance.hands[i].controller.index);
+                    e = ApplyEventArgs(e, i);
                     OnGripUp(e);
                 }
             }
@@ -101,8 +97,7 @@ public class SteamVRControllerEvents : MonoBehaviour
                 if (OnGripUp != null)
                 {
                     ControllerEventArgs e = new ControllerEventArgs();
-                    e.deviceIndex = i;
-                    e.handOrientation = GetHandOrientation(Player.instance.hands[i].controller.index);
+                    e = ApplyEventArgs(e, i);
                     OnGripUp(e);
                 }
             }
@@ -116,10 +111,7 @@ public class SteamVRControllerEvents : MonoBehaviour
                 if (OnTouchpadDown != null)
                 {
                     ControllerEventArgs e = new ControllerEventArgs();
-                    e.deviceIndex = i;
-                    e.handOrientation = GetHandOrientation(Player.instance.hands[i].controller.index);
-                    e.touchpadAxis = Player.instance.hands[i].controller.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
-                    e.touchpadAngle = CalculateTouchpadAxisAngle(e.touchpadAxis);
+                    e = ApplyEventArgs(e, i, touchpad);
                     OnTouchpadDown(e);
                 }
             }
@@ -129,10 +121,7 @@ public class SteamVRControllerEvents : MonoBehaviour
                 if (OnTouchpadUp != null)
                 {
                     ControllerEventArgs e = new ControllerEventArgs();
-                    e.deviceIndex = i;
-                    e.handOrientation = GetHandOrientation(Player.instance.hands[i].controller.index);
-                    e.touchpadAxis = Player.instance.hands[i].controller.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
-                    e.touchpadAngle = CalculateTouchpadAxisAngle(e.touchpadAxis);
+                    e = ApplyEventArgs(e, i, touchpad);
                     OnTouchpadUp(e);
                 }
             }
@@ -142,10 +131,7 @@ public class SteamVRControllerEvents : MonoBehaviour
                 if (OnTouchpadTouch != null)
                 {
                     ControllerEventArgs e = new ControllerEventArgs();
-                    e.deviceIndex = i;
-                    e.handOrientation = GetHandOrientation(Player.instance.hands[i].controller.index);
-                    e.touchpadAxis = Player.instance.hands[i].controller.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
-                    e.touchpadAngle = CalculateTouchpadAxisAngle(e.touchpadAxis);
+                    e = ApplyEventArgs(e, i, touchpad);
                     OnTouchpadTouch(e);
                 }
             }
@@ -155,10 +141,7 @@ public class SteamVRControllerEvents : MonoBehaviour
                 if (OnTouchpadRelease != null)
                 {
                     ControllerEventArgs e = new ControllerEventArgs();
-                    e.deviceIndex = i;
-                    e.handOrientation = GetHandOrientation(Player.instance.hands[i].controller.index);
-                    e.touchpadAxis = Player.instance.hands[i].controller.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
-                    e.touchpadAngle = CalculateTouchpadAxisAngle(e.touchpadAxis);
+                    e = ApplyEventArgs(e, i, touchpad);
                     OnTouchpadRelease(e);
                 }
             }
@@ -179,6 +162,20 @@ public class SteamVRControllerEvents : MonoBehaviour
         {
             return "Warning: Cannot find a LEFT or RIGHT hand";
         }
+    }
+
+    private SteamVRControllerEvents.ControllerEventArgs ApplyEventArgs(ControllerEventArgs e, int i, ulong? button = null)
+    {
+        e.deviceIndex = i;
+        e.handOrientation = GetHandOrientation(Player.instance.hands[i].controller.index);
+
+        if (button == touchpad)
+        {
+            e.touchpadAxis = Player.instance.hands[i].controller.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
+            e.touchpadAngle = CalculateTouchpadAxisAngle(e.touchpadAxis);
+        }
+
+        return e;
     }
 
     protected float CalculateTouchpadAxisAngle(Vector2 axis)

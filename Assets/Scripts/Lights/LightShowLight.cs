@@ -72,6 +72,9 @@ public class LightShowLight : MonoBehaviour
 
         lightAction = GetLightAction();
 
+        //---------------------------------------------------------------
+        // Disable other features of audio visualizer is applied to light
+        //---------------------------------------------------------------
         if (visualize)
         {
             strobe = colorRandomizer = false;
@@ -80,6 +83,9 @@ public class LightShowLight : MonoBehaviour
 
     void Update()
     {
+        //-----------------------------------------------
+        // Stop active co-routines when light is disabled
+        //-----------------------------------------------
         if (!Enabled && !coRoutinesStopped)
         {
             StopAllCoroutines();

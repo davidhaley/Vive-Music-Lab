@@ -710,7 +710,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: 5.6571e+31
+  field of view: 2.5225915e-18
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -6323,8 +6323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0ce3079cdb6a646a75f65cec8e8714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_innerSpotPercent: 39.2
-  m_shadowResolution: 4096
+  m_innerSpotPercent: 90
+  m_shadowResolution: 8192
   m_shadowNearClipPlane: 1
   m_shadowCastLayerMask:
     serializedVersion: 2
@@ -6349,10 +6349,10 @@ MonoBehaviour:
   lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 180317458}
   visualize: 1
-  scaleMagnitude: 1
+  scaleMagnitude: 0.66
   band: 6
   minIntensity: 0
-  maxIntensity: 3
+  maxIntensity: 1.38
   xAngle: 0
   yAngle: 0
   zAngle: 0
@@ -7685,8 +7685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0ce3079cdb6a646a75f65cec8e8714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_innerSpotPercent: 70
-  m_shadowResolution: 4096
+  m_innerSpotPercent: 100
+  m_shadowResolution: 8192
   m_shadowNearClipPlane: 1
   m_shadowCastLayerMask:
     serializedVersion: 2
@@ -7706,8 +7706,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strobe: 0
-  speed: 2
-  upperIntensityBounds: 4
+  speed: 1
+  upperIntensityBounds: 2
   lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 0}
   visualize: 0
@@ -7715,11 +7715,11 @@ MonoBehaviour:
   band: 0
   minIntensity: 0
   maxIntensity: 8
-  xAngle: 10
-  yAngle: 25
+  xAngle: 11
+  yAngle: 4
   zAngle: 0
   period: 1
-  rotationSpeed: 1
+  rotationSpeed: 0.76
   colorRandomizer: 0
   randomizeTime: 0
 --- !u!1 &408817928
@@ -14029,8 +14029,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0ce3079cdb6a646a75f65cec8e8714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_innerSpotPercent: 70
-  m_shadowResolution: 4096
+  m_innerSpotPercent: 100
+  m_shadowResolution: 8192
   m_shadowNearClipPlane: 1
   m_shadowCastLayerMask:
     serializedVersion: 2
@@ -14050,8 +14050,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strobe: 0
-  speed: 0.5
-  upperIntensityBounds: 3
+  speed: 2
+  upperIntensityBounds: 2
   lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 0}
   visualize: 0
@@ -14059,11 +14059,11 @@ MonoBehaviour:
   band: 0
   minIntensity: 0
   maxIntensity: 8
-  xAngle: 25
-  yAngle: -15
-  zAngle: 0
+  xAngle: -14
+  yAngle: 1
+  zAngle: 20
   period: 1
-  rotationSpeed: 1.5
+  rotationSpeed: 0.5
   colorRandomizer: 0
   randomizeTime: 0.63
 --- !u!1 &975958632
@@ -16741,8 +16741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0ce3079cdb6a646a75f65cec8e8714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_innerSpotPercent: 39.2
-  m_shadowResolution: 4096
+  m_innerSpotPercent: 90
+  m_shadowResolution: 8192
   m_shadowNearClipPlane: 1
   m_shadowCastLayerMask:
     serializedVersion: 2
@@ -16767,10 +16767,10 @@ MonoBehaviour:
   lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 180317458}
   visualize: 1
-  scaleMagnitude: 1
+  scaleMagnitude: 0.66
   band: 6
   minIntensity: 0
-  maxIntensity: 3
+  maxIntensity: 1.38
   xAngle: 0
   yAngle: 0
   zAngle: 0
@@ -20966,8 +20966,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0ce3079cdb6a646a75f65cec8e8714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_innerSpotPercent: 70
-  m_shadowResolution: 4096
+  m_innerSpotPercent: 100
+  m_shadowResolution: 8192
   m_shadowNearClipPlane: 1
   m_shadowCastLayerMask:
     serializedVersion: 2
@@ -20987,8 +20987,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strobe: 0
-  speed: 1
-  upperIntensityBounds: 3
+  speed: 2
+  upperIntensityBounds: 2
   lowerIntensityBounds: 0.5
   audioVisualizer: {fileID: 0}
   visualize: 0
@@ -20996,11 +20996,11 @@ MonoBehaviour:
   band: 0
   minIntensity: 0
   maxIntensity: 8
-  xAngle: -30
-  yAngle: 20
+  xAngle: 13
+  yAngle: 8
   zAngle: 0
   period: 1
-  rotationSpeed: 2
+  rotationSpeed: 0.5
   colorRandomizer: 0
   randomizeTime: 0
 --- !u!1 &1743701720
@@ -22257,7 +22257,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1908407811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.95, y: 0, z: -5.002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2088536683}
@@ -22910,8 +22910,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1945536887}
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0.531, y: 1.531, z: -6.0884995}
-  m_LocalScale: {x: 75, y: 75, z: 75}
+  m_LocalPosition: {x: 0.531, y: 1.636, z: -6.0884995}
+  m_LocalScale: {x: 85, y: 85, z: 85}
   m_Children: []
   m_Father: {fileID: 2039863351}
   m_RootOrder: 2
@@ -23989,8 +23989,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2084326663}
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 7.285, y: 1.531, z: -6.0884995}
-  m_LocalScale: {x: 75, y: 75, z: 75}
+  m_LocalPosition: {x: 7.285, y: 1.636, z: -6.0884995}
+  m_LocalScale: {x: 85, y: 85, z: 85}
   m_Children: []
   m_Father: {fileID: 2039863351}
   m_RootOrder: 3

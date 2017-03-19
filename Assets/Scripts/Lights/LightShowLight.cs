@@ -11,7 +11,7 @@ public class LightShowLight : MonoBehaviour
     [Header("Strobe (Fade Default)")]
     public bool strobe;
     public float speed = 3f;
-    [Range(3f, 8f)]     public float upperIntensityBounds = 8f;
+    [Range(2f, 8f)]     public float upperIntensityBounds = 8f;
     [Range(0.5f, 8f)]   public float lowerIntensityBounds = 1f;
     [Space(15)]
 

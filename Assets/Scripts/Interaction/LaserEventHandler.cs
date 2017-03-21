@@ -18,10 +18,11 @@ namespace MusicLab.InteractionSystem
                 Hand hand = Player.instance.GetHand(i);
 
                 LaserPointerInteractable laserPointer = hand.GetComponent<LaserPointerInteractable>();
-                LaserEvents laserEvents = laserPointer.LaserEvents();
 
                 if (laserPointer != null)
                 {
+                    LaserEvents laserEvents = laserPointer.LaserEvents();
+
                     if (laserPointer.ValidLaserTarget == null)
                     {
                         laserPointer.DisableLaser();
@@ -30,11 +31,11 @@ namespace MusicLab.InteractionSystem
                     {
                         laserPointer.EnableLaser();
                     }
-                }
 
-                if (laserEvents != null && hand.controller.GetHairTriggerDown())
-                {
-                    laserEvents.onTriggerDown.Invoke();
+                    if (laserEvents != null && hand.controller.GetHairTriggerDown())
+                    {
+                        laserEvents.onTriggerDown.Invoke();
+                    }
                 }
             }
         }

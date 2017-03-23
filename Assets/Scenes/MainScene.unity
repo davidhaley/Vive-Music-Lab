@@ -710,7 +710,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: 2.5225915e-18
+  field of view: 6.22e-43
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -24290,12 +24290,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c5acf727c4d5d43bc69e892a516630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_valveShadowTextureWidth: 4096
-  m_valveShadowTextureHeight: 4096
-  m_indirectLightmapsOnly: 0
+  m_valveShadowTextureWidth: 8192
+  m_valveShadowTextureHeight: 8192
+  m_indirectLightmapsOnly: 1
   m_adaptiveQualityEnabled: 1
   m_adaptiveQualityDebugVis: 0
-  m_MSAALevel: 0
+  m_MSAALevel: 8
   m_minRenderTargetScale: 0.8
   m_maxRenderTargetScale: 1.4
   m_maxRenderTargetDimension: 4096
@@ -24349,7 +24349,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 300
-  field of view: NaN
+  field of view: 6.25e-43
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -24519,7 +24519,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: NaN
+  field of view: 7.847e-42
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

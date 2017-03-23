@@ -14,6 +14,14 @@ So far, the application features:
 4. An audio visualizer. I partitioned the audio into seven frequency bands. Each group represents a different frequency range (bass for example). Then, I convert each group's amplitude to a value ranging between 0 and 1 and assign the values to shapes, which move/dance according to those values.  
 5. A 'Modulation Contaminate Funnel.' The player can solve the puzzle, by throwing a cube into a large solid funnel, and the cube becomes "contaminated" with modulation (the same technique used for the audio visualizer). Then, when the player places the contaminated cube onto the dance floor, and turns on the music and turns off the lights, the cube will dance to the music.  
 
+
+#### Project Dependencies
+
+The Lab Renderer v1.0 - https://www.assetstore.unity3d.com/en/#!/content/63141  
+SteamVR Unity Plugin - https://www.assetstore.unity3d.com/en/#!/content/32647  
+Steam Audio (Phonon) - https://valvesoftware.github.io/steam-audio/  
+Unity 5.6.0b11 - https://unity3d.com/unity/beta  
+
 #### Screenshots (March 8th 2017)
 
 ![alt text](https://cloud.githubusercontent.com/assets/11729897/23720137/11fe6bec-03fb-11e7-9735-a62548b546e3.png)
@@ -27,10 +35,3 @@ So far, the application features:
 ![alt text](https://cloud.githubusercontent.com/assets/11729897/23720186/43f63288-03fb-11e7-8591-f747ef8171b2.png)
 ![alt text](https://cloud.githubusercontent.com/assets/11729897/23720194/48119c18-03fb-11e7-815d-abbdc2d06413.png)
 ![alt text](https://cloud.githubusercontent.com/assets/11729897/23720204/4c7d270e-03fb-11e7-8f16-6a53fed3335c.png)
-
-#### Project Dependencies
-
-The Lab Renderer v1.0 - https://www.assetstore.unity3d.com/en/#!/content/63141  
-SteamVR Unity Plugin - https://www.assetstore.unity3d.com/en/#!/content/32647  
-Steam Audio (Phonon) - https://valvesoftware.github.io/steam-audio/  
-Unity 5.6.0b11 - https://unity3d.com/unity/beta  
